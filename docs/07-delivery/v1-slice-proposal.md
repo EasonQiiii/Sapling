@@ -1,116 +1,117 @@
-# V1 完整主干提案（修订 · 待审）
+# V1 精简切片提案（当前方向）
 
-**状态：** `PROPOSAL` — 按产品意见修订：V1 要更完善，不做过度裁剪。  
-**前一版：** 曾建议大幅缓建 Policy / Stage / 三类 State；**已撤回该立场**。  
-**日期：** 2026-11-15（修订）
-
----
-
-## 1. 立场（已对齐你的方向）
-
-- **同意：** V1 应是完整、可演进的主干，而不是「只够演示的最小玩具」。
-- **不同意（已收回）：** 把 Thinking/Habit/GoalProgress、Intervention Stage、Policy、Methodology、Workflow 大体踢出 V1。
-- **仍坚持：** 「更完善」≠「把未拍板的规则假装已定并写进不可逆 Migration」。完善 = **域表齐全 + 关键规则先冻结 + 空库可验收**。
-
-一句话目标：
-
-> V1 落地整条学习闭环的**完整领域主干**（含四类状态、干预阶段、策略与流程、决策与审计），并对齐纸质作业原则；未冻结规则先写成正式决策，再进 SQL。
+**状态：** `PROPOSAL` — 产品已口头倾向精简路线；待确认 4 点后写入 `decision-register` 为正式 `D-xxx`。  
+**修订史：**  
+1. 初版：精简切片  
+2. 曾按「V1 更完善」改为完整主干  
+3. **2026-11-15：改回精简路线（本版）**
 
 ---
 
-## 2. V1 应包含的范围（完善主干）
+## 1. 一句话目标
 
-### 2.1 必含领域（建议全部进 V1 Migration）
+纸质数学作业 → 拍照上传 → 确认识别 → 有证据的诊断要点 → 家长确认后一条练习建议；不覆盖原始作答，不要求屏幕重做。
 
-| 域 | V1 包含 | 说明 |
-|---|---|---|
-| Identity | Family / Person / Account / FamilyMember / Authorization 基础 | 含家庭隔离 |
-| Learning / Assessment | Goal、Task、Question*、Response、关联 | 纸质闭环核心 |
-| Evidence / Event | Evidence 谱系、Event、Outbox | 证据与可靠通知 |
-| Diagnosis | Diagnosis、Finding、Validity、KnowledgeIssue(+Revision)、Links | 完整诊断链 |
-| LearningState | **四类** State + StateRevision + References | 按原则完整建模 |
-| Decision | Record、Candidate、Selection、Approval、StatusHistory、基础 Result | 先记录再执行 |
-| Intervention | Intervention、Goal/Revision、Progress、**Stage 树**、Task 链接、Dependency、Acceptance | 完整干预模型 |
-| Policy | Policy / Version / Publication / Relation | SYSTEM + FAMILY；规则见下 |
-| Methodology | Methodology / Version / GuidanceStrategy | 无独立 GuidanceExecution（D-015） |
-| Workflow | Definition/Version/Step/Transition/Run/StepRun/StatusHistory/PolicyReference | 真表，不靠「纯代码流水线」凑合 |
-| AI / Audit | Execution Record/Input/Output/Tool + Audit | AI 非事实源 |
+在此之前，不建 Policy 模拟/评价全套、Intervention Stage 全树、完整四类 State 并行落库等重型对象。
 
-### 2.2 仍建议不进 V1 的（少而硬）
+---
 
-这些不是「偷懒砍功能」，而是基线里**未冻结或明确 V1 不做**的项：
+## 2. 为什么精简（当前共识方向）
 
-| 项 | 原因 |
+| 问题 | 影响 |
 |---|---|
-| Policy **TASK** 层（可选延后） | U-003 未定；先 SYSTEM+FAMILY 也可称完善主干 |
-| PolicySimulation / PolicyEvaluation 产品化表 | 可 V1.1；不阻塞主闭环 |
-| GuidanceExecution 独立表 | 已决策不做（D-015） |
-| AIOutputAcceptance 全局表 | 已决策不做（D-016） |
-| PolicyRegistry 重复实体 | 已决策不做（D-017） |
-| Redis / 独立 MQ / 向量库 | 已决策不做（D-018） |
-| OCR 引擎锁定某一开源实现 | 用适配层；样本验证后定（U-001） |
+| OCR 未选型（U-001） | 纸质闭环关键路径未通 |
+| 知识目录缺失（U-012） | State / KI 难稳挂 |
+| Finding→KI 归并未定（U-011） | 诊断后半段不宜过度自动化 |
+| Intervention Stage 全树 | 首条闭环过重 |
+| Policy 冲突规则未冻 | 过早落全表易锁死错误语义 |
+| G-01…G-24 未收口 | 全量 DDL 易返工 |
 
-若你要求 **TASK 层 Policy 与 Simulation 也进 V1**，可以——但必须先冻结 U-002/U-003/U-004 的文字规则，再写表。
+完整领域设计仍保留在 `docs/03-*` / `04-*` / recovery-baseline，作为 **已讨论、V1 后置** 的资产，不是删除。
 
 ---
 
-## 3. 「完善 V1」落库前必须先定的设计（不是缓建表，是补规则）
+## 3. V1 必建
 
-没有这些，表建得越全，返工越大：
+### Identity
+`family`, `person`, `account`, `account_person_link`, `family_member`  
+缓建：完整 `child_autonomy_profile` 修订树、复杂 `on_behalf_of`
 
-| ID | 必须产出的冻结物 | 为什么 |
+### Learning / Assessment
+`learning_task`（+ 简单状态或 Event）  
+`question`, `question_version`, `task_question`  
+`learning_response`（RespondentReference、Mode、SupportLevel）  
+`learning_goal` + revision + `goal_task_link`：**可选**——见下方待确认第 2 点
+
+### Evidence / Event
+`evidence`, `evidence_relation`, `learning_response_evidence_link`  
+`learning_event`, `transactional_outbox`  
+缓建：大而全通用 `evidence_link`（先专用 link）
+
+### Diagnosis（薄）
+`diagnosis`, `diagnosis_subject`, `diagnosis_evidence_link`  
+`finding`, `finding_validity`, `finding_evidence_link`  
+`knowledge_issue`, `knowledge_issue_revision`, `finding_issue_link`  
+首版 KI 归并允许人工确认
+
+### State（最小）
+仅 `knowledge_state` + `state_revision` + `state_revision_reference`  
+**缓建：** Thinking / Habit / GoalProgress 头表（原则保留在文档，V1 不落）
+
+### Decision / Intervention（极薄）
+`decision_record`, `decision_candidate`, `decision_candidate_selection`, `decision_approval`  
+`learning_intervention`, `intervention_goal`, `intervention_goal_revision`, `intervention_task`  
+**无 Stage 树**
+
+### Workflow / AI（务实）
+Workflow：真表 **或** 代码固定流水线——见待确认第 3 点  
+`ai_execution_record` + input/output；`audit_record`
+
+---
+
+## 4. V1 明确缓建
+
+| 域 | 缓建 | 理由 |
 |---|---|---|
-| U-001 | OCR 适配层接口 + 候选引擎评测计划 | 纸质闭环关键路径 |
-| U-002 | Publication 范围/时间冲突规则（至少 FAMILY） | 否则 policy_publication 语义不稳 |
-| U-006 | Workflow 图发布最小校验集 | 已有倾向，升为 D 即可 |
-| U-007 | 旧 Run 不升版 | 基线已倾向，升为 D |
-| U-011 | Finding→KI 归并：**规则 v0**（可半自动+人工确认） | 完善诊断链需要 |
-| U-012 | 知识/能力/习惯目录 **v0 种子**（小学数学为主） | 四类 State 要挂得住 |
-| U-014 | 隐私删除原则 v0 | Audit append-only 与删除冲突 |
-| G-01…G-24 | 收口进 Migration 设计说明 | 完善物理模型的验收门禁 |
-
-**Intervention Stage 全树：** 按你的要求 **进 V1**；同步把环路检查（G-10）与归属校验（G-11）写进物理说明与测试，而不是砍掉 Stage。
+| Policy | Publication 全冲突模型、Simulation、Evaluation、TASK 层 | 未冻结；SYSTEM 规则先用配置/常量 |
+| Methodology | 复杂 GuidanceStrategy JSON、独立会话表 | 固定提示强度枚举即可（D-015） |
+| Intervention | Stage / StageGoal / Dependency / Acceptance | 一条 Goal+Task 足够 |
+| Decision | OutcomeEvaluation 网、大量 relation | Selection+Approval+简单 result |
+| State | Thinking / Habit / GoalProgress | 先跑通知识状态 |
+| Infra | Redis / MQ / 向量库 | D-018 |
 
 ---
 
-## 4. 建议 Migration 计划（完整主干）
+## 5. Migration 顺序（仅切片）
 
-保持原 001–009 拓扑，**不再把 005/006 标成 DEFERRED**：
+```text
+1. 001  identity
+2. 002  task + question* + response（± goal）
+3. 003  evidence + event + outbox
+4. 004  diagnosis + finding + knowledge_issue + knowledge_state 最小
+5. 007' decision 薄 + intervention 薄
+6. 008' ai_execution + audit 最小
+```
 
-| 顺序 | 文件 | V1 |
-|---|---|---|
-| 001 | platform_identity | 完整基础身份 |
-| 002 | learning_assessment | Goal+Task+Question+Response |
-| 003 | evidence_event | Evidence+Event+Outbox |
-| 004 | diagnosis_state | Diagnosis+Finding+KI+**四类 State** |
-| 005 | learning_intervention | **含 Stage 树** |
-| 006 | policy_methodology | Policy（SYSTEM+FAMILY）+ Methodology；Simulation 表可空壳或 V1.1 |
-| 007 | decision_workflow | Decision 完整主链 + Workflow 真表 |
-| 008 | ai_execution_audit | 完整执行与审计 |
-| 009 | cross_schema_constraints | G 清单跨 schema 收口 |
-
-每批：空库执行 → 约束/并发/关键业务测试 → `docs/06-validation/` 只记 PASS/FAIL/NOT_RUN。
+原 `005` 全 Intervention、`006` Policy/Methodology 全量：标 `DEFERRED`，文件可留空壳说明，不进 V1 验收门禁。
 
 ---
 
-## 5. 与「过度裁剪版」的差异
+## 6. 落库前三刀
 
-| 主题 | 旧提案（已撤回） | 本修订（对齐你） |
-|---|---|---|
-| 四类 State | 只留 Knowledge | **四类都进 V1** |
-| Intervention Stage | 缓建 | **进 V1** |
-| Policy | 几乎不做 | **Version/Publication/Relation 进 V1** |
-| Workflow | 可代码硬编码 | **真表进 V1** |
-| Methodology | 枚举凑合 | **Version + GuidanceStrategy 进 V1** |
-| 完善方式 | 靠砍范围 | **靠先冻规则再落全主干** |
+1. 本提案确认后 → 正式 `D-025`（V1 范围）  
+2. 知识目录 v0（小学数学小种子）——关 U-012 的 V1 子集  
+3. Finding→KI：V1 = 人工确认归并 ——关 U-011 的 V1 姿态  
+
+OCR：适配层接口先定；不阻塞表结构起草，阻塞产品闭环验收。
 
 ---
 
-## 6. 请你确认的点（比上版少，且偏完善向）
+## 7. 待你确认（精简版四点）
 
-1. **确认：** V1 = 完整主干（上表 §2.1），接受「先冻 U/G 再写 SQL」，而不是先砍表。  
-2. **TASK 层 Policy：** V1 要还是不要？（要 = 先写 U-003 规则）  
-3. **PolicySimulation / Evaluation：** V1 要表，还是 V1.1？  
-4. **Finding→KI：** 接受「规则 v0 + 可人工确认」作为完善诊断链的第一版吗？
+1. 是否正式确认：**V1 不做** Policy 全表、Intervention Stage 树、Thinking/Habit/GoalProgress？  
+2. LearningGoal 首周：缓建只留 Task，还是极简 Goal 也建？  
+3. Workflow：首版 **真表** 还是 **代码内固定流水线**（表后补）？  
+4. KnowledgeIssue：接受 **人工归并** 吗？
 
-你点头后，我会：把本提案要点写入 `decision-register`（新 D-xxx）、更新 `unresolved` 的 V1 姿态、按完整主干改 `database/README` 与 Migration 计划——**仍不会在规则冻结前塞假 PASS 的全量 DDL。**
+确认后：写入 decision-register、更新 unresolved 的 V1 姿态、改 `database/README` Migration 计划。

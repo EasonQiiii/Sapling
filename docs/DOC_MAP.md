@@ -101,7 +101,7 @@
 | 文件 | 状态 |
 |---|---|
 | [v1-freeze-report.md](./07-delivery/v1-freeze-report.md) | 未冻结清单 |
-| [v1-slice-proposal.md](./07-delivery/v1-slice-proposal.md) | **PROPOSAL 修订待审**（完整主干，非大砍） |
+| [v1-slice-proposal.md](./07-delivery/v1-slice-proposal.md) | **PROPOSAL 当前方向：精简切片**（完整主干方案已撤回） |
 | [known-limitations.md](./07-delivery/known-limitations.md) | 完整 |
 | [v2-backlog.md](./07-delivery/v2-backlog.md) | 完整 |
 
