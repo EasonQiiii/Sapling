@@ -42,7 +42,7 @@
 | [learning-workflow.md](./02-business/learning-workflow.md) | 完整 |
 | [paper-homework-process.md](./02-business/paper-homework-process.md) | 完整 |
 | [ocr-and-correction.md](./02-business/ocr-and-correction.md) | 完整；选型 U-001 |
-| [diagnosis-process.md](./02-business/diagnosis-process.md) | 完整；归并 U-011 |
+| [diagnosis-process.md](./02-business/diagnosis-process.md) | 完整；自动归并 D-028；算法 U-011 |
 | [learning-intervention.md](./02-business/learning-intervention.md) | 完整；深度 U-013 |
 | [learning-verification.md](./02-business/learning-verification.md) | 完整 |
 | [parent-child-ai-boundaries.md](./02-business/parent-child-ai-boundaries.md) | 完整 |
@@ -101,7 +101,7 @@
 | 文件 | 状态 |
 |---|---|
 | [v1-freeze-report.md](./07-delivery/v1-freeze-report.md) | 未冻结清单 |
-| [v1-slice-proposal.md](./07-delivery/v1-slice-proposal.md) | **PROPOSAL 当前方向：精简切片**（完整主干方案已撤回） |
+| [v1-slice-proposal.md](./07-delivery/v1-slice-proposal.md) | **已确认** D-025…D-028（精简 + 自动归并） |
 | [known-limitations.md](./07-delivery/known-limitations.md) | 完整 |
 | [v2-backlog.md](./07-delivery/v2-backlog.md) | 完整 |
 

@@ -16,6 +16,11 @@
 - 补全 `docs/04-physical-model/` 各域说明与 `global-conflicts.md`（G-01…G-24）。
 - `docs/diagrams/erd-overview.mmd`：RECONSTRUCTED 总览图。
 
+### Added
+
+- 正式决策 D-025…D-028：V1 精简范围、缓建 Goal、Workflow 真表、Finding→KI **自动**归并。
+- 纠正「V1 先人工归并」误默认；U-011 收窄为算法规格。
+
 ### Notes
 
 - 文档地图（设计层）已闭合；可执行 Migration 仍未整合。

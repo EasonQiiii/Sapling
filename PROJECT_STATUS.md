@@ -1,8 +1,8 @@
 # PROJECT_STATUS
 
-**最后更新：** 2026-11-15 20:48（Asia/Shanghai）  
-**项目状态：** 文档地图已闭合；V1 改回精简切片方向（完整主干方案已撤回）  
-**当前分支目标：** 待确认精简四点后，写入正式 D-xxx 并改 Migration 计划
+**最后更新：** 2026-11-15 20:53（Asia/Shanghai）  
+**项目状态：** V1 精简四点已确认并写入 D-025…D-028；Migration 仍为占位  
+**当前分支目标：** 按精简范围起草可执行 Migration（仍须空库验收，不得假 PASS）
 
 ## 已完成
 
@@ -17,7 +17,9 @@
 
 ## 进行中
 
-- [ ] 按三层模型整合可执行 PostgreSQL Migration（当前仍 PLACEHOLDER）
+- [ ] 按 D-025…D-028 精简范围起草可执行 PostgreSQL Migration（当前仍 PLACEHOLDER）
+- [ ] U-011：自动归并算法 v0（不再争论人工/自动）
+- [ ] U-012：知识目录 v0 种子
 
 ## 当前问题 / 阻塞
 

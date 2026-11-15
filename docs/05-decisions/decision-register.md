@@ -30,6 +30,10 @@
 | D-022 | ExecutionRequestID 统一幂等身份 | Accepted | 2026-11-15 | C-03；不另设业务 IdempotencyKey |
 | D-023 | RespondentReference 独立于 Task Owner | Accepted | 2026-11-15 | C-01 |
 | D-024 | ResponseContent 不存大型原始材料 | Accepted | 2026-11-15 | C-02；结构化内容或引用 |
+| D-025 | V1 精简范围 | Accepted | 2026-11-15 | 见正文；完整域模型文档保留为后置资产 |
+| D-026 | V1 缓建 LearningGoal | Accepted | 2026-11-15 | 首期只建 Task 闭环 |
+| D-027 | V1 Workflow 使用真表 | Accepted | 2026-11-15 | 不用纯代码流水线冒充 |
+| D-028 | Finding→KnowledgeIssue 自动归并 | Accepted | 2026-11-15 | 不依赖人工点选归并；规则算法仍可迭代 |
 
 ## 决策正文
 
@@ -56,6 +60,40 @@
 **上下文：** 第30章多批聊天 SQL 易被误拼为最终稿。  
 **决策：** 逻辑模型、物理模型说明、`database/migrations/` 可执行 SQL 三层分离。  
 **后果：** 物理文档解释设计；Migration 才是执行源。
+
+### D-025 — V1 精简范围
+
+**上下文：** 完整领域模型已设计，但未冻结项多，全量落库风险高；产品确认先走精简闭环。  
+**决策（V1 不做 / 缓建）：**
+- Policy 全表（Publication 冲突全套、Simulation、Evaluation、TASK 层）
+- Intervention Stage 树（Stage/Dependency/Acceptance 等）
+- ThinkingState / LearningHabitState / GoalProgressState（仅落 KnowledgeState）
+- LearningGoal（见 D-026）
+
+**V1 仍做：** Identity 基础、Task/Question/Response、Evidence/Event/Outbox、Diagnosis/Finding/KnowledgeIssue、KnowledgeState、薄 Decision+薄 Intervention、Workflow 真表、AIExecution+Audit 最小集。  
+**后果：** `005`/`006` 全量标 DEFERRED；完整设计保留在 docs，不删除。
+
+### D-026 — V1 缓建 LearningGoal
+
+**决策：** 首期不建 Goal 及 GoalTaskLink；学习闭环以 LearningTask 为主。  
+**后果：** Migration `002` 不含 goal 表；日后加 Goal 不破坏 Task 身份。
+
+### D-027 — V1 Workflow 真表
+
+**决策：** WorkflowDefinition/Version/Step/Run/StepRun/StatusHistory 等进 V1，不用「仅代码固定流水线、无表」。  
+**后果：** 纳入 `007_decision_workflow.sql` 精简所需子集。
+
+### D-028 — Finding→KnowledgeIssue 自动归并
+
+**上下文：** 产品目标是系统自动形成长期知识问题，不依赖家长/老师点选归并。历史恢复文档写了「可归并到 KnowledgeIssue」，但**没有**写明必须人工确认；「先人工」曾是错误的精简默认，已纠正。  
+**决策：** V1 **自动**将 Finding 归并/挂接到 KnowledgeIssue（创建或关联），不把人工点选当作必经步骤。  
+**约束（与 D-004 并存）：**
+- 归并是系统流程产出的业务事实，须写入 `finding_issue_link`（及必要 Event），可追溯到 Diagnosis/Finding/Evidence。
+- 原始模型输出仍不是事实；须经 Diagnosis/归并服务落库后才生效。
+- 置信不足可标 UNCONFIRMED / 新建待观察 Issue，而不是改回「等人点选才能并」。
+- 归并**算法与阈值细则**仍可迭代（原 U-011 收窄为规则规格，不再争论要不要自动）。
+
+**后果：** 诊断流水线默认自动归并；家长参与点在成长目标等（D-006），不在 KI 归并闸门。
 
 ---
 
