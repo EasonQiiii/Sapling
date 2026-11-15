@@ -14,7 +14,7 @@
 | U-008 | Policy 检查点结果表 | 是否独立持久化 | 审计粒度 | 先 Event/审计，必要时再加表 |
 | U-009 | GuidanceStrategy Schema | JSONB schema 未定 | Methodology 实现 | 先枚举强度与工具，再锁 schema |
 | U-010 | 部分 JSONB Schema | StateContent 等 | 状态内容无法校验 | 按状态类型逐步冻结 |
-| U-011 | Finding→KnowledgeIssue 归并**算法** | 是否自动已由 D-028 确认；置信度、合并/拆分、新建 vs 挂接策略未规格化 | 自动归并质量 | 写规则 v0 + 评测集；不改回人工闸门 |
+| U-011 | Finding→KnowledgeIssue 归并**算法迭代** | v0 规格见 `auto-merge-rules-v0.md`；缺评测集与指标基线 | 归并质量 | 补样例集 + 反馈指标；遵守 D-030 |
 | U-012 | 知识目录 ontology | knowledge_point / capability 目录缺失；需支持中小学多科目（D-029） | State/KI 无处附着 | v0 先数学；目录结构预留学段+科目扩展 |
 | U-013 | Intervention V1 深度 | Stage 是否进 V1 | 已由 D-025 缓建 Stage | **关闭条件：** 补「薄干预行为规格」后可标 Resolved→D |
 | U-014 | 隐私删除治理 | 受控删除 vs append-only Audit | 合规 | 完整治理设计后再实现 |

@@ -9,5 +9,7 @@
 | P5 | 不以 AI 使用作成功标准 | 不用时长/对话数/频率/任务数衡量成长 |
 | P6 | AI 不替代家长 | 成长目标由家长与孩子共同制定 |
 | P7 | 不追求一开始完美 | 优先稳定可演进主干，避免过早复杂对象 |
+| P8 | 搬运成熟体系；自研必带反馈 | 算法/设计先学现成轮子做适配；非造不可才自研，且必须有反馈迭代（D-030） |
 
-对应决策：`D-001`…`D-006`（见 decision-register）。
+对应决策：`D-001`…`D-006`、`D-030`（见 decision-register）。  
+细则：[`docs/01-architecture/reuse-and-feedback.md`](../01-architecture/reuse-and-feedback.md)。

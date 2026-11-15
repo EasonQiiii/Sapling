@@ -32,6 +32,7 @@
 | [module-interfaces.md](./01-architecture/module-interfaces.md) | 摘要（schema 未冻） |
 | [cross-module-collaboration.md](./01-architecture/cross-module-collaboration.md) | 完整 |
 | [architecture-decisions.md](./01-architecture/architecture-decisions.md) | 完整（索引） |
+| [reuse-and-feedback.md](./01-architecture/reuse-and-feedback.md) | **D-030 搬运/反馈** |
 
 图：[`diagrams/system-architecture.mmd`](./diagrams/system-architecture.mmd)
 
@@ -42,6 +43,9 @@
 | [learning-workflow.md](./02-business/learning-workflow.md) | 完整 |
 | [paper-homework-process.md](./02-business/paper-homework-process.md) | 完整 |
 | [ocr-and-correction.md](./02-business/ocr-and-correction.md) | 完整；选型 U-001 |
+| [ocr-human-boundary.md](./02-business/ocr-human-boundary.md) | **P0 人机边界** |
+| [closed-loop-steps.md](./02-business/closed-loop-steps.md) | **P0 逐步规格** |
+| [auto-merge-rules-v0.md](./02-business/auto-merge-rules-v0.md) | **P0 自动归并 v0** |
 | [diagnosis-process.md](./02-business/diagnosis-process.md) | 完整；自动归并 D-028；算法 U-011 |
 | [learning-intervention.md](./02-business/learning-intervention.md) | 完整；深度 U-013 |
 | [learning-verification.md](./02-business/learning-verification.md) | 完整 |
@@ -59,6 +63,7 @@
 | [relationship-matrix.md](./03-domain-model/relationship-matrix.md) | RECONSTRUCTED 摘要 |
 | [lifecycle-definitions.md](./03-domain-model/lifecycle-definitions.md) | 完整 |
 | [logical-data-model.md](./03-domain-model/logical-data-model.md) | 完整 |
+| [subject-and-catalog.md](./03-domain-model/subject-and-catalog.md) | **P0 学段科目目录** |
 
 图：[`domain-relationships.mmd`](./diagrams/domain-relationships.mmd)、[`erd-overview.mmd`](./diagrams/erd-overview.mmd)
 

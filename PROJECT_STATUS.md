@@ -1,8 +1,8 @@
 # PROJECT_STATUS
 
-**最后更新：** 2026-11-15 21:10（Asia/Shanghai）  
-**项目状态：** 已出设计缺口审核（闭环优先）；P0 为科目扩展/归并算法/逐步规格/OCR 人机边界  
-**当前分支目标：** 按 `docs/06-validation/design-gap-audit.md` 补 P0 设计，再进入实现/落库
+**最后更新：** 2026-11-15 21:15（Asia/Shanghai）  
+**项目状态：** D-030 搬运优先已立；P0 四份规格初稿已写（学自/搬运/自研分栏）  
+**当前分支目标：** 按闭环推进 P1 教练性规格；实现时继续搬运成熟体系
 
 ## 已完成
 
@@ -17,11 +17,11 @@
 
 ## 进行中
 
-- [ ] P0 设计：学段/科目扩展字段 + 目录骨架（D-029 / U-012）
-- [ ] P0 设计：自动归并算法 v0（D-028 / U-011）
-- [ ] P0 设计：纸质闭环逐步规格 + OCR 人机边界
-- [ ] P1 设计：薄干预/决策权限/验证（教练性）
-- [ ] 其后：精简 Migration / 原型（仍 PLACEHOLDER 直至可执行）
+- [x] D-030 + reuse-and-feedback 原则
+- [x] P0：`subject-and-catalog.md` / `auto-merge-rules-v0.md` / `closed-loop-steps.md` / `ocr-human-boundary.md`
+- [ ] P1：薄干预/决策权限/验证（须标明学自 ITS/间隔复习等）
+- [ ] U-012：数学目录内容从课标/教材树搬运填充
+- [ ] 其后：精简 Migration / 原型（PLACEHOLDER 直至可执行）
 
 ## 当前问题 / 阻塞
 
