@@ -8,7 +8,10 @@
 1. `ExpectedCurrentRevisionID` 不入库，仅为 OCC 写参数（C-06）  
 2. `LearningGoal` 不含 `GoalLevel`（属 §16 业务范围）  
 3. `KnowledgeIssue` 使用 `CurrentRevisionID` + `KnowledgeIssueRevision`  
-4. C-05…C-10 已覆盖（实体或明确“不建表”注释）
+4. C-05…C-10 已覆盖（实体或明确“不建表”注释）  
+5. D-029：补 `SchoolStage` / `SubjectCode` / `KnowledgePoint` 挂载  
+6. D-026：LearningGoal 表 V1 缓建（字典保留供后置）  
+7. D-031：Finding/KI 对齐 KC + Newman `ErrorClass`
 
 逻辑类型：ID, ENUM, STRING, TEXT, INTEGER, DECIMAL, BOOLEAN, DATETIME, DATE, JSON, REFERENCE, HASH, URI。
 
@@ -21,8 +24,11 @@
 | LearningTaskID | ID | REQUIRED | 稳定任务身份 | PK |
 | FamilyID | ID | REQUIRED | 所属家庭 | FK |
 | LearnerFamilyMemberID | ID | REQUIRED | 学习者 | FK |
+| SchoolStage | ENUM | REQUIRED | 学段 PRIMARY/JUNIOR_SECONDARY… | D-029 |
+| SubjectCode | ENUM | REQUIRED | 科目；先 MATH | D-029；可扩展 |
+| GradeCode | STRING | OPTIONAL | 年级细化 | |
 | TaskType | ENUM | REQUIRED | 任务类型 | |
-| TaskStatus | ENUM | REQUIRED | 任务状态 | |
+| TaskStatus | ENUM | REQUIRED | 任务状态 | 对齐 closed-loop-steps |
 | TaskSource | ENUM | REQUIRED | 任务来源 | |
 | Title | STRING | OPTIONAL | 标题 | |
 | Description | TEXT | OPTIONAL | 说明 | |
@@ -73,8 +79,9 @@
 
 ## Question / QuestionVersion / TaskQuestion
 
-**Question：** `QuestionID`, `CreatedAt`  
+**Question：** `QuestionID`, `SubjectCode` (REQUIRED), `CreatedAt`  
 **QuestionVersion：** `QuestionVersionID`, `QuestionID`, `VersionNumber`, `StemContent`(JSON), `StandardAnswer`, `Rubric`, `CreatedAt`（不可变）  
+**QuestionKnowledgeLink（建议）：** `QuestionID`/`QuestionVersionID` + `KnowledgePointID`（Q 矩阵一行；可多 KC）  
 **TaskQuestion：** `TaskQuestionID`, `LearningTaskID`, `QuestionID`, `QuestionVersionID`（与 Question 复合一致）, `SequenceNo`, `CreatedAt`
 
 ## LearningResponse
@@ -119,20 +126,37 @@
 
 **Diagnosis：** DiagnosisID, FamilyID, DiagnosisVersion, DiagnosedAt, InputContextRef, BasisSummary, DiagnosisStatus, CreatedAt（追加新诊断）。  
 **DiagnosisSubject / DiagnosisEvidenceLink：** 主体与证据关联。  
-**Finding：** 不可变；Confidence 可 UNCONFIRMED；CausalNotes 区分共存/因果。  
 **FindingValidity：** 追加有效性。  
 
-### KnowledgeIssue
+### Finding（D-031）
+
+| Field | Type | Required | Description | Constraint |
+|---|---|---|---|---|
+| FindingID | ID | REQUIRED | 不可变判断 | PK |
+| DiagnosisID | ID | REQUIRED | 所属诊断 | FK |
+| KnowledgePointID | ID | CONDITIONAL | 主责 KC | 归并强依赖；缺则 UNCLEAR |
+| ErrorClass | ENUM | CONDITIONAL | Newman 映射类 | 见 auto-merge-rules-v0 |
+| IsPrimaryBlame | BOOLEAN | OPTIONAL | 多 KC 题是否主责 | 默认 true |
+| FindingType | ENUM | REQUIRED | 判断类型 | |
+| Statement | TEXT | REQUIRED | 判断陈述 | |
+| Confidence | ENUM | REQUIRED | 含 UNCONFIRMED | |
+| CausalNotes | JSON | OPTIONAL | 共存/因果 | |
+| CreatedAt | DATETIME | REQUIRED | 创建 | 不可变 |
+
+### KnowledgeIssue（D-031）
 
 | Field | Type | Required | Description | Constraint |
 |---|---|---|---|---|
 | KnowledgeIssueID | ID | REQUIRED | 长期问题 | ≠ 单次 Finding |
 | FamilyID | ID | REQUIRED | 家庭 | |
 | LearnerFamilyMemberID | ID | REQUIRED | 学习者 | |
-| KnowledgePointRef | STRING | CONDITIONAL | 知识点（目录 U-012） | |
+| SubjectCode | ENUM | REQUIRED | 科目 | D-029 |
+| PrimaryKnowledgePointID | ID | CONDITIONAL | 主 KC | 归并主键之一 |
+| IssueKind | ENUM | REQUIRED | CONCEPTUAL/PROCESS/CARELESS/UNCLEAR… | 与 ErrorClass 相容 |
 | Title | STRING | REQUIRED | 短标题 | |
 | IssueStatus | ENUM | REQUIRED | OPEN…CLOSED | |
 | CurrentRevisionID | ID | REQUIRED | 当前修订 | FK → KnowledgeIssueRevision |
+| MergeAlgorithmVersion | STRING | OPTIONAL | 如 ki_merge.kc_newman.v0 | 反馈追溯 |
 | OpenedAt / ResolvedAt | DATETIME | REQ / COND | 开闭时间 | |
 | CreatedAt / UpdatedAt | DATETIME | REQUIRED | 审计 | |
 
@@ -149,10 +173,23 @@
 | CreatedAt | DATETIME | REQUIRED | 创建 | |
 | BasedOnFindingIDs | JSON | OPTIONAL | 参考 Finding | 权威在 Link |
 
+## KnowledgePoint（目录节点，D-029 / U-012）
+
+| Field | Type | Required | Description | Constraint |
+|---|---|---|---|---|
+| KnowledgePointID | ID | REQUIRED | KC 稳定身份 | PK |
+| SubjectCode | ENUM | REQUIRED | 科目 | |
+| SchoolStage | ENUM | OPTIONAL | 学段提示 | |
+| ParentKnowledgePointID | ID | OPTIONAL | 树父节点 | |
+| Code | STRING | REQUIRED | 稳定业务码 | UNIQUE(subject, code) |
+| Title | STRING | REQUIRED | 展示名 | |
+| CurriculumRef | STRING | OPTIONAL | 课标/教材映射 | 搬运来源 |
+| CreatedAt | DATETIME | REQUIRED | 创建 | |
+
 ## LearningState
 
-四类头表：`KnowledgeState` / `ThinkingState` / `LearningHabitState` / `GoalProgressState`  
-各含：主体唯一键（child+point/capability/habit/goal）、`CurrentRevisionID`、`UpdatedAt`。
+**V1 只落** `KnowledgeState`（D-025）。Thinking/Habit/GoalProgress 字典保留、表缓建。  
+KnowledgeState：`LearnerFamilyMemberID` + `KnowledgePointID` 唯一；`CurrentRevisionID`、`UpdatedAt`。
 
 ### StateRevision（C-04）
 

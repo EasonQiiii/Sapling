@@ -19,8 +19,8 @@ LearningGoal、Policy 全量、Intervention Stage 树、Thinking/Habit/GoalProgr
 
 | 文件 | 内容 | V1 状态 |
 |---|---|---|
-| 001_platform_identity.sql | platform + identity | 计划内 · PLACEHOLDER |
-| 002_learning_assessment.sql | task + question* + response（**无 goal**） | 计划内 · PLACEHOLDER |
+| 001_platform_identity.sql | platform + identity | 计划内 · **draft SQL written** · 空库 NOT_RUN |
+| 002_learning_assessment.sql | catalog + task/question/response（**无 goal**） | 计划内 · **draft SQL written** · 空库 NOT_RUN |
 | 003_evidence_event.sql | evidence + event + outbox | 计划内 · PLACEHOLDER |
 | 004_diagnosis_state.sql | diagnosis + finding + KI + knowledge_state only | 计划内 · PLACEHOLDER |
 | 005_learning_intervention.sql | 全 Stage 树 | **DEFERRED** |

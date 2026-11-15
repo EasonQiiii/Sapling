@@ -33,6 +33,7 @@
 | [cross-module-collaboration.md](./01-architecture/cross-module-collaboration.md) | 完整 |
 | [architecture-decisions.md](./01-architecture/architecture-decisions.md) | 完整（索引） |
 | [reuse-and-feedback.md](./01-architecture/reuse-and-feedback.md) | **D-030 搬运/反馈** |
+| [adapter-contracts.md](./01-architecture/adapter-contracts.md) | **适配层契约** |
 
 图：[`diagrams/system-architecture.mmd`](./diagrams/system-architecture.mmd)
 
@@ -45,7 +46,11 @@
 | [ocr-and-correction.md](./02-business/ocr-and-correction.md) | 完整；选型 U-001 |
 | [ocr-human-boundary.md](./02-business/ocr-human-boundary.md) | **P0 人机边界** |
 | [closed-loop-steps.md](./02-business/closed-loop-steps.md) | **P0 逐步规格** |
-| [auto-merge-rules-v0.md](./02-business/auto-merge-rules-v0.md) | **P0 自动归并 v0** |
+| [auto-merge-rules-v0.md](./02-business/auto-merge-rules-v0.md) | **D-031 推荐解法** |
+| [thin-intervention-coach.md](./02-business/thin-intervention-coach.md) | **P1 教练** |
+| [decision-authority-closed-loop.md](./02-business/decision-authority-closed-loop.md) | **P1 / D-032** |
+| [verification-and-mastery.md](./02-business/verification-and-mastery.md) | **P1 验证** |
+| [thinking-signals-v1.md](./02-business/thinking-signals-v1.md) | **P1 思维弱信号** |
 | [diagnosis-process.md](./02-business/diagnosis-process.md) | 完整；自动归并 D-028；算法 U-011 |
 | [learning-intervention.md](./02-business/learning-intervention.md) | 完整；深度 U-013 |
 | [learning-verification.md](./02-business/learning-verification.md) | 完整 |
@@ -64,6 +69,7 @@
 | [lifecycle-definitions.md](./03-domain-model/lifecycle-definitions.md) | 完整 |
 | [logical-data-model.md](./03-domain-model/logical-data-model.md) | 完整 |
 | [subject-and-catalog.md](./03-domain-model/subject-and-catalog.md) | **P0 学段科目目录** |
+| [math-knowledge-catalog-v0.md](./03-domain-model/math-knowledge-catalog-v0.md) | **数学 KC 骨架** |
 
 图：[`domain-relationships.mmd`](./diagrams/domain-relationships.mmd)、[`erd-overview.mmd`](./diagrams/erd-overview.mmd)
 
