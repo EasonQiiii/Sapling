@@ -15,7 +15,7 @@
 | U-009 | GuidanceStrategy Schema | JSONB schema 未定 | Methodology 实现 | 先枚举强度与工具，再锁 schema |
 | U-010 | 部分 JSONB Schema | StateContent 等 | 状态内容无法校验 | 按状态类型逐步冻结 |
 | U-011 | Finding→KnowledgeIssue 归并**算法** | 是否自动已由 D-028 确认；置信度、合并/拆分、新建 vs 挂接策略未规格化 | 自动归并质量 | 写规则 v0 + 评测集；不改回人工闸门 |
-| U-012 | 知识目录 ontology | knowledge_point / capability 目录缺失 | State/KI 无处附着 | 先做四～六年级数学子集 |
+| U-012 | 知识目录 ontology | knowledge_point / capability 目录缺失；需支持中小学多科目（D-029） | State/KI 无处附着 | v0 先数学；目录结构预留学段+科目扩展 |
 | U-013 | Intervention V1 深度 | 完整 Stage 图是否进 V1 | 实现过重 | 建议 MVP：Intervention+GoalRevision+Task 链接 |
 | U-014 | 隐私删除治理 | 受控删除 vs append-only Audit | 合规 | 完整治理设计后再实现 |
 | U-015 | G-01…G-24 SQL 整合 | 物理冲突清单未在可执行 Migration 中收口 | 无法空库验收 | 见物理模型与 migrations README |

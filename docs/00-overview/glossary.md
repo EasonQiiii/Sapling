@@ -21,3 +21,5 @@
 | LDSM | Learning Data and State Management |
 | ExecutionRequestID | 请求幂等身份（C-03 / D-022） |
 | RECONSTRUCTED | 非原文恢复、按基线重建的内容标记 |
+| 学段范围 | 中小学（D-029）；非仅小学四至六年级 |
+| 学科范围 | 全科目标；落地先做数学（D-029） |
