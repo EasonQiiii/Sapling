@@ -19,6 +19,7 @@
 
 - [x] D-030 + reuse-and-feedback 原则
 - [x] P0：`subject-and-catalog.md` / `auto-merge-rules-v0.md` / `closed-loop-steps.md` / `ocr-human-boundary.md`
+- [x] D-031：KI 自动归并默认解法（KC + Newman + 规则落库）
 - [ ] P1：薄干预/决策权限/验证（须标明学自 ITS/间隔复习等）
 - [ ] U-012：数学目录内容从课标/教材树搬运填充
 - [ ] 其后：精简 Migration / 原型（PLACEHOLDER 直至可执行）

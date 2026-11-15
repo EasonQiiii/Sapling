@@ -36,6 +36,7 @@
 | D-028 | Finding→KnowledgeIssue 自动归并 | Accepted | 2026-11-15 | 不依赖人工点选归并；规则算法仍可迭代 |
 | D-029 | 产品范围为中小学全科，先做数学 | Accepted | 2026-11-15 | 纠正基线「仅小学四至六年级」的表述 |
 | D-030 | 搬运成熟体系；自研必须带反馈 | Accepted | 2026-11-15 | 不做无来源发明；自研轮子可观测可迭代 |
+| D-031 | KI 自动归并采用 KC + Newman 规则 | Accepted | 2026-11-15 | 默认解法见 auto-merge-rules-v0；算法 ki_merge.kc_newman.v0 |
 
 ## 决策正文
 
@@ -118,6 +119,12 @@
 
 **后果：** P0/P1 设计稿无「学自」栏视为不合格；实现以适配层接入第三方/标准，避免锁死单一自研算法。  
 **细则：** `docs/01-architecture/reuse-and-feedback.md`。
+
+### D-031 — KnowledgeIssue 自动归并默认解法
+
+**上下文：** 产品要求自动归并（D-028）但未自带算法；应由设计侧调研成熟体系后给出可执行默认解法。  
+**决策：** 采用 **KC（Knowledge Component）主键 + Newman 错因分层 + 确定性规则挂接/新建**；可选 LLM 仅打标候选。算法版本 `ki_merge.kc_newman.v0`。粗心不与概念类强并；多技能题只归并主责 KC（Conjunctive 归咎思想）。  
+**后果：** 实现与评测以 [auto-merge-rules-v0.md](../02-business/auto-merge-rules-v0.md) 为准；迭代靠延迟验证等反馈，不改回人工闸门。
 
 ---
 
