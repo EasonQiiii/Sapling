@@ -95,6 +95,7 @@
 | [migration-validation.md](./06-validation/migration-validation.md) | NOT_RUN |
 | [end-to-end-validation.md](./06-validation/end-to-end-validation.md) | 设计层 PASS；SQL NOT_RUN |
 | [privacy-security-validation.md](./06-validation/privacy-security-validation.md) | NOT_RUN |
+| [design-gap-audit.md](./06-validation/design-gap-audit.md) | **对照目的/D-025…D-029 的设计缺口** |
 
 ## 07 Delivery
 
