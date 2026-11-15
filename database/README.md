@@ -8,33 +8,38 @@
 | 物理设计 | `docs/04-physical-model/` | 表/约束设计说明 |
 | 可执行 SQL | `database/migrations/` | **唯一**结构执行来源 |
 
-**禁止**把第30章各批聊天输出直接拼成最终 Migration。
+## V1 范围（D-025…D-032）
 
-## V1 范围（D-025…D-028）
+精简闭环 + Workflow 真表 + Finding→KI 自动归并（KC+Newman）+ 练习建议默认自动。  
+LearningGoal、Policy 全量、Intervention Stage、Thinking/Habit/GoalProgress：**DEFERRED**。
 
-精简闭环 + Workflow 真表 + Finding→KI **自动**归并。  
-LearningGoal、Policy 全量、Intervention Stage 树、Thinking/Habit/GoalProgress：**DEFERRED**。
+## Migrations
 
-## Migrations（计划）
-
-| 文件 | 内容 | V1 状态 |
+| 文件 | 内容 | 空库结果 |
 |---|---|---|
-| 001_platform_identity.sql | platform + identity | 计划内 · **draft SQL written** · 空库 NOT_RUN |
-| 002_learning_assessment.sql | catalog + task/question/response（**无 goal**） | 计划内 · **draft SQL written** · 空库 NOT_RUN |
-| 003_evidence_event.sql | evidence + event + outbox | 计划内 · PLACEHOLDER |
-| 004_diagnosis_state.sql | diagnosis + finding + KI + knowledge_state only | 计划内 · PLACEHOLDER |
-| 005_learning_intervention.sql | 全 Stage 树 | **DEFERRED** |
-| 006_policy_methodology.sql | policy + methodology 全量 | **DEFERRED** |
-| 007_decision_workflow.sql | 薄 decision + workflow 真表 + 薄 intervention | 计划内 · PLACEHOLDER |
-| 008_ai_execution_audit.sql | ai_execution + audit 最小 | 计划内 · PLACEHOLDER |
-| 009_cross_schema_constraints.sql | 跨 schema（V1 子集） | 计划内 · PLACEHOLDER |
+| 001_platform_identity.sql | identity | PASS（2026-11-15） |
+| 002_learning_assessment.sql | catalog + task/question/response | PASS |
+| 003_evidence_event.sql | evidence + event + outbox | PASS |
+| 004_diagnosis_state.sql | diagnosis + KI + knowledge_state | PASS |
+| 005_learning_intervention.sql | DEFERRED no-op | PASS（有意空） |
+| 006_policy_methodology.sql | DEFERRED no-op | PASS（有意空） |
+| 007_decision_workflow.sql | decision + workflow + 薄 intervention | PASS |
+| 008_ai_execution_audit.sql | ai + audit 最小 | PASS |
+| 009_cross_schema_constraints.sql | 索引子集 | PASS |
 
-所有计划内文件当前仍为占位；**不可用于生产**。空库执行：`NOT_RUN`。
-
-## Tests
-
-结果写入 `docs/06-validation/`，仅 `PASS` / `FAIL` / `NOT_RUN`（D-021）。
+详情：[docs/06-validation/migration-validation.md](../docs/06-validation/migration-validation.md)
 
 ## Seeds
 
-`seeds/development-seed.sql` — 待可执行 Migration 后补充（含知识目录 v0 种子，关 U-012）。
+`seeds/math_knowledge_points_v0.sql` — 42 个 MATH 知识点；空库执行 **PASS**。
+
+## 本地重跑
+
+```bash
+# Postgres 16 + role/db flos / family_learning_os
+export PGPASSWORD=flos
+for f in database/migrations/00{1,2,3,4,5,6,7,8,9}_*.sql; do
+  psql -h 127.0.0.1 -U flos -d family_learning_os -v ON_ERROR_STOP=1 -f "$f"
+done
+psql -h 127.0.0.1 -U flos -d family_learning_os -v ON_ERROR_STOP=1 -f database/seeds/math_knowledge_points_v0.sql
+```

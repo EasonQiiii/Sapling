@@ -1,9 +1,7 @@
 -- 005_learning_intervention.sql
--- Status: PLACEHOLDER — not executable final DDL
--- Do not treat chat batch SQL as this file's content (D-020).
--- Source of design intent: docs/04-physical-model/ + docs/00-overview/recovery-baseline.md
--- Validation: NOT_RUN
+-- DEFERRED (D-025): full Stage tree not in V1.
+-- Thin intervention tables live in 007_decision_workflow.sql instead.
 
 BEGIN;
--- TODO: integrated CREATE SCHEMA / CREATE TABLE / constraints after G-list closure
+-- no-op for V1
 COMMIT;
