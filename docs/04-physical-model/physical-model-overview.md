@@ -33,7 +33,8 @@
 
 ## 冲突清单 G-01…G-24
 
-见 Recovery Baseline §26.4 与 [unresolved-decisions U-015](../05-decisions/unresolved-decisions.md)。  
+完整表：[global-conflicts.md](./global-conflicts.md)。  
+未决跟踪：[unresolved-decisions U-015](../05-decisions/unresolved-decisions.md)。  
 收口前 Migration 不得宣称完成。
 
 ## 子文档

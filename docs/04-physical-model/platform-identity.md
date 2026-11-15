@@ -1,16 +1,33 @@
-# Physical model: platform-identity
+# Physical model: Platform / Identity
 
-**Status:** Design notes recovered from Recovery Baseline; **not** executable SQL.  
-**Executable source:** `database/migrations/` (pending integration).  
-**Rule (D-020):** Do not paste chat batch DDL here as final truth.
+**Migration target:** `001_platform_identity.sql`  
+**Status:** Design recovered from baseline Ch21 / batch 15. Executable SQL: PLACEHOLDER.
 
-## Tables (from baseline)
+## Tables
 
-See Recovery Baseline §§21–27 / §30 and [physical-model-overview.md](./physical-model-overview.md).
+| Table | Role |
+|---|---|
+| `family` | 家庭租户 |
+| `person` | 自然人 |
+| `account` | 系统账号 |
+| `account_person_link` | 账号↔人 |
+| `family_member` | 家庭成员关系 |
+| `child_autonomy_profile` | 孩子自主权配置头 |
+| `autonomy_profile_revision` | 自主权不可变修订 |
+| `authorization` | 授权记录 |
+| `authorization_reference` | 授权依据引用 |
+| `on_behalf_of` | 代操作关系 |
 
-## Open items
+## Key rules
 
-- Field-level DDL may be incomplete or RECONSTRUCTED.
-- Apply G-list fixes before claiming migration readiness.
-- Validation: `NOT_RUN`.
+- UUID 主键；时间 `TIMESTAMPTZ`
+- `family_member` 复合唯一：`UNIQUE(id, family_id, member_role)`（G-01）
+- 家庭数据隔离以 `family_id` 为租户边界
+- 授权与审计最终需真 FK 对齐（G-19 / batch 23）
+- 隐私删除走受控治理，不能普通 DELETE 了事（U-014）
 
+## Open
+
+- 完整列级 DDL 待整合进 Migration
+- 角色权限防绕过触发器（U-017）
+- Validation: `NOT_RUN`

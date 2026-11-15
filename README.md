@@ -8,6 +8,7 @@
 
 | 文件 | 用途 |
 |---|---|
+| [docs/DOC_MAP.md](docs/DOC_MAP.md) | **整图导航**（完成度图例 + 阅读路径） |
 | [PROJECT_STATUS.md](PROJECT_STATUS.md) | 当前进度、阻塞、下一步 |
 | [docs/00-overview/recovery-baseline.md](docs/00-overview/recovery-baseline.md) | 历史设计恢复入口 |
 | [docs/05-decisions/decision-register.md](docs/05-decisions/decision-register.md) | 已确认决策（D-xxx） |

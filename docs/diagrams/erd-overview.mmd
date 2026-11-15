@@ -1,6 +1,61 @@
-%% PLACEHOLDER — Chapter 16 subgraphs A–J Mermaid not recovered (U-016)
-%% Rebuild from entity-catalog + relationship-matrix; mark RECONSTRUCTED.
+%% RECONSTRUCTED overview from relationship-matrix / entity-catalog
+%% Full Chapter 16 subgraphs A–J original Mermaid not recovered (U-016)
+
 flowchart TB
-  subgraph note [ERD overview pending reconstruction]
-    X[See docs/03-domain-model/relationship-matrix.md]
+  subgraph identity [Platform / Identity]
+    Family --> FamilyMember
+    Person --> FamilyMember
+    Account --> AccountPersonLink
+    Person --> AccountPersonLink
   end
+
+  subgraph learning [Learning]
+    LearningGoal --> LearningGoalRevision
+    LearningGoal --- GoalTaskLink
+    GoalTaskLink --- LearningTask
+    LearningTask --> WorkflowRun
+    LearningIntervention --- InterventionTask
+    InterventionTask --- LearningTask
+  end
+
+  subgraph assessment [Assessment]
+    Question --> QuestionVersion
+    LearningTask --> TaskQuestion
+    TaskQuestion --> QuestionVersion
+    TaskQuestion --> LearningResponse
+  end
+
+  subgraph evidence [Evidence / Event]
+    LearningResponse --- ResponseEvidenceLink
+    ResponseEvidenceLink --- Evidence
+    Evidence --> EvidenceRelation
+    LearningEvent --> Outbox[TransactionalOutbox]
+  end
+
+  subgraph diagnosis [Diagnosis]
+    Diagnosis --> Finding
+    Finding --> FindingValidity
+    Finding --- FindingIssueLink
+    FindingIssueLink --- KnowledgeIssue
+    KnowledgeIssue --> KnowledgeIssueRevision
+  end
+
+  subgraph state [Learning State]
+    KnowledgeState --> StateRevision
+    ThinkingState --> StateRevision
+    LearningHabitState --> StateRevision
+    GoalProgressState --> StateRevision
+    StateRevision --> StateRevisionReference
+  end
+
+  subgraph decision [Decision]
+    DecisionRecord --> DecisionCandidate
+    DecisionRecord --> DecisionCandidateSelection
+    DecisionCandidateSelection --> DecisionApproval
+    DecisionRecord --> DecisionStatusHistory
+  end
+
+  Finding -.-> DecisionRecord
+  DecisionRecord -.-> LearningIntervention
+  StateRevisionReference -.-> Finding
+  StateRevisionReference -.-> Evidence

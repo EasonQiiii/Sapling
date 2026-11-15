@@ -12,8 +12,11 @@
 - 逻辑模型、架构、业务流程等首批拆分文档。
 - `docs/03-domain-model/entity-dictionary.md`：Chapter 15 字段字典重建草稿（RECONSTRUCTED，已应用 C-01…C-10 修复）。
 - `database/migrations/` 与 `database/tests/` 占位说明（状态均为待整合 / `NOT_RUN`）。
+- `docs/DOC_MAP.md`：文档整图导航（完成度、阅读路径、三层改表规则）。
+- 补全 `docs/04-physical-model/` 各域说明与 `global-conflicts.md`（G-01…G-24）。
+- `docs/diagrams/erd-overview.mmd`：RECONSTRUCTED 总览图。
 
 ### Notes
 
-- 尚未包含可执行的完整 PostgreSQL Migration 正文。
-- 未执行数据库验收；无 PASS 测试结果。
+- 文档地图（设计层）已闭合；可执行 Migration 仍未整合。
+- 未执行数据库验收；无工程 PASS 测试结果。

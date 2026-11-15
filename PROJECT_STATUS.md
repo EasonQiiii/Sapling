@@ -1,8 +1,8 @@
 # PROJECT_STATUS
 
-**最后更新：** 2026-11-15 20:14（Asia/Shanghai）  
-**项目状态：** 暂停推进后的正式文档结构初始化；设计恢复基线已入库，工程交付未完成  
-**当前分支目标：** 建立正式目录、迁入 Recovery Baseline、登记决策与未决事项
+**最后更新：** 2026-11-15 20:21（Asia/Shanghai）  
+**项目状态：** 文档地图已闭合（设计层）；工程 Migration 仍为占位  
+**当前分支目标：** 补全 DOC_MAP 与物理模型节点，使接手路径完整
 
 ## 已完成
 
@@ -12,11 +12,12 @@
 - [x] 物理模型主体设计与 G-01…G-24 冲突清单（设计层）
 - [x] 正式仓库目录结构（docs / database / deployment / delivery）
 - [x] 重建 Chapter 15 字段字典草稿（`entity-dictionary.md`，标记 RECONSTRUCTED）
+- [x] `docs/DOC_MAP.md` 整图导航 + 各物理模型节点补全
+- [x] `docs/04-physical-model/global-conflicts.md`（G-01…G-24 地图）
 
 ## 进行中
 
-- [ ] 将 Recovery Baseline 内容拆分进各领域文档（首批已拆核心文件，其余为入口 + 摘要）
-- [ ] 按三层模型整合 PostgreSQL Migration（尚未有可执行完整 SQL）
+- [ ] 按三层模型整合可执行 PostgreSQL Migration（当前仍 PLACEHOLDER）
 
 ## 当前问题 / 阻塞
 
@@ -38,9 +39,11 @@
 
 | 文档 | 路径 |
 |---|---|
+| **整图导航** | `docs/DOC_MAP.md` |
 | 恢复入口 | `docs/00-overview/recovery-baseline.md` |
 | 决策登记 | `docs/05-decisions/decision-register.md` |
 | 未决事项 | `docs/05-decisions/unresolved-decisions.md` |
 | 逻辑模型 | `docs/03-domain-model/logical-data-model.md` |
 | 字段字典 | `docs/03-domain-model/entity-dictionary.md` |
+| G 清单 | `docs/04-physical-model/global-conflicts.md` |
 | 已知限制 | `docs/07-delivery/known-limitations.md` |
