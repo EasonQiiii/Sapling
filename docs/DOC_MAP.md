@@ -101,6 +101,7 @@
 | 文件 | 状态 |
 |---|---|
 | [v1-freeze-report.md](./07-delivery/v1-freeze-report.md) | 未冻结清单 |
+| [v1-slice-proposal.md](./07-delivery/v1-slice-proposal.md) | **PROPOSAL 待审**（必建/缓建表） |
 | [known-limitations.md](./07-delivery/known-limitations.md) | 完整 |
 | [v2-backlog.md](./07-delivery/v2-backlog.md) | 完整 |
 
