@@ -1,0 +1,13 @@
+%% RECONSTRUCTED summary — full ERD A–J Mermaid not recovered (U-016)
+flowchart LR
+  LG[LearningGoal] --- GTL[GoalTaskLink]
+  GTL --- LT[LearningTask]
+  LT --> WR[WorkflowRun]
+  LT --> TQ[TaskQuestion]
+  TQ --> QV[QuestionVersion]
+  QV --> Q[Question]
+  TQ --> LR[LearningResponse]
+  LR --- E[Evidence]
+  D[Diagnosis] --> F[Finding]
+  F --- KI[KnowledgeIssue]
+  LT -.-> LI[LearningIntervention]
