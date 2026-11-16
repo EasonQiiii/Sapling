@@ -1,6 +1,8 @@
 -- math_knowledge_points_v0.sql
+-- INVALID DRAFT (D-033): NOT the standard knowledge catalog.
+-- Self-authored hang-points for empty-DB smoke only. Do not treat as curriculum authority.
 -- Requires: 002 (catalog.knowledge_point)
--- Source: docs/03-domain-model/math-knowledge-catalog-v0.md
+-- See: docs/03-domain-model/math-knowledge-catalog-v0.md
 
 BEGIN;
 

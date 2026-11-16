@@ -31,7 +31,7 @@ LearningGoal、Policy 全量、Intervention Stage、Thinking/Habit/GoalProgress�
 
 ## Seeds
 
-`seeds/math_knowledge_points_v0.sql` — 42 个 MATH 知识点；空库执行 **PASS**。
+`seeds/math_knowledge_points_v0.sql` — **INVALID DRAFT（D-033）**：自编挂点，仅空库 smoke **PASS**；非正式标准知识体系。权威来源见决策 D-033 / `docs/03-domain-model/subject-and-catalog.md`。
 
 ## 本地重跑
 

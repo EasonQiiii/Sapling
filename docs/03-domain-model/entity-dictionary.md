@@ -11,7 +11,8 @@
 4. C-05…C-10 已覆盖（实体或明确“不建表”注释）  
 5. D-029：补 `SchoolStage` / `SubjectCode` / `KnowledgePoint` 挂载  
 6. D-026：LearningGoal 表 V1 缓建（字典保留供后置）  
-7. D-031：Finding/KI 对齐 KC + Newman `ErrorClass`
+7. D-031：Finding/KI 对齐 KC + Newman `ErrorClass`  
+8. D-033：KnowledgePoint 属**标准知识体系**；`CurriculumRef` 锚定课标；个人掌握另表；依赖边候选/发布另模型
 
 逻辑类型：ID, ENUM, STRING, TEXT, INTEGER, DECIMAL, BOOLEAN, DATETIME, DATE, JSON, REFERENCE, HASH, URI。
 
@@ -173,7 +174,9 @@
 | CreatedAt | DATETIME | REQUIRED | 创建 | |
 | BasedOnFindingIDs | JSON | OPTIONAL | 参考 Finding | 权威在 Link |
 
-## KnowledgePoint（目录节点，D-029 / U-012）
+## KnowledgePoint（标准知识体系节点，D-029 / D-033；首版内容 U-012）
+
+公共基准节点；**不是**个人知识地图。教材年级/章节属映射扩展，不替代 `CurriculumRef` 课标锚。
 
 | Field | Type | Required | Description | Constraint |
 |---|---|---|---|---|
@@ -183,7 +186,11 @@
 | ParentKnowledgePointID | ID | OPTIONAL | 树父节点 | |
 | Code | STRING | REQUIRED | 稳定业务码 | UNIQUE(subject, code) |
 | Title | STRING | REQUIRED | 展示名 | |
-| CurriculumRef | STRING | OPTIONAL | 课标/教材映射 | 搬运来源 |
+| CurriculumRef | STRING | REQUIRED* | 课标条目锚（D-033） | *发布版必填；草稿可空但不得当权威 |
+| CatalogEdition | STRING | REQUIRED | 标准目录发布版本 | 与依赖边版本对齐 |
+
+**KnowledgeDependency（候选/发布，D-033）：** `FromKnowledgePointID`, `ToKnowledgePointID`, `RelationStatus` (CANDIDATE|PUBLISHED|REJECTED), `EvidenceRef`, `SourceType`, `CatalogEdition`, 变更历史可回滚。  
+**TextbookMapping（教学映射）：** 教材版别/册/章/节/年级 → KnowledgePointID；来源可含「中小学知识平台」下载教材。
 | CreatedAt | DATETIME | REQUIRED | 创建 | |
 
 ## LearningState

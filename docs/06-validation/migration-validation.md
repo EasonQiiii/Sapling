@@ -15,8 +15,10 @@
 | 007_decision_workflow | 执行成功 | **PASS** |
 | 008_ai_execution_audit | 执行成功 | **PASS** |
 | 009_cross_schema_constraints | 执行成功 | **PASS** |
-| seeds/math_knowledge_points_v0 | 42 knowledge points | **PASS** |
+| seeds/math_knowledge_points_v0 | 42 rows inserted | **PASS（结构 smoke）** |
+
+> **D-033：** 该种子为 **INVALID DRAFT**，仅证明表可插入；**不是**标准知识体系权威内容。业务语义验收不得引用此种子。
 
 **未跑：** FK 业务场景测试、并发、E2E 业务数据、隐私测试 → 仍见各专项文件 `NOT_RUN`。
 
-规则（D-021）：仅真实执行可标 PASS。本文件仅覆盖「空库结构 Migration + 种子」。
+规则（D-021）：仅真实执行可标 PASS。本文件仅覆盖「空库结构 Migration + 种子插入」。

@@ -6,6 +6,11 @@
 
 ### Added
 
+- **D-033**：标准知识体系以课标 2022 为权威基准；教材做映射；依赖关系候选制；标准体系与个人知识地图分离（产品 2026-11-13 方案 C，2026-11-16 落档）。
+- 自编数学 42 点种子与 catalog v0 标为 **INVALID DRAFT**（非权威）。
+
+### Added
+
 - 正式项目目录结构：`docs/`、`database/`、`deployment/`、`delivery/`。
 - `docs/00-overview/recovery-baseline.md`：Family Learning OS Recovery Baseline 1.0 入库。
 - `PROJECT_STATUS.md`、决策登记与未决事项文档。
@@ -24,10 +29,9 @@
 - D-031 KI 归并解法（KC+Newman）；D-032 练习建议默认自动。
 - P1 教练/权限/验证规格；适配层契约；数学 KC 骨架。
 - Migration `001`–`009` 可执行（005/006 DEFERRED no-op）；空库执行 **PASS**（2026-11-15）。
-- 数学知识点种子 42 条 **PASS**。
+- Migration 空库结构 PASS；种子仅结构 smoke，**非**课标权威内容（见 D-033）。
 - D-031 KI 归并；D-032 练习自动；P1 教练规格与适配契约。
 
 ### Notes
 
-- 文档地图（设计层）已闭合；可执行 Migration 仍未整合。
-- 未执行数据库验收；无工程 PASS 测试结果。
+- 标准知识体系首版内容仍属 U-012；不得把 INVALID 种子当业务真相。

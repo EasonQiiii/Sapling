@@ -1,23 +1,22 @@
 # PROJECT_STATUS
 
-**最后更新：** 2026-11-15 21:35（Asia/Shanghai）  
-**项目状态：** Plan 剩余项已执行——V1 Migration 空库 PASS；数学种子 42 点 PASS  
+**最后更新：** 2026-11-16 08:30（Asia/Shanghai）  
+**项目状态：** D-033 落档（课标基准标准知识体系）；自编 42 点种子标 INVALID  
 **当前分支：** `cursor/family-learning-os-docs-structure-8c05`
 
 ## 已完成
 
-- [x] 文档地图、Recovery Baseline、D-001…D-032
+- [x] 文档地图、Recovery Baseline、D-001…D-033
 - [x] P0/P1 闭环设计规格 + 适配层契约 + KI 归并解法（D-031）
-- [x] 数学目录填充 + `database/seeds/math_knowledge_points_v0.sql`
-- [x] Migration 001–009（005/006 DEFERRED no-op）空库执行 **PASS**
-- [x] `docs/06-validation/migration-validation.md` 记录结果
+- [x] Migration 001–009 空库结构 **PASS**（结构 smoke；**不含**权威目录）
+- [x] D-033：标准知识体系来源与分层（2026-11-13 方案 C）正式落档；草稿目录标 INVALID
 
-## 下一步（未自动开干，等你说做）
+## 下一步（决策协作：对策+证据 → 你抉择 → 再动手）
 
-1. FK/约束/并发/E2E 业务 SQL 测试（现仍 NOT_RUN）  
-2. OCR 适配层实现与引擎选型评测（U-001）  
-3. 归并评测样例集（U-011）  
-4. 应用层原型（诊断/归并/薄干预服务）
+1. **U-012：** 按 D-033 产出数学标准目录首版发布方案（课标结构化 + 教材映射流程）— 先交对策再执行  
+2. FK/E2E 业务 SQL 测试  
+3. OCR 选型评测（U-001）  
+4. 归并评测样例集（U-011）
 
 ## 关键文档
 
