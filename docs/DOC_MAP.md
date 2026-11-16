@@ -70,7 +70,8 @@
 | [logical-data-model.md](./03-domain-model/logical-data-model.md) | 完整 |
 | [subject-and-catalog.md](./03-domain-model/subject-and-catalog.md) | **P0 学段科目目录** |
 | [math-knowledge-catalog-v0.md](./03-domain-model/math-knowledge-catalog-v0.md) | 数学目录草稿说明（**INVALID**；权威见 D-033） |
-| [subject-and-catalog.md](./03-domain-model/subject-and-catalog.md) | 学段/科目/标准体系与个人地图（D-033） |
+| [subject-and-catalog.md](./03-domain-model/subject-and-catalog.md) | 学段/科目/标准体系与个人地图（D-033/D-034） |
+| [math-std-v1-landing-plan.md](./07-delivery/math-std-v1-landing-plan.md) | **math.std.v1 落地计划**（暂不入库） |
 
 图：[`domain-relationships.mmd`](./diagrams/domain-relationships.mmd)、[`erd-overview.mmd`](./diagrams/erd-overview.mmd)
 
