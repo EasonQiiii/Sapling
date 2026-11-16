@@ -1,0 +1,11 @@
+flowchart LR
+  Photo[Original photo Evidence] --> OCR[OCR candidate Evidence]
+  OCR --> Corr[Corrected Evidence]
+  Corr --> Resp[Confirmed LearningResponse]
+  Resp --> Diag[Diagnosis]
+  Diag --> Finding
+  Finding --> KI[KnowledgeIssue]
+  Finding --> Dec[DecisionRecord]
+  Dec --> Int[LearningIntervention]
+  Int --> Verify[New LearningResponse verification]
+  Verify --> State[StateRevision + References]

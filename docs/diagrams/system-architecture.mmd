@@ -1,0 +1,15 @@
+flowchart TD
+    A[Decision Engine] --> B[Workflow Engine]
+    B --> C[Methodology Engine]
+    B --> D[Diagnosis Capability]
+    A --> E[Policy Engine]
+    B --> E
+    F[Learning Domain] --> B
+    D --> F
+    A --> F
+    A --> G[LDSM]
+    B --> G
+    C --> G
+    D --> G
+    E --> G
+    F --> G

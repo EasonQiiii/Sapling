@@ -1,0 +1,4 @@
+-- foreign-key-tests.sql
+-- Status: PLACEHOLDER
+-- Result: NOT_RUN
+-- Record outcomes in docs/06-validation/ (PASS | FAIL | NOT_RUN only)
