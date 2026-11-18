@@ -87,6 +87,14 @@ def check_shape(label, obj, errors, item_id):
 
 
 def main():
+    argv = sys.argv[1:]
+    # Optional: only items up to this id number are expected to have answers filled.
+    # While a fill campaign is in progress, pass the highest completed number
+    # (e.g. `validate_g5v1.py 67`) so pending items do not trip check 6b.
+    filled_through = None
+    if argv and argv[0].isdigit():
+        filled_through = int(argv[0])
+
     with ITEMS.open(encoding="utf-8") as f:
         data = yaml.safe_load(f)
     items = data["items"]
@@ -130,6 +138,20 @@ def main():
         # 6: figure / answer shape
         check_shape("figure", it.get("figure"), errors, iid)
         check_shape("answer", it.get("answer"), errors, iid)
+
+        # 6a: when both figure and answer are structured, their type must match.
+        fig, ans = it.get("figure"), it.get("answer")
+        if isinstance(fig, dict) and isinstance(ans, dict):
+            ft, at = fig.get("type"), ans.get("type")
+            if ft is not None and at is not None and ft != at:
+                errors.append(f"{iid}: figure.type={ft!r} != answer.type={at!r}")
+
+        # 6b: answer null => answer_note must be non-empty (for filled items only
+        # while the fill campaign is in progress; unconditionally without the arg).
+        num = int(str(iid).split("-")[1])
+        if filled_through is None or num <= filled_through:
+            if ans is None and not (it.get("answer_note") or "").strip():
+                errors.append(f"{iid}: answer is null but answer_note is empty")
 
     # 7: textbook order
     unit_order = []
