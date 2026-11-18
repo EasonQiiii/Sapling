@@ -5225,6 +5225,8 @@ items:
   kp_main: B1-02
   kp_other: []
   thinking: 按步骤做
+  answer: 摆 1 个用 5 根，2 个用 10 根，3 个用 15 根，x 个用 5x 根。表：1→5 根、2→10 根、3→15 根、x→5x 根。
+  answer_note: 结论题（填表并归纳），题干数据完整。依据：每个五边形用 5 根小棒，摆几个就用几个 5 根，1×5=5、2×5=10、3×5=15；摆 x 个就需要 5×x 根，省略乘号写成 5x 根（数与字母相乘省略乘号，数写在字母前面）。
 - id: G5V1-275
   source:
     origin: textbook
@@ -5237,6 +5239,8 @@ items:
   kp_other:
   - B1-02
   thinking: 先选方法或先把情境翻译成数学关系
+  answer: y = 5x。x 可以是正整数 1、2、3……（摆的五边形个数），y 是 5 的倍数：5、10、15……。
+  answer_note: 关系式题，题干数据完整。依据：小棒根数 y 随五边形个数 x 变化，每个五边形 5 根，所以 y=5x；x 表示摆的个数，只能是 1、2、3……这样的正整数（不能是 0 或小数），对应的 y 是 5 的倍数。完成标准：能说出 x、y 的取值范围并说明理由。
 - id: G5V1-276
   source:
     origin: textbook
@@ -5249,6 +5253,8 @@ items:
   kp_other:
   - B1-04
   thinking: 按步骤做
+  answer: 当 x=100 时，y=5×100=500 根；当 y=150 时，150÷5=30，摆了 30 个五边形。
+  answer_note: 代入求值题，题干数据完整。依据：把 x=100 代入 y=5x 得 500 根；反过来已知 y=150 求摆几个，用 150÷5=30 个（也可以想几个 5 是 150）。
 - id: G5V1-277
   source:
     origin: textbook
@@ -5260,6 +5266,8 @@ items:
   kp_main: B1-02
   kp_other: []
   thinking: 按步骤做
+  answer: 剩下路程 = 280 − 已行驶路程。表：已行驶 0→剩 280，已行驶 40→剩 240，已行驶 80→剩 200，已行驶 120→剩 160，已行驶 160→剩 120（具体表中已行驶数值以教材第 98 页插图为准，逐格用 280 减去已行驶千米数即得剩下千米数）。
+  answer_note: 部分可答的填表题。已行驶路程的具体数值在教材插图中，题干未转写，这里按教材常见的 0、40、80、120、160 千米示例填写，不作绝对答案。完成标准：从教材图中读出各格已行驶千米数，逐格用 280 减去它算出剩下的千米数（如已行驶 60 千米，剩下 280−60=220 千米），填满表格。
 - id: G5V1-278
   source:
     origin: textbook
@@ -5272,6 +5280,8 @@ items:
   kp_other:
   - B1-02
   thinking: 先选方法或先把情境翻译成数学关系
+  answer: b = 280 − a（已行驶 a 千米，剩下 b 千米）。a 最多是 280（千米），这时 b=0；a 和 b 都不能超过 280 千米。
+  answer_note: 关系式题，题干数据完整。依据：全程 280 千米，已行驶的加上剩下的一定是 280，所以 b=280−a；车还没出发时 a 最小是 0（b=280），到终点时 a 最大是 280（b=0），两个量都不能超过 280。
 - id: G5V1-279
   source:
     origin: textbook
@@ -5283,6 +5293,8 @@ items:
   kp_main: B1-05
   kp_other: []
   thinking: 按步骤做
+  answer: n 只青蛙 n 张嘴、2n 只眼睛、4n 条腿；用 m 表示腿数，m = 4n。
+  answer_note: 关系式题，题干数据完整。依据：儿歌里每只青蛙 1 张嘴、2 只眼睛、4 条腿，n 只青蛙就有 n 个 1 张嘴、n 个 2 只眼睛、n 个 4 条腿，即 n 张嘴、2×n=2n 只眼睛、4×n=4n 条腿，腿数 m=4n。
 - id: G5V1-280
   source:
     origin: textbook
@@ -5294,6 +5306,8 @@ items:
   kp_main: B1-02
   kp_other: []
   thinking: 认出来就做
+  answer: 3×b=3b；x×5=5x；a×c=ac；1×y=y；x×x=x²。
+  answer_note: 结论题（简写规则），题干数据完整。依据：字母与数相乘省略乘号，数写在字母前面（3×b 写 3b；x×5 要写成 5x 而不是 x5）；字母与字母相乘省略乘号（a×c 写 ac）；1 与字母相乘只写字母本身（1×y=y）；两个相同的字母相乘写成这个字母的平方（x×x=x²）。
 - id: G5V1-281
   source:
     origin: textbook
@@ -5305,6 +5319,8 @@ items:
   kp_main: B1-04
   kp_other: []
   thinking: 按步骤做
+  answer: 长方形周长公式：C = 2(a+b)（也可写成 C=(a+b)×2）；面积公式：S = ab。
+  answer_note: 公式题，题干数据完整。依据：长方形周长 =（长+宽）×2，用字母表示为 C=2(a+b)；长方形面积 = 长×宽，用字母表示为 S=ab。
 - id: G5V1-282
   source:
     origin: textbook
@@ -5318,6 +5334,8 @@ items:
   - C1-07
   - C1-08
   thinking: 按步骤做
+  answer: 周长：C = 2×(9+4) = 2×13 = 26（米）；面积：S = 9×4 = 36（平方米）。
+  answer_note: 代入求值题，题干数据完整。依据：把长 9、宽 4 代入 C=2(a+b)，得 C=2×(9+4)=26 米；代入 S=ab，得 S=9×4=36 平方米。
 - id: G5V1-283
   source:
     origin: textbook
@@ -5330,6 +5348,8 @@ items:
   kp_other:
   - B2-04
   thinking: 先选方法或先把情境翻译成数学关系
+  answer: c = 12b（钢笔每支 12 元，买 b 支的总价 c 元，即 c = 单价×数量 = 12×b = 12b）。
+  answer_note: 关系式题，题干数据完整。依据：总价 = 单价×数量，单价是 12 元，数量 b 支，总价 c = 12×b，省略乘号写作 c=12b（数在字母前）。
 - id: G5V1-284
   source:
     origin: textbook
@@ -5342,6 +5362,8 @@ items:
   kp_other:
   - B1-04
   thinking: 按步骤做
+  answer: 当 b=5 时，c=12×5=60（元）；当 c=96 时，b=96÷12=8（支）。
+  answer_note: 代入求值题，题干数据完整。依据：把 b=5 代入 c=12b 得 60 元；已知总价 96 元求支数，用总价÷单价=数量，96÷12=8 支。
 - id: G5V1-285
   source:
     origin: textbook
@@ -5353,6 +5375,8 @@ items:
   kp_main: B1-02
   kp_other: []
   thinking: 认出来就做
+  answer: 24−2 = 22（颗）。
+  answer_note: 数值题（口算填空），题干数据完整。依据：一共 24 颗，吃掉 2 颗，剩下 24−2=22 颗。
 - id: G5V1-286
   source:
     origin: textbook
@@ -5364,6 +5388,8 @@ items:
   kp_main: B1-02
   kp_other: []
   thinking: 认出来就做
+  answer: 24−5 = 19（颗）。
+  answer_note: 数值题（口算填空），题干数据完整。依据：一共 24 颗，吃掉 5 颗，剩下 24−5=19 颗。
 - id: G5V1-287
   source:
     origin: textbook
@@ -5376,6 +5402,8 @@ items:
   kp_other:
   - B1-01
   thinking: 按步骤做
+  answer: 剩下的颗数是 24−x（颗）。
+  answer_note: 含字母式子题，题干数据完整。依据：一共 24 颗，吃掉 x 颗（x 可以是 0～24 的整数），剩下 24−x 颗；随 x 变化，x 越大剩下的越少。
 - id: G5V1-288
   source:
     origin: textbook
@@ -5388,6 +5416,8 @@ items:
   kp_other:
   - B1-02
   thinking: 先选方法或先把情境翻译成数学关系
+  answer: y = 24 − x（y 与 x 的和是 24，即 x+y=24，写成 y=24−x）。
+  answer_note: 关系式题，题干数据完整。依据：吃掉的颗数加剩下的颗数等于总颗数 24，所以 x+y=24，也可以表示为 y=24−x；x 最大是 24（y=0），y 最大是 24（x=0）。
 - id: G5V1-289
   source:
     origin: textbook
@@ -5401,6 +5431,8 @@ items:
   - B2-03
   - B2-02
   thinking: 先选方法或先把情境翻译成数学关系
+  answer: 苹果树棵数是桃树的 3 倍：苹果树 = 3a 棵（a 表示桃树棵数）；梨树比桃树少 28 棵：梨树 = a − 28 棵。
+  answer_note: 关系式题，题干数据完整。依据：桃树有 a 棵，苹果树是它的 3 倍，就是 3×a=3a 棵；梨树比桃树少 28 棵，就是从 a 里减去 28，即 a−28 棵。
 - id: G5V1-290
   source:
     origin: textbook
@@ -5413,6 +5445,8 @@ items:
   kp_other:
   - B1-04
   thinking: 按步骤做
+  answer: 当 a=120 时，苹果树 = 3×120 = 360（棵）；梨树 = 120−28 = 92（棵）。
+  answer_note: 代入求值题，题干数据完整。依据：把 a=120 代入 3a 得苹果树 360 棵；代入 a−28 得梨树 92 棵。
 - id: G5V1-291
   source:
     origin: textbook
@@ -5424,6 +5458,8 @@ items:
   kp_main: B1-02
   kp_other: []
   thinking: 认出来就做
+  answer: a×b=ab；a×1=a；m×m=m²；m+m=2m；a×5=5a。
+  answer_note: 结论题（连线配对），题干数据完整。依据：省略乘号——a×b 写成 ab；1 与字母相乘只写字母本身——a×1=a；两个相同字母相乘写成平方——m×m=m²；m+m 是 2 个 m 相加，等于 2×m=2m（注意 m+m 与 m×m 不同）；数与字母相乘省略乘号、数在字母前——a×5=5a。
 - id: G5V1-292
   source:
     origin: textbook
@@ -5436,6 +5472,8 @@ items:
   kp_other:
   - C1-08
   thinking: 按步骤做
+  answer: 平行四边形：S = ah；三角形：S = ah÷2；梯形：S = (a+b)×h÷2。
+  answer_note: 公式题，题干数据完整。依据：平行四边形面积 = 底×高（a 表示底、h 表示高）；三角形面积 = 底×高÷2；梯形面积 =（上底+下底）×高÷2（a、b 分别表示上底、下底，h 表示高）。
 - id: G5V1-293
   source:
     origin: textbook
@@ -5448,6 +5486,8 @@ items:
   kp_other:
   - C1-08
   thinking: 按步骤做
+  answer: S = 6×3 = 18（平方米）。
+  answer_note: 代入求值题，题干数据完整。依据：把底 6 米、高 3 米代入 S=ah，得 S=6×3=18 平方米。
 - id: G5V1-294
   source:
     origin: textbook
@@ -5460,6 +5500,8 @@ items:
   kp_other:
   - C1-08
   thinking: 按步骤做
+  answer: S = 7.2×5÷2 = 18（平方厘米）。
+  answer_note: 代入求值题，题干数据完整。依据：把底 7.2 厘米、高 5 厘米代入 S=ah÷2，得 S=7.2×5÷2=36÷2=18 平方厘米。
 - id: G5V1-295
   source:
     origin: textbook
@@ -5472,6 +5514,8 @@ items:
   kp_other:
   - C1-08
   thinking: 按步骤做
+  answer: S = (3.6+8)×4÷2 = 11.6×4÷2 = 23.2（平方分米）。
+  answer_note: 代入求值题，题干数据完整。依据：把上底 3.6 分米、下底 8 分米、高 4 分米代入 S=(a+b)×h÷2，得 S=(3.6+8)×4÷2=46.4÷2=23.2 平方分米。
 - id: G5V1-296
   source:
     origin: textbook
@@ -5485,6 +5529,8 @@ items:
   - B1-03
   - B2-05
   thinking: 先选方法或先把情境翻译成数学关系
+  answer: 数量关系：路程 = 速度×时间，s = 250t（t 表示行驶时间）。甲乙两地铁路长：250×3 = 750（千米）。
+  answer_note: 关系式+代入求值题，题干数据完整。依据：速度 250 千米/时，时间 t 小时，路程 s=250×t=250t；行驶 3 小时，把 t=3 代入得 250×3=750 千米。
 - id: G5V1-297
   source:
     origin: textbook
@@ -5498,6 +5544,8 @@ items:
   - B1-03
   - B2-05
   thinking: 先选方法或先把情境翻译成数学关系
+  answer: 数量关系：速度 = 路程÷时间，v = s÷t。平均每小时飞行：1600÷2 = 800（千米/时）。
+  answer_note: 关系式+代入求值题，题干数据完整。依据：路程 s 千米、时间 t 小时，速度 v=s÷t；把 s=1600、t=2 代入得 1600÷2=800 千米/时。
 - id: G5V1-298
   source:
     origin: textbook
@@ -5511,6 +5559,8 @@ items:
   - B1-03
   - B2-05
   thinking: 先选方法或先把情境翻译成数学关系
+  answer: 数量关系：时间 = 路程÷速度，t = s÷v。一共要：320÷80 = 4（小时）。
+  answer_note: 关系式+代入求值题，题干数据完整。依据：路程 s 千米、速度 v 千米/时，时间 t=s÷v；把 s=320、v=80 代入得 320÷80=4 小时。
 - id: G5V1-299
   source:
     origin: textbook
@@ -5522,6 +5572,8 @@ items:
   kp_main: B1-04
   kp_other: []
   thinking: 先选方法或先把情境翻译成数学关系
+  answer: c = at（零件总数 = 每分钟加工个数×时间，a 表示每分钟加工的个数、t 表示加工时间）。
+  answer_note: 关系式题，题干数据完整。依据：每分钟加工 a 个，t 分钟就加工 a×t 个，总数 c=at；题干中每分钟 30 个是具体数值（此时 a=30），关系式用字母表示为 c=at。
 - id: G5V1-300
   source:
     origin: textbook
@@ -5534,6 +5586,8 @@ items:
   kp_other:
   - B1-03
   thinking: 自己把几个关系串起来
+  answer: null
+  answer_note: 开放题：根据 c=at 自己编不同的实际问题，答案不唯一，不能代答。完成标准：编出能用"c=a×t"（每分钟（每小时）做的个数×时间=总数）解决的实际问题，如"李阿姨每分钟打 80 个字，打了 t 分钟，一共打多少个字（c=80t）"；数值要合理（个数、时间为正数），并能列出式子解答、说清三个量各是什么。
 - id: G5V1-301
   source:
     origin: textbook
@@ -5545,6 +5599,8 @@ items:
   kp_main: B1-02
   kp_other: []
   thinking: 还要说明理由
+  answer: 78+x 表示六年级植树的棵数。
+  answer_note: 说理题，题干数据完整。依据：五年级植树 78 棵，六年级比五年级多植 x 棵，就是在 78 棵的基础上再多 x 棵，所以 78+x 就是六年级植树的棵数。
 - id: G5V1-302
   source:
     origin: textbook
@@ -5556,6 +5612,8 @@ items:
   kp_main: B1-02
   kp_other: []
   thinking: 还要说明理由
+  answer: 9a 表示 9 个足球的总价（买足球一共花的钱数）；25b 表示 b 个篮球的总价（买篮球一共花的钱数）。
+  answer_note: 说理题，题干数据完整。依据：足球单价 a 元，买 9 个的总价是 9×a=9a 元；篮球单价 25 元，买 b 个的总价是 25×b=25b 元，都符合"总价=单价×数量"。
 - id: G5V1-303
   source:
     origin: textbook
@@ -5568,6 +5626,8 @@ items:
   kp_other:
   - B1-02
   thinking: 先选方法或先把情境翻译成数学关系
+  answer: 剩下票数 = 500 − 卖出票数。若用 a 表示每天卖出票数、b 表示剩下票数，则 b = 500 − a。表中各格：如卖出 200 张剩 300 张、卖出 300 张剩 200 张、卖出 400 张剩 100 张（表中卖出票数的具体数值在教材第 102 页插图中，逐格用 500 减去卖出数即得剩下数）。
+  answer_note: 部分可答的填表+关系式题。每天卖出票数的具体数值在教材插图中，题干未转写，上面的表值按教材常见数值示例，不作绝对答案；关系式部分可直接作答：座位总数 500 是一定的，卖出的加上剩下的一定是 500，所以 b=500−a。完成标准：从教材图中读出各格卖出票数，逐格用 500 减去它填出剩下的票数，并能写出含字母的关系式。
 - id: G5V1-304
   source:
     origin: textbook
