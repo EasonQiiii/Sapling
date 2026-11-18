@@ -2154,6 +2154,8 @@ items:
   kp_other:
   - D1-03
   thinking: 按步骤做
+  answer: null
+  answer_note: 开放题。完成标准：围绕四种民族乐器对本班同学分组开展真实调查；分小组收集数据，用画"正"字等方法记录；汇总后填写复式统计表，表中须含乐器的分组类别（横行或竖列）、男/女生人数及合计，各格人数与调查记录一致。
 - id: G5V1-048
   source:
     origin: textbook
@@ -2165,6 +2167,8 @@ items:
   kp_main: D1-03
   kp_other: []
   thinking: 认出来就做
+  answer: null
+  answer_note: 开放题。结果取决于本班调查所得的统计表数据，不能预先给出。完成标准：能从复式统计表中读出各乐器"想学人数"（男、女生合计），正确比较并说出人数最多的一种乐器。
 - id: G5V1-049
   source:
     origin: textbook
@@ -2177,6 +2181,8 @@ items:
   kp_other:
   - D1-03
   thinking: 按步骤做
+  answer: null
+  answer_note: 开放题。结果取决于本班调查数据，不能预先给出。完成标准：能分别比较男、女生对四种乐器喜欢的人数，通过差值或倍数判断差别较大和差别不大的乐器，并说出比较的依据。
 - id: G5V1-050
   source:
     origin: textbook
@@ -2189,6 +2195,8 @@ items:
   kp_other:
   - D1-04
   thinking: 还要说明理由
+  answer: null
+  answer_note: 开放题。结果取决于本班制成的条形统计图数据，不能预先给出。完成标准：能从统计图中读出至少两条信息（如最高成绩、最低成绩、男女生差异），并结合数据对男、女生测试成绩作出有依据的评价。
 - id: G5V1-051
   source:
     origin: textbook
@@ -2202,6 +2210,8 @@ items:
   - D1-02
   - D1-03
   thinking: 按步骤做
+  answer: null
+  answer_note: 开放题。完成标准：选定体质健康测试的一个项目；真实调查本班男、女生各等级（如优秀、良好、及格等）的人数并记录；根据数据完成复式条形统计图，须有标题、图例、纵轴刻度和直条，数据与记录一致。
 - id: G5V1-052
   source:
     origin: textbook
@@ -2213,6 +2223,8 @@ items:
   kp_main: D1-03
   kp_other: []
   thinking: 按步骤做
+  answer: null
+  answer_note: 此题数据来自教材插图（六个年级男、女生会游泳人数的统计图），题干未给出具体数值，无法给出填表结果，不得编造数据。完成标准：从教材插图中正确读出各年级男、女生会游泳人数，填入复式统计表，并正确计算每行合计、每列合计及总计。
 - id: G5V1-053
   source:
     origin: textbook
@@ -2224,6 +2236,8 @@ items:
   kp_main: D1-03
   kp_other: []
   thinking: 认出来就做
+  answer: null
+  answer_note: 依赖上一题统计表的数据（源自教材插图，题干未给出），不能预先给出结论。完成标准：能算出或读出各年级会游泳的总人数，正确比较并说出人数最多的年级。
 - id: G5V1-054
   source:
     origin: textbook
@@ -2235,6 +2249,8 @@ items:
   kp_main: D1-03
   kp_other: []
   thinking: 认出来就做
+  answer: null
+  answer_note: 依赖统计表的数据（源自教材插图，题干未给出），不能预先给出结论。完成标准：能分别求出会游泳的男生总人数和女生总人数，比较后说出男生多还是女生多，并说出比较依据。
 - id: G5V1-055
   source:
     origin: textbook
@@ -2247,6 +2263,8 @@ items:
   kp_other:
   - D1-03
   thinking: 按步骤做
+  answer: null
+  answer_note: 会游泳总人数需由统计表（源自教材插图）汇总得出，题干只给出全校 989 人，数据不充分，不能预先算出。完成标准：正确汇总会游泳总人数；再与 989 比较（989 减去会游泳人数得不会游泳人数），估计会游泳的多还是不会游泳的多，并说出估算或比较的理由。
 - id: G5V1-056
   source:
     origin: textbook
@@ -2259,6 +2277,8 @@ items:
   kp_other:
   - D1-03
   thinking: 按步骤做
+  answer: null
+  answer_note: 开放题。完成标准：真实调查本校各年级男、女生人数，数据来源清楚（如向教导处或各班主任询问）；填写的复式统计表含六个年级的男、女生人数、合计与总计，各格数据与调查结果一致。
 - id: G5V1-057
   source:
     origin: textbook
@@ -2271,6 +2291,8 @@ items:
   kp_other:
   - D1-03
   thinking: 还要说明理由
+  answer: null
+  answer_note: 开放题。结论取决于本校调查的统计结果，不能预先给出。完成标准：能从统计表中说出至少两条有依据的信息（如哪个年级人数最多、全校男女生人数情况等），信息与数据一致。
 - id: G5V1-058
   source:
     origin: textbook
@@ -2282,6 +2304,8 @@ items:
   kp_main: D1-04
   kp_other: []
   thinking: 认出来就做
+  answer: null
+  answer_note: 此题数据来自教材插图（四人跳绳训练前、后成绩的复式条形统计图），题干未给出具体数值，不能预先给出结论。完成标准：能从统计图中分别读出四人训练前、后的成绩，比较后正确说出训练前、后成绩最好的人。
 - id: G5V1-059
   source:
     origin: textbook
@@ -2293,6 +2317,8 @@ items:
   kp_main: D1-04
   kp_other: []
   thinking: 按步骤做
+  answer: null
+  answer_note: 依赖教材插图统计图的数据（题干未给出），不能预先算出。完成标准：能算出每人训练后比训练前多跳的次数，比较得出进步最大的人，并用减法算式写出相差的次数（单位：次）。
 - id: G5V1-060
   source:
     origin: textbook
@@ -2305,6 +2331,8 @@ items:
   kp_other:
   - D1-04
   thinking: 按步骤做
+  answer: null
+  answer_note: 依赖教材插图统计图的数据（题干未给出），不能预先算出。完成标准：分别用"四人成绩之和 ÷ 4"求出训练前、后的平均成绩，再求两平均成绩之差，写出算式和结果（单位：次）。
 - id: G5V1-061
   source:
     origin: textbook
@@ -2316,6 +2344,8 @@ items:
   kp_main: D1-04
   kp_other: []
   thinking: 认出来就做
+  answer: null
+  answer_note: 此题数据来自教材插图（两支篮球队四场友谊赛得分的复式条形统计图），题干未给出具体数值，不能预先给出结论。完成标准：能从统计图中读出两队各场得分，正确说出两队各自的最高单场得分和最低单场得分（单位：分）。
 - id: G5V1-062
   source:
     origin: textbook
@@ -2327,6 +2357,8 @@ items:
   kp_main: D1-04
   kp_other: []
   thinking: 按步骤做
+  answer: null
+  answer_note: 依赖教材插图统计图的数据（题干未给出），不能预先给出结论。完成标准：能算出每场比赛两队得分的差，比较得出差距最大和最小的场次，并说出判断依据。
 - id: G5V1-063
   source:
     origin: textbook
@@ -2339,6 +2371,8 @@ items:
   kp_other:
   - D1-04
   thinking: 还要说明理由
+  answer: null
+  answer_note: 开放题（评价题），结论须依据统计图数据得出，不能预先给出。完成标准：能结合数据对两队表现作出评价（如从总得分、场均得分、胜负场次、得分稳定性等角度），评价与数据一致且说出依据。
 - id: G5V1-064
   source:
     origin: textbook
@@ -2351,6 +2385,8 @@ items:
   kp_other:
   - D1-02
   thinking: 按步骤做
+  answer: null
+  answer_note: 开放题。完成标准：以本人记录的好朋友基本信息（如姓名、性别、年龄、身高、体重等）为数据来源，分类整理后制成统计表；表头分类清楚，各格数据与记录一致。
 - id: G5V1-065
   source:
     origin: textbook
@@ -2363,6 +2399,8 @@ items:
   kp_other:
   - D1-03
   thinking: 按步骤做
+  answer: null
+  answer_note: 开放题。完成标准：真实调查好朋友的年龄（岁）、身高（厘米）、体重（千克），记录数据后制成统计表，数据真实、单位正确、表格要素齐全。
 - id: G5V1-066
   source:
     origin: textbook
@@ -2377,6 +2415,8 @@ items:
   - D1-03
   - D1-08
   thinking: 先选方法或先把情境翻译成数学关系
+  answer: null
+  answer_note: 开放题。完成标准：小组设计的调查表能列出文学图书的若干类别；真实调查本班男、女生喜好并汇总；用统计图表示结果（图例、刻度齐全）；交流的信息与数据一致；讨论中能说出了解全年级、全校情况还需扩大调查范围（如在更多班级开展同样的调查）。
 - id: G5V1-067
   source:
     origin: textbook
@@ -2391,6 +2431,8 @@ items:
   - D1-03
   - D1-08
   thinking: 还要说明理由
+  answer: null
+  answer_note: 开放题。完成标准：与同桌合作真实记录各自双休日各类活动（如学习、运动、阅读、娱乐、家务等）的时间（单位：时或分）；据此完成复式条形统计图（含标题、图例、刻度）；比较两人时间安排的差异，并结合数据对谁的安排更合理作出有依据的评价。
 - id: G5V1-068
   source:
     origin: textbook

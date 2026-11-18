@@ -28,12 +28,13 @@ def scalar_line(indent, key, value):
     """Render `key: value` as a single YAML line, escaping when needed."""
     if value is None:
         return f"{indent}{key}: null"
-    if isinstance(value, str):
-        dumped = yaml.safe_dump(value, allow_unicode=True, default_flow_style=False,
-                                width=10**6).rstrip("\n")
-        return f"{indent}{key}: {dumped}"
     dumped = yaml.safe_dump(value, allow_unicode=True, default_flow_style=False,
                             width=10**6).rstrip("\n")
+    # safe_dump of a scalar document appends a document-end marker "..." — drop it.
+    if dumped == "..." or dumped.endswith("\n..."):
+        dumped = dumped[:-4].rstrip("\n") if dumped.endswith("\n...") else ""
+    if isinstance(value, str):
+        return f"{indent}{key}: {dumped}"
     out = [f"{indent}{key}:"]
     for ln in dumped.splitlines():
         out.append(f"{indent}{ln}" if not ln.startswith("- ") else f"{indent}  {ln}")
@@ -68,14 +69,16 @@ def main():
     ordered = sorted(starts.items(), key=lambda kv: kv[1])
 
     merged = 0
+    offset = 0  # cumulative line count inserted so far; block indices were
+                # computed on the pre-edit list, so shift them accordingly.
     for iid in ids:
         if iid not in starts:
             sys.exit(f"ERROR: {iid} not found in main YAML")
-        block_start = starts[iid]
+        block_start = starts[iid] + offset
         block_end = len(lines)
         for other_id, other_idx in ordered:
-            if other_idx > block_start:
-                block_end = other_idx
+            if other_idx > starts[iid]:
+                block_end = other_idx + offset
                 break
         block = lines[block_start:block_end]
 
@@ -96,6 +99,7 @@ def main():
         if note is not None:
             new_lines.append(scalar_line("  ", "answer_note", note))
         lines[insert_at:insert_at] = new_lines
+        offset += len(new_lines)
         merged += 1
 
     new_text = "\n".join(lines) + ("\n" if not text.endswith("\n") else "")
