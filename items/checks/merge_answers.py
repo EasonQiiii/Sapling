@@ -62,11 +62,17 @@ def main():
 
     # Locate each item block start: line "- id: G5V1-NNN"
     starts = {}  # id -> line index
+    stops = []   # lines that terminate an item block (next "- id:" or any top-level key)
     for idx, ln in enumerate(lines):
         s = ln.strip()
         if s.startswith("- id: G5V1-"):
             starts[s.split(": ")[1]] = idx
+            stops.append(idx)
+        elif ln and not ln.startswith((" ", "-", "\t")) and ":" in ln:
+            # top-level key after the items list (e.g. _note_figures)
+            stops.append(idx)
     ordered = sorted(starts.items(), key=lambda kv: kv[1])
+    stop_sorted = sorted(stops)
 
     merged = 0
     offset = 0  # cumulative line count inserted so far; block indices were
@@ -76,7 +82,7 @@ def main():
             sys.exit(f"ERROR: {iid} not found in main YAML")
         block_start = starts[iid] + offset
         block_end = len(lines)
-        for other_id, other_idx in ordered:
+        for other_idx in stop_sorted:
             if other_idx > starts[iid]:
                 block_end = other_idx + offset
                 break
