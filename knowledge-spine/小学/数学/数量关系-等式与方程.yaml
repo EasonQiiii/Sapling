@@ -1,0 +1,274 @@
+status: "final"
+module:
+  id: B3
+  name: 等式与方程
+  version: "1.0"
+  domain: 数与代数
+  description: >
+    研究数量之间的相等关系及其符号表达，
+    理解方程的意义，掌握等式变形与方程求解，
+    并运用方程解决实际问题。
+
+  boundary:
+    prerequisites:
+      - B1-01  # 字母表示数的意义
+      - B1-02  # 含有字母的式子
+      - B1-03  # 字母式的求值
+      - B2-06  # 等量关系
+
+    includes:
+      - 等式的意义
+      - 方程的意义
+      - 等式的基本性质
+      - 方程的解
+      - 解方程
+      - 方程的检验
+      - 根据实际问题列方程
+
+    excludes:
+      - 比和比例
+      - 正比例与反比例
+      - 不等式
+      - 二元一次方程组
+      - 一元二次方程
+      - 分式方程
+
+  knowledge_points:
+
+    - id: B3-01
+      name: 等式的意义
+      definition: >
+        表示两个数学表达式相等的关系式。
+      learning_objectives:
+        - 理解等式表示两个量或表达式相等
+        - 能判断一个式子是否为等式
+        - 能识别等式中的左右两边
+      diagnostic_dimensions:
+        - 等式概念理解
+        - 等量关系识别
+        - 等式结构辨认
+      prerequisites:
+        - B2-06
+      curriculum:
+        stage_2:
+          status: 前置基础
+          description: 了解等量的等量相等
+        stage_3:
+          status: 体系细化
+          description: 承接等量关系，过渡到符号等式，非第三学段独立明确要求条文
+        stage_4:
+          status: 基础要求
+          description: 在方程学习中使用等式，为 B7-01 概念前置
+
+    - id: B3-02
+      name: 方程的意义
+      definition: >
+        含有未知数的等式称为方程。
+      learning_objectives:
+        - 理解方程必须同时满足含有未知数和等式两个条件
+        - 能区分方程与一般等式
+        - 能判断一个数学表达式是否为方程
+      diagnostic_dimensions:
+        - 未知数概念理解
+        - 方程定义理解
+        - 方程与等式辨析
+      prerequisites:
+        - B1-01
+        - B3-01
+      curriculum:
+        stage_4:
+          status: 明确要求
+          description: 根据现实情境理解方程的意义
+      primary_status: 教材提前教学
+      notes:
+        - 2022 小学无独立方程主题，方程在第四学段；小学侧为教材拓展/提前教学，由 B7-01 系统承接并加深。
+
+    - id: B3-03
+      name: 等式的基本性质
+      definition: >
+        等式两边同时进行相同的合法运算，
+        可以得到与原等式等价的等式。
+      learning_objectives:
+        - 理解等式两边同时加上或减去同一个数，等式仍成立
+        - 理解等式两边同时乘以同一个数，等式仍成立
+        - 理解等式两边同时除以同一个非零数，等式仍成立
+        - 能利用等式性质进行等式变形
+      diagnostic_dimensions:
+        - 等式加减性质
+        - 等式乘法性质
+        - 等式除法性质
+        - 等式变形合法性
+      prerequisites:
+        - B3-01
+      curriculum:
+        stage_3:
+          status: 明确要求
+          description: 根据具体情境理解等式的基本性质（2022 小学第三学段 CR-023，理解级）
+        stage_4:
+          status: 掌握级进阶
+          description: 由 B7-02 升格为掌握，并用于解方程；本点不作为 CR-023 的初中覆盖点
+      notes:
+        - 本点是小学第三学段明确要求（理解级），初中 B7-02 为掌握级进阶，二者不互相覆盖。
+
+    - id: B3-04
+      name: 方程的解
+      definition: >
+        能使方程左右两边相等的未知数的值，
+        称为方程的解。
+      learning_objectives:
+        - 理解方程的解的意义
+        - 能判断给定数值是否为方程的解
+        - 能通过代入检验判断解的正确性
+      diagnostic_dimensions:
+        - 方程解的概念
+        - 代入判断
+        - 解的合理性
+      prerequisites:
+        - B3-02
+      curriculum:
+        stage_4:
+          status: 明确要求
+          description: 理解方程解的意义
+      primary_status: 教材提前教学
+      notes:
+        - 与 B7-01 建立进阶关系：初中系统理解"方程与方程的解"。
+
+    - id: B3-05
+      name: 解方程
+      definition: >
+        运用等式的基本性质等方法，
+        求出使方程成立的未知数的值。
+      learning_objectives:
+        - 理解解方程的基本思路
+        - 能解简单的一元一次方程
+        - 能正确进行等式变形
+        - 能处理含括号的一元一次方程
+        - 能处理未知数在等号两边的简单方程
+      diagnostic_dimensions:
+        - 等式变形
+        - 移项与合并
+        - 去括号
+        - 系数处理
+        - 运算准确性
+      prerequisites:
+        - B3-03
+        - B3-04
+      curriculum:
+        stage_4:
+          status: 明确要求
+          description: 运用等式基本性质解一元一次方程
+      primary_status: 教材提前教学
+      notes:
+        - 边界：仅简单一元一次方程，不含初中去分母等；由 B7-03 系统承接完整变形技能。
+
+    - id: B3-06
+      name: 方程的检验
+      definition: >
+        将求得的未知数值代入原方程，
+        判断方程左右两边是否相等，
+        并结合实际情境判断结果是否合理。
+      learning_objectives:
+        - 能将求得的解代入原方程
+        - 能判断方程左右两边是否相等
+        - 能结合实际问题判断解是否符合条件
+      diagnostic_dimensions:
+        - 代入检验
+        - 等式验证
+        - 实际意义判断
+      prerequisites:
+        - B3-04
+        - B3-05
+      curriculum:
+        stage_4:
+          status: 明确要求
+          description: 根据具体问题的实际意义检验方程解的合理性
+      primary_status: 教材提前教学
+      notes:
+        - 由 B7 各方程点的检验环节承接。
+
+    - id: B3-07
+      name: 根据实际问题列方程
+      definition: >
+        从实际情境中识别未知量和数量关系，
+        用含有未知数的等式表达问题。
+      learning_objectives:
+        - 能确定问题中的未知量
+        - 能识别题目中的等量关系
+        - 能用字母表示未知量
+        - 能根据等量关系列出方程
+        - 能解释方程中各部分的实际意义
+      diagnostic_dimensions:
+        - 未知量确定
+        - 等量关系识别
+        - 方程建立
+        - 数学表达
+        - 方程与情境对应
+      prerequisites:
+        - B1-01
+        - B1-04
+        - B2-06
+        - B3-02
+      curriculum:
+        stage_4:
+          status: 明确要求
+          description: 根据现实情境理解方程意义并列出方程
+      primary_status: 教材提前教学
+      notes:
+        - 由 B7-03 及 B7 建模能力承接。
+
+  cross_module_abilities:
+    - id: B3-C01
+      name: 方程建模能力
+      description: 从实际情境抽象出未知量和等量关系，建立方程。
+      uses:
+        - B3-02
+        - B3-07
+
+    - id: B3-C02
+      name: 方程求解策略
+      description: 根据方程结构选择合适的变形和求解方法。
+      uses:
+        - B3-03
+        - B3-05
+
+    - id: B3-C03
+      name: 结果验证与解释
+      description: 检验方程解，并解释结果在实际情境中的意义。
+      uses:
+        - B3-04
+        - B3-06
+        - B3-07
+
+  curriculum_mapping_policy:
+    standard:
+      source: 义务教育数学课程标准（2022年版）
+      primary:
+        stage_1: 不作为本模块核心要求
+        stage_2: 等量关系（B2-06）作为前置基础
+        stage_3: 等式基本性质（B3-03）为明确要求（理解）；字母表示（B1）为相关前置
+        stage_4_note: 方程意义/求解（B3-02 等）不作为 2022 小学明确要求，标"教材提前教学"
+      junior_high:
+        stage_4: 方程体系由 B7 主责
+
+    textbook_mapping:
+      rule: >
+        各教材版本单独记录知识点的年级、册次、单元和教学顺序。
+        即使某个教材在小学阶段提前安排方程内容，
+        也不改变统一知识点ID及其课标学段属性。
+
+  diagnostic_policy:
+    rule: >
+      题目必须绑定具体知识点ID。
+      如果题目同时考查列方程和解方程，
+      应分别记录主要考查点和辅助考查点。
+    examples:
+      - question: 判断一个含未知数的式子是否为方程
+        primary: B3-02
+      - question: 利用等式性质进行变形
+        primary: B3-03
+      - question: 求方程中的未知数
+        primary: B3-05
+      - question: 根据应用题列出方程
+        primary: B3-07
+      - question: 检验方程的解
+        primary: B3-06

@@ -1,0 +1,287 @@
+schema_version: "1.0"
+status: "final"
+module:
+  id: "B1"
+  name: "用字母表示数"
+  parent: "数量关系"
+  description: >
+    研究如何用字母或含有字母的式子表示数、
+    数量之间的关系、数学性质和变化规律。
+    核心是从具体数量表达过渡到一般化的符号表达。
+
+  scope:
+    education_stage: "小学阶段"
+    primary_grade_stage: "第三学段（5～6年级）"
+    curriculum_basis: "义务教育数学课程标准（2022年版）"
+    curriculum_source:
+      url: "https://www.moe.gov.cn/srcsite/A26/s8001/202204/W020220420582346895190.pdf"
+      section: "四、课程内容—数与代数—数量关系"
+      requirement: >
+        在具体情境中，探索用字母表示事物的关系、
+        性质和规律的方法，感悟用字母表示的一般性。
+
+  design_principles:
+    - "字母表示数是符号表达方式，不是独立的数域。"
+    - "字母可以表示一个确定的数，也可以表示变化的数或一般的数。"
+    - "含有字母的式子可以表示数量，也可以表示数量关系。"
+    - "用字母表示规律的核心是从具体情况抽象出一般关系。"
+    - "教材中的具体表达形式不决定统一知识点的定义。"
+
+  knowledge_points:
+
+    - id: "B1-01"
+      name: "字母表示数的意义"
+      definition: >
+        字母可以表示一个数或一类数。
+        在不同情境中，字母可以表示未知数、
+        变化的数或具有一般性的数。
+      learning_objectives:
+        - "理解字母可以表示数。"
+        - "能够根据情境理解字母所表示的数量。"
+        - "理解同一个字母在同一情境中表示同一个数。"
+        - "理解字母表示数具有一般性。"
+      mastery_criteria:
+        - "能够解释具体情境中字母的含义。"
+        - "能够区分字母表示的确定数量和变化数量。"
+        - "能够用字母代替具体数表达一般情况。"
+      diagnostic_dimensions:
+        - id: "meaning"
+          name: "字母表示数的意义"
+        - id: "context_interpretation"
+          name: "情境中字母含义解释"
+        - id: "unknown_value"
+          name: "未知数表示"
+        - id: "variable_value"
+          name: "变化数表示"
+        - id: "generality"
+          name: "字母表示的一般性"
+      prerequisites:
+        - "A1-01"
+        - "A2-01"
+      curriculum_mapping:
+        stage_1: "通过数或符号表达简单变化规律，建立初步基础"
+        stage_2: "借助符号表达简单数量关系"
+        stage_3: "明确要求"
+      source_type: "课标要求"
+
+    - id: "B1-02"
+      name: "含有字母的式子"
+      definition: >
+        用字母和数按照运算关系组成的式子，
+        可以表示一个数量或一个数量关系。
+        字母参与运算时，应遵循相应的运算规则。
+      learning_objectives:
+        - "能够用含有字母的式子表示数量。"
+        - "理解字母与数字组合表达的含义。"
+        - "掌握常见的字母式书写形式。"
+        - "能够解释式子中各部分的含义。"
+      mastery_criteria:
+        - "能够根据文字描述写出含有字母的式子。"
+        - "能够解释含有字母的式子表示的数量。"
+        - "能够正确处理常见的省略乘号表达形式。"
+      diagnostic_dimensions:
+        - id: "expression_construction"
+          name: "含字母式子的构建"
+        - id: "expression_interpretation"
+          name: "含字母式子的意义解释"
+        - id: "operation_notation"
+          name: "字母式的运算符号表达"
+        - id: "coefficient"
+          name: "数字与字母相乘的表达"
+        - id: "expression_difference"
+          name: "不同式子表达意义的辨析"
+      prerequisites:
+        - "B1-01"
+        - "A3-01"
+        - "A3-02"
+        - "A3-03"
+        - "A3-04"
+      curriculum_mapping:
+        stage_3: "明确要求"
+      source_type: "课标要求的具体化"
+
+    - id: "B1-03"
+      name: "字母式的求值"
+      definition: >
+        当字母表示的数确定时，
+        将数值代入含有字母的式子，
+        按照运算规则计算式子的结果。
+      learning_objectives:
+        - "理解字母取值与式子结果之间的关系。"
+        - "能够将给定数值代入字母式。"
+        - "能够按照运算顺序计算字母式的值。"
+        - "能够结合情境解释计算结果。"
+      mastery_criteria:
+        - "能够正确代入字母的指定数值。"
+        - "能够正确计算含字母式子的值。"
+        - "能够解释结果对应的实际数量。"
+      diagnostic_dimensions:
+        - id: "substitution"
+          name: "数值代入"
+        - id: "calculation"
+          name: "代入后的计算"
+        - id: "operation_order"
+          name: "运算顺序处理"
+        - id: "result_interpretation"
+          name: "结果意义解释"
+      prerequisites:
+        - "B1-02"
+        - "A3-05"
+        - "A4-08"
+      curriculum_mapping:
+        stage_3: "字母式运用的基础要求"
+      source_type: "体系细化"
+      notes:
+        - "求值是字母式的应用，不等同于解方程。"
+
+    - id: "B1-04"
+      name: "用字母表示数量关系"
+      definition: >
+        用字母或含有字母的式子表示两个或多个数量之间
+        的关系，使具体情境中的数量关系能够一般化表达。
+      learning_objectives:
+        - "能够从具体情境中识别相关数量。"
+        - "能够分析数量之间的关系。"
+        - "能够用字母和式子表示数量关系。"
+        - "能够根据数量关系写出不同形式的表达式。"
+        - "能够解释式子中各字母所代表的数量。"
+      mastery_criteria:
+        - "能够从情境中正确识别相关数量。"
+        - "能够判断数量之间的运算关系。"
+        - "能够将数量关系转化为字母式。"
+        - "能够解释字母式与原情境的对应关系。"
+      diagnostic_dimensions:
+        - id: "quantity_identification"
+          name: "相关数量识别"
+        - id: "relationship_analysis"
+          name: "数量关系分析"
+        - id: "expression_translation"
+          name: "数量关系符号化"
+        - id: "expression_transformation"
+          name: "数量关系的等值表达"
+        - id: "context_mapping"
+          name: "字母与实际数量对应"
+      prerequisites:
+        - "B1-01"
+        - "B1-02"
+        - "A3-01"
+        - "A3-02"
+        - "A3-03"
+        - "A3-04"
+      curriculum_mapping:
+        stage_2: "常见数量关系的认识和应用"
+        stage_3: "明确要求"
+      source_type: "课标要求"
+      examples:
+        - context: "路程、速度和时间"
+          expression: "s = v × t"
+        - context: "总价、单价和数量"
+          expression: "总价 = 单价 × 数量"
+        - context: "长方形周长"
+          expression: "C = 2(a + b)"
+      notes:
+        - "这里只研究关系的符号表达。"
+        - "比例、正比例、反比例等作为其他知识模块处理。"
+
+    - id: "B1-05"
+      name: "用字母表示数学性质与规律"
+      definition: >
+        用字母表达数与运算中的性质、规律或一般关系，
+        使具体数值下观察到的规律能够推广到一般情况。
+      learning_objectives:
+        - "能够从具体实例中发现数学规律。"
+        - "能够用字母表达运算性质。"
+        - "能够用字母表达数列或简单变化规律。"
+        - "理解字母表达的规律适用于符合条件的一般情况。"
+      mastery_criteria:
+        - "能够从多个具体实例中发现共同规律。"
+        - "能够使用字母表达发现的规律。"
+        - "能够解释字母表达式中各部分的含义。"
+        - "能够用具体数值验证一般表达式。"
+      diagnostic_dimensions:
+        - id: "pattern_discovery"
+          name: "规律发现"
+        - id: "generalization"
+          name: "规律一般化"
+        - id: "property_expression"
+          name: "数学性质的字母表达"
+        - id: "pattern_expression"
+          name: "变化规律的字母表达"
+        - id: "verification"
+          name: "一般规律验证"
+      prerequisites:
+        - "B1-01"
+        - "B1-02"
+        - "A4-01"
+        - "A4-02"
+        - "A4-03"
+      curriculum_mapping:
+        stage_1: "探索简单变化规律"
+        stage_2: "探索并理解运算律，尝试用字母表达"
+        stage_3: "明确要求"
+      source_type: "课标要求"
+
+  exclusions:
+    - name: "方程的意义与解方程"
+      reason: "属于方程模块，不在B1中展开。"
+    - name: "等式的基本性质"
+      reason: "属于等式与方程相关知识模块。"
+    - name: "比和比例"
+      reason: "属于独立的数量关系知识模块。"
+    - name: "正比例与反比例"
+      reason: "属于变量关系及函数初步内容，不纳入B1。"
+    - name: "复杂代数式化简"
+      reason: "超出小学阶段本模块的核心要求。"
+
+  dependency_rules:
+    - "B1-01是所有字母表达知识的基础。"
+    - "B1-02依赖B1-01。"
+    - "B1-03依赖B1-02及基本四则运算。"
+    - "B1-04依赖对具体数量关系的理解。"
+    - "B1-05依赖对运算性质和具体规律的观察。"
+    - "前置关系表示知识理解依赖，不代表教材教学顺序。"
+
+  assessment_binding:
+    rules:
+      - "题目必须绑定主要考查知识点。"
+      - "尽可能绑定具体诊断维度。"
+      - "情境题应区分数量关系识别错误和符号表达错误。"
+      - "字母式求值题应区分代入错误和计算错误。"
+      - "规律题应区分规律发现错误和一般化表达错误。"
+    common_error_types:
+      - id: "E01"
+        name: "误解字母含义"
+      - id: "E02"
+        name: "不能识别字母所代表的数量"
+      - id: "E03"
+        name: "数量关系分析错误"
+      - id: "E04"
+        name: "字母式列写错误"
+      - id: "E05"
+        name: "字母式符号书写错误"
+      - id: "E06"
+        name: "代入数值错误"
+      - id: "E07"
+        name: "字母式计算错误"
+      - id: "E08"
+        name: "规律发现错误"
+      - id: "E09"
+        name: "不能将规律一般化"
+      - id: "E10"
+        name: "不能解释字母式的实际意义"
+
+  quality_rules:
+    - "知识点定义必须能独立解释，不依赖教材例题。"
+    - "每个诊断维度必须能设计出可测量的题目。"
+    - "不能将字母表示数、字母式求值和解方程混为一谈。"
+    - "不能把具体教材中的某一种表达形式当作知识点定义。"
+    - "题目应考查学生对数量关系的理解，而不是只考查符号记忆。"
+    - "课标学段要求不能直接推断为具体年级要求。"
+
+  version_history:
+    - version: "1.0"
+      date: "2026-11-17"
+      changes:
+        - "建立用字母表示数的统一知识结构。"
+        - "明确字母表示数、字母式、求值、数量关系表达和规律表达五个知识点。"
+        - "明确与方程、比例和函数初步内容的边界。"

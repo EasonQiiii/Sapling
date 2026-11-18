@@ -1,0 +1,288 @@
+status: "final"
+module:
+  id: B4
+  name: 比与比例
+  version: "1.0"
+  domain: 数与代数
+  description: >
+    研究两个数量之间的倍数关系，
+    理解比、比值、相等的比及比例，
+    并运用比和比例解决简单实际问题。
+
+  boundary:
+    prerequisites:
+      - B1-01  # 字母表示数的意义
+      - B1-02  # 含有字母的式子
+      - B2-03  # 倍数关系
+      - B2-06  # 等量关系
+
+    includes:
+      - 比的意义
+      - 比的各部分名称
+      - 比值及其计算
+      - 比与除法、分数的联系
+      - 相等的比
+      - 比的基本性质
+      - 比的化简
+      - 比例的意义
+      - 按比例分配
+
+    excludes:
+      - 正比例与反比例
+      - 比例尺的计算与应用
+      - 方程及解方程
+      - 百分数
+      - 百分率
+      - 复杂比例问题
+      - 函数关系
+
+  knowledge_points:
+
+    - id: B4-01
+      name: 比的意义
+      definition: >
+        两个数量进行比较，可以用比表示它们之间的倍数关系。
+      learning_objectives:
+        - 理解比表示两个数量之间的倍数关系
+        - 能根据具体情境写出两个数量的比
+        - 能区分两个数量的先后顺序
+        - 理解比的前项和后项
+      diagnostic_dimensions:
+        - 比的概念理解
+        - 比的书写
+        - 前项与后项辨认
+        - 比的顺序理解
+      prerequisites:
+        - B2-03
+      curriculum:
+        stage_3:
+          status: 明确要求
+          description: 在实际情境中理解比的含义
+
+    - id: B4-02
+      name: 比值及其计算
+      definition: >
+        比的前项除以后项所得的商，称为比值。
+      learning_objectives:
+        - 理解比值的意义
+        - 能正确计算比值
+        - 能根据比值判断两个数量之间的倍数关系
+        - 理解比值可以用整数、小数或分数表示
+      diagnostic_dimensions:
+        - 比值概念
+        - 比值计算
+        - 分数形式的比值
+        - 比值的实际意义
+      prerequisites:
+        - B4-01
+        - A3-03
+      curriculum:
+        stage_3:
+          status: 明确要求
+          description: 能判断两个量的比并计算比值
+
+    - id: B4-03
+      name: 比与除法、分数的关系
+      definition: >
+        比、除法和分数之间存在联系：
+        比的前项相当于被除数和分子，
+        比的后项相当于除数和分母，
+        比值相当于商和分数值。
+      learning_objectives:
+        - 理解比与除法之间的联系
+        - 理解比与分数之间的联系
+        - 能在比、除法和分数表示之间进行转换
+        - 理解比的后项不能为零
+      diagnostic_dimensions:
+        - 比与除法对应关系
+        - 比与分数对应关系
+        - 表示形式转换
+        - 除数与分母限制
+      prerequisites:
+        - B4-01
+        - B4-02
+        - A2-05
+      curriculum:
+        stage_3:
+          status: 体系细化
+          description: 为理解比的意义和计算比值提供数与运算基础
+
+    - id: B4-04
+      name: 相等的比与比的基本性质
+      definition: >
+        比的前项和后项同时乘或除以同一个非零数，
+        比值不变。
+      learning_objectives:
+        - 理解比的基本性质
+        - 能判断两个比是否相等
+        - 能根据比的基本性质得到相等的比
+        - 理解比的化简依据
+      diagnostic_dimensions:
+        - 比的基本性质理解
+        - 相等的比判断
+        - 等值变换
+        - 变换条件判断
+      prerequisites:
+        - B4-02
+        - B4-03
+      curriculum:
+        stage_3:
+          status: 体系细化
+          description: 支撑理解比值相同的量及比的应用
+
+    - id: B4-05
+      name: 比的化简
+      definition: >
+        将一个比转化为比值相同、
+        且前项和后项更简单的比。
+      learning_objectives:
+        - 能运用比的基本性质化简整数比
+        - 能化简含有分数的比
+        - 能化简含有小数的比
+        - 能将比化为最简整数比
+      diagnostic_dimensions:
+        - 最大公因数应用
+        - 分数比化简
+        - 小数比化简
+        - 最简整数比判断
+      prerequisites:
+        - B4-04
+        - A1-05
+        - A3-05
+      curriculum:
+        stage_3:
+          status: 体系细化
+          description: 作为比的计算和实际应用的常见方法
+
+    - id: B4-06
+      name: 比例的意义
+      definition: >
+        表示两个比相等的式子称为比例。
+      learning_objectives:
+        - 理解比例表示两个比相等
+        - 能判断两个比是否能够组成比例
+        - 能根据比值判断两个比是否相等
+        - 能区分比和比例
+      diagnostic_dimensions:
+        - 比例概念理解
+        - 比例组成判断
+        - 比与比例辨析
+        - 比值相等判断
+      prerequisites:
+        - B4-01
+        - B4-02
+        - B4-04
+      curriculum:
+        stage_3:
+          status: 明确要求
+          description: 在实际情境中理解比例的含义
+
+    - id: B4-07
+      name: 按比例分配
+      definition: >
+        已知总量和各部分之间的比，
+        按照比所表示的份数关系分配总量。
+      learning_objectives:
+        - 理解按比例分配的意义
+        - 能根据比确定总份数
+        - 能计算各部分所占份数
+        - 能计算各部分实际数量
+        - 能检验分配结果是否符合原比
+      diagnostic_dimensions:
+        - 总份数确定
+        - 各部分份数确定
+        - 单份数量计算
+        - 各部分数量计算
+        - 分配结果检验
+      prerequisites:
+        - B4-01
+        - B4-02
+        - B4-05
+        - B2-01
+      curriculum:
+        stage_3:
+          status: 明确要求
+          description: 理解按比例分配的含义并解决简单问题
+
+  cross_module_abilities:
+    - id: B4-C01
+      name: 比关系识别
+      description: >
+        从实际情境中识别两个数量之间的倍数关系，
+        判断是否适合用比表示。
+      uses:
+        - B4-01
+        - B4-02
+
+    - id: B4-C02
+      name: 比的等值转换
+      description: >
+        根据实际计算需要，将比转换为等值的其他形式。
+      uses:
+        - B4-03
+        - B4-04
+        - B4-05
+
+    - id: B4-C03
+      name: 比例模型应用
+      description: >
+        利用比和比例关系建立实际问题的数学模型，
+        完成简单的按比例分配。
+      uses:
+        - B4-06
+        - B4-07
+
+  curriculum_mapping_policy:
+    standard:
+      source: 义务教育数学课程标准（2022年版）
+      stage_3:
+        status: 明确要求
+        requirements:
+          - 在实际情境中理解比和比例的含义
+          - 判断两个量的比
+          - 计算比值
+          - 理解比值相同的量
+          - 理解按比例分配的含义
+          - 解决简单的按比例分配问题
+
+    textbook_mapping:
+      rule: >
+        各教材版本分别记录比、比例、比的化简、
+        按比例分配等内容的年级、册次、单元和教学顺序。
+        不以某一教材的章节结构决定统一知识点层级。
+
+  external_mapping:
+    - name: 比例尺
+      target_domain: 图形与几何
+      relation: 应用比表示图上距离与实际距离的关系
+      note: >
+        比例尺独立归入图形的位置与运动相关知识体系，
+        不在B4重复建立核心知识点。
+
+    - name: 正比例
+      target_module: B5
+      relation: 比的基础上研究两个变量的变化关系
+
+    - name: 反比例
+      target_module: B5
+      relation: 与正比例共同研究变量之间的变化关系
+
+  diagnostic_policy:
+    rule: >
+      每道题绑定实际考查的知识点。
+      比的意义、比值计算、比的化简、比例判断、
+      按比例分配应分别诊断，不因题目同时出现多个概念
+      而将其合并成一个知识点。
+    examples:
+      - question: 根据两个数量写出它们的比
+        primary: B4-01
+      - question: 计算一个比的比值
+        primary: B4-02
+      - question: 将比转换为分数形式
+        primary: B4-03
+      - question: 将一个比化成最简整数比
+        primary: B4-05
+      - question: 判断两个比能否组成比例
+        primary: B4-06
+      - question: 根据各部分的比进行总量分配
+        primary: B4-07

@@ -1,0 +1,1202 @@
+schema_version: "1.0"
+status: "final"
+name: "小学数学统一知识体系：数与运算"
+name_en: "Primary Mathematics Knowledge System: Numbers and Operations"
+scope:
+  education_stage: "义务教育小学阶段"
+  subject: "数学"
+  domain: "数与代数"
+  topic: "数与运算"
+  applicable_grades: [1, 2, 3, 4, 5, 6]
+  design_principle: >
+    知识体系以数学概念、性质、关系和运算为基础，
+    不依赖任何教材版本。教材版本只负责映射知识点、
+    编排顺序、年级和单元。
+  exclusions:
+    - "数量关系中的比和比例、方程等独立主题不在本体系内。"
+    - "估算、数感、结果检验等跨知识能力不作为核心知识点。"
+    - "教材中的具体计算技巧不单独建立为核心知识点。"
+
+standards:
+  primary:
+    name: "义务教育数学课程标准（2022年版）"
+    publisher: "中华人民共和国教育部"
+    url: "https://www.moe.gov.cn/srcsite/A26/s8001/202204/W020220420582346895190.pdf"
+    relevant_sections:
+      - "四、课程内容：小学部分—数与代数—数与运算"
+      - "第一学段（1～2年级）"
+      - "第二学段（3～4年级）"
+      - "第三学段（5～6年级）"
+  mapping_rules:
+    - "课标原文要求与知识体系归纳必须分开记录。"
+    - "课标按学段提出的要求，不得擅自标记为某个具体年级的新增知识。"
+    - "教材版本映射不得反向改变统一知识点的定义。"
+    - "课标未明确列为独立内容要求的细化知识点，标记为体系细化，不得伪称课标原文。"
+    - "教材出现但课标未单独列出的内容，可以作为教材扩展映射，不直接认定为课标核心要求。"
+
+grade_stages:
+  stage_1:
+    grades: [1, 2]
+    name: "第一学段"
+  stage_2:
+    grades: [3, 4]
+    name: "第二学段"
+  stage_3:
+    grades: [5, 6]
+    name: "第三学段"
+
+modules:
+
+  - id: "A1"
+    name: "数的概念与特征"
+    description: >
+      研究数是什么、数如何产生、数具有哪些基本属性。
+      是数的表示、比较和运算的概念基础。
+    knowledge_points:
+
+      - id: "A1-01"
+        name: "自然数的意义"
+        definition: >
+          自然数用于表示物体的个数或事物的顺序，
+          是由具体数量抽象形成的数学对象。
+        learning_objectives:
+          - "理解自然数表示数量和顺序的意义。"
+          - "能够在具体情境中用自然数表示数量。"
+          - "理解相邻自然数之间的关系。"
+        diagnostic_dimensions:
+          - id: "meaning"
+            name: "数量与顺序意义"
+          - id: "counting"
+            name: "数数与计数"
+          - id: "successor"
+            name: "相邻自然数关系"
+          - id: "zero"
+            name: "零的意义"
+        prerequisites: []
+        curriculum_mapping:
+          stage_1: "明确要求"
+          stage_2: "前置基础"
+          stage_3: "持续应用"
+
+      - id: "A1-02"
+        name: "因数与倍数"
+        definition: >
+          在非零自然数范围内，如果整数a除以整数b没有余数，
+          则b是a的因数，a是b的倍数。
+        learning_objectives:
+          - "理解因数和倍数的相互依存关系。"
+          - "能够找出一个数的因数和倍数。"
+          - "理解因数个数有限、倍数个数无限。"
+        diagnostic_dimensions:
+          - id: "concept"
+            name: "因数与倍数概念"
+          - id: "factor_finding"
+            name: "找一个数的因数"
+          - id: "multiple_finding"
+            name: "找一个数的倍数"
+          - id: "relationship"
+            name: "因数与倍数关系判断"
+        prerequisites:
+          - "A1-01"
+          - "A3-04"
+        curriculum_mapping:
+          stage_3: "相关基础，结合倍数特征、公因数和公倍数要求学习"
+
+      - id: "A1-03"
+        name: "2、3、5的倍数特征"
+        definition: >
+          根据整数的个位数字或各位数字之和，
+          判断一个自然数是否为2、3或5的倍数。
+        learning_objectives:
+          - "理解2、5的倍数特征。"
+          - "理解3的倍数特征。"
+          - "能够综合判断一个数是否同时满足多个倍数条件。"
+        diagnostic_dimensions:
+          - id: "divisible_by_2"
+            name: "2的倍数特征"
+          - id: "divisible_by_5"
+            name: "5的倍数特征"
+          - id: "divisible_by_3"
+            name: "3的倍数特征"
+          - id: "combined"
+            name: "多个倍数特征综合判断"
+        prerequisites:
+          - "A1-02"
+          - "A2-01"
+        curriculum_mapping:
+          stage_3: "明确要求"
+
+      - id: "A1-04"
+        name: "公因数与最大公因数"
+        definition: >
+          两个或多个自然数共有的因数称为公因数，
+          其中最大的一个称为最大公因数。
+        learning_objectives:
+          - "理解公因数和最大公因数的意义。"
+          - "能够找出两个数的公因数。"
+          - "能够求两个数的最大公因数。"
+        diagnostic_dimensions:
+          - id: "common_factor"
+            name: "公因数识别"
+          - id: "gcd"
+            name: "最大公因数求解"
+          - id: "method"
+            name: "求解方法选择"
+          - id: "application"
+            name: "实际情境应用"
+        prerequisites:
+          - "A1-02"
+        curriculum_mapping:
+          stage_3: "明确要求"
+
+      - id: "A1-05"
+        name: "公倍数与最小公倍数"
+        definition: >
+          两个或多个自然数共有的倍数称为公倍数，
+          其中最小的正公倍数称为最小公倍数。
+        learning_objectives:
+          - "理解公倍数和最小公倍数的意义。"
+          - "能够找出两个数的公倍数。"
+          - "能够求两个数的最小公倍数。"
+        diagnostic_dimensions:
+          - id: "common_multiple"
+            name: "公倍数识别"
+          - id: "lcm"
+            name: "最小公倍数求解"
+          - id: "method"
+            name: "求解方法选择"
+          - id: "application"
+            name: "实际情境应用"
+        prerequisites:
+          - "A1-02"
+        curriculum_mapping:
+          stage_3: "明确要求"
+
+      - id: "A1-06"
+        name: "奇数与偶数"
+        definition: >
+          整数中，能被2整除的数是偶数，
+          不能被2整除的数是奇数。
+        learning_objectives:
+          - "理解奇数和偶数的定义。"
+          - "能够判断一个自然数的奇偶性。"
+          - "能够探索奇偶数在简单运算中的变化规律。"
+        diagnostic_dimensions:
+          - id: "identification"
+            name: "奇偶数判断"
+          - id: "classification"
+            name: "奇偶数分类"
+          - id: "operation"
+            name: "奇偶性运算规律"
+        prerequisites:
+          - "A1-01"
+          - "A3-04"
+        curriculum_mapping:
+          stage_3: "明确要求"
+
+      - id: "A1-07"
+        name: "质数与合数"
+        definition: >
+          在大于1的自然数中，只有1和它本身两个因数的数是质数；
+          除1和它本身外还有其他因数的数是合数。
+          1既不是质数，也不是合数。
+        learning_objectives:
+          - "理解质数和合数的定义。"
+          - "能够判断一个数是质数还是合数。"
+          - "理解质因数分解的基础意义。"
+        diagnostic_dimensions:
+          - id: "definition"
+            name: "质数与合数概念"
+          - id: "identification"
+            name: "质数与合数判断"
+          - id: "special_one"
+            name: "对1的判断"
+          - id: "prime_factor"
+            name: "质因数识别"
+        prerequisites:
+          - "A1-02"
+        curriculum_mapping:
+          stage_3: "明确要求"
+
+      - id: "A1-08"
+        name: "小数的意义"
+        definition: >
+          小数是十进分数的一种表示形式，
+          用于表示整数单位无法精确表示的数量。
+          小数的每一位对应不同的十进计数单位。
+        learning_objectives:
+          - "理解小数表示数量的意义。"
+          - "理解十分之一、百分之一等计数单位。"
+          - "能够结合具体情境解释小数。"
+        diagnostic_dimensions:
+          - id: "meaning"
+            name: "小数意义"
+          - id: "unit"
+            name: "小数计数单位"
+          - id: "decimal_fraction"
+            name: "小数与十进分数关系"
+          - id: "context"
+            name: "情境中的小数解释"
+        prerequisites:
+          - "A1-10"
+          - "A2-01"
+        curriculum_mapping:
+          stage_2: "初步认识"
+          stage_3: "进一步理解"
+
+      - id: "A1-09"
+        name: "分数的意义"
+        definition: >
+          分数既可以表示一个整体被平均分后其中若干份的数量，
+          也可以表示测量结果、两个整数相除的商等。
+          分数的意义需要结合具体情境理解。
+        learning_objectives:
+          - "理解分数表示部分与整体关系的意义。"
+          - "理解分数单位。"
+          - "理解分数作为测量结果和除法商的意义。"
+          - "能够结合情境解释分数。"
+        diagnostic_dimensions:
+          - id: "part_whole"
+            name: "部分与整体"
+          - id: "fraction_unit"
+            name: "分数单位"
+          - id: "measurement"
+            name: "测量意义"
+          - id: "quotient"
+            name: "商的意义"
+          - id: "context"
+            name: "情境解释"
+        prerequisites:
+          - "A1-10"
+          - "A3-04"
+        curriculum_mapping:
+          stage_2: "初步认识"
+          stage_3: "进一步理解"
+
+      - id: "A1-10"
+        name: "十进制计数单位"
+        definition: >
+          十进制计数体系中，相邻计数单位之间的进率为10。
+          整数部分和小数部分通过数位位置表达不同的计数单位。
+        learning_objectives:
+          - "理解个、十、百、千、万等计数单位。"
+          - "理解相邻整数计数单位之间的十进关系。"
+          - "理解十分之一、百分之一等小数计数单位。"
+        diagnostic_dimensions:
+          - id: "integer_units"
+            name: "整数计数单位"
+          - id: "decimal_units"
+            name: "小数计数单位"
+          - id: "base_ten"
+            name: "十进关系"
+          - id: "unit_conversion"
+            name: "计数单位转换"
+        prerequisites:
+          - "A1-01"
+        curriculum_mapping:
+          stage_1: "初步建立"
+          stage_2: "理解十进制计数法"
+          stage_3: "进一步应用"
+
+      - id: "A1-11"
+        name: "负数的意义"
+        definition: >
+          负数用于表示与正数意义相反的量，
+          例如低于零的温度、向相反方向变化的数量等。
+        learning_objectives:
+          - "理解负数在具体情境中的意义。"
+          - "能够用负数表示具有相反意义的量。"
+          - "初步理解正数、负数和零的关系。"
+        diagnostic_dimensions:
+          - id: "opposite_quantity"
+            name: "相反意义的量"
+          - id: "representation"
+            name: "负数表示"
+          - id: "zero_relation"
+            name: "正数、负数与零"
+        prerequisites: []
+        curriculum_mapping:
+          status: "情境扩展"
+          stage_3: "综合与实践中涉及负数，不列为数与运算核心内容要求"
+        notes:
+          - "保留为统一体系的扩展节点。"
+          - "不得将其标记为所有小学教材五年级或六年级的必学内容。"
+
+  - id: "A2"
+    name: "数的表示与关系"
+    description: >
+      研究数如何通过符号、数位、分数和小数等形式表示，
+      以及不同表示之间的等值关系。
+    knowledge_points:
+
+      - id: "A2-01"
+        name: "整数的数位与位值"
+        definition: >
+          一个整数中数字所在的位置称为数位，
+          数字在特定数位上所表示的数量称为位值。
+          同一个数字位于不同数位时表示的数值不同。
+        learning_objectives:
+          - "理解数位和位值的区别。"
+          - "理解十进制数位顺序。"
+          - "能够分解和解释整数各数位上的数值。"
+        diagnostic_dimensions:
+          - id: "place"
+            name: "数位识别"
+          - id: "value"
+            name: "位值理解"
+          - id: "decomposition"
+            name: "整数分解"
+          - id: "large_number"
+            name: "大数读写与表示"
+        prerequisites:
+          - "A1-10"
+        curriculum_mapping:
+          stage_1: "明确要求"
+          stage_2: "万以上数与十进制计数法"
+          stage_3: "持续应用"
+
+      - id: "A2-02"
+        name: "小数的数位与位值"
+        definition: >
+          小数点右侧各数位依次表示十分之一、百分之一、
+          千分之一等计数单位，数字所在位置决定其位值。
+        learning_objectives:
+          - "理解小数数位顺序。"
+          - "理解小数各数位的位值。"
+          - "能够分解小数并解释各部分的数值。"
+        diagnostic_dimensions:
+          - id: "decimal_place"
+            name: "小数数位识别"
+          - id: "decimal_value"
+            name: "小数位值理解"
+          - id: "decomposition"
+            name: "小数分解"
+          - id: "zero_placeholder"
+            name: "零的占位作用"
+        prerequisites:
+          - "A1-08"
+          - "A1-10"
+        curriculum_mapping:
+          stage_2: "初步认识"
+          stage_3: "进一步理解"
+
+      - id: "A2-03"
+        name: "分数的表示"
+        definition: >
+          分数由分子、分数线和分母组成。
+          分母表示平均分的份数，分子表示所取的份数；
+          分数单位由分母决定。
+        learning_objectives:
+          - "理解分子和分母的意义。"
+          - "能够正确读写分数。"
+          - "理解真分数、假分数和带分数的表示。"
+          - "能够借助图形或数轴表示分数。"
+        diagnostic_dimensions:
+          - id: "numerator"
+            name: "分子意义"
+          - id: "denominator"
+            name: "分母意义"
+          - id: "fraction_unit"
+            name: "分数单位"
+          - id: "types"
+            name: "真分数、假分数与带分数"
+          - id: "representation"
+            name: "图形与符号表示"
+        prerequisites:
+          - "A1-09"
+        curriculum_mapping:
+          stage_2: "初步认识"
+          stage_3: "进一步理解"
+
+      - id: "A2-04"
+        name: "数的等值关系与表示"
+        definition: >
+          同一个数可以通过不同的符号形式表示。
+          不同表示形式在数值相等时构成等值关系。
+        learning_objectives:
+          - "理解同一个数可以有不同表示形式。"
+          - "能够识别数值相等的不同表示。"
+          - "理解表示变化不改变数值的条件。"
+        diagnostic_dimensions:
+          - id: "equivalent_representation"
+            name: "等值表示识别"
+          - id: "fraction_equivalence"
+            name: "分数等值关系"
+          - id: "decimal_equivalence"
+            name: "小数等值关系"
+          - id: "representation_conversion"
+            name: "不同形式转换"
+        prerequisites:
+          - "A2-01"
+          - "A2-02"
+          - "A2-03"
+        curriculum_mapping:
+          stage_2: "相关基础"
+          stage_3: "结合分数、小数转化进一步应用"
+
+      - id: "A2-05"
+        name: "小数与分数互化"
+        definition: >
+          根据小数和分数之间的等值关系，
+          将符合学习要求的小数表示为分数，
+          或将分数表示为小数。
+        learning_objectives:
+          - "理解小数与十进分数的关系。"
+          - "能够进行规定范围内的小数与分数互化。"
+          - "能够根据数值特点选择合适的表示形式。"
+        diagnostic_dimensions:
+          - id: "decimal_to_fraction"
+            name: "小数化分数"
+          - id: "fraction_to_decimal"
+            name: "分数化小数"
+          - id: "conversion_reasoning"
+            name: "互化依据"
+          - id: "conversion_scope"
+            name: "有限小数与适用范围判断"
+        prerequisites:
+          - "A1-08"
+          - "A1-09"
+          - "A2-04"
+        curriculum_mapping:
+          stage_3: "明确要求"
+        notes:
+          - "不将循环小数及其复杂互化纳入小学核心范围。"
+
+      - id: "A2-06"
+        name: "整数除法与分数的关系"
+        definition: >
+          两个整数相除，在除数不为零时，
+          其商可以用分数表示。
+          被除数相当于分子，除数相当于分母。
+        learning_objectives:
+          - "理解整数除法与分数之间的关系。"
+          - "能够用分数表示整数除法的商。"
+          - "能够解释分数表示除法结果的意义。"
+        diagnostic_dimensions:
+          - id: "division_fraction_relation"
+            name: "除法与分数关系"
+          - id: "quotient_representation"
+            name: "商的分数表示"
+          - id: "context"
+            name: "情境解释"
+        prerequisites:
+          - "A1-09"
+          - "A3-04"
+        curriculum_mapping:
+          stage_3: "明确要求"
+        notes:
+          - "从原数表示模块迁移至运算模块时，保留原ID。"
+          - "本节点仍保留在此处作为分数表示与运算的桥接知识。"
+
+      - id: "A2-08"
+        name: "分数的基本性质"
+        definition: >
+          分数的分子和分母同时乘或除以相同的非零数，
+          分数的大小不变。
+        learning_objectives:
+          - "理解分数基本性质。"
+          - "能够判断等值分数。"
+          - "能够运用分数基本性质进行约分和通分。"
+        diagnostic_dimensions:
+          - id: "property"
+            name: "基本性质理解"
+          - id: "equivalent_fraction"
+            name: "等值分数判断"
+          - id: "simplification"
+            name: "约分"
+          - id: "common_denominator"
+            name: "通分"
+          - id: "condition"
+            name: "适用条件判断"
+        prerequisites:
+          - "A2-03"
+          - "A2-04"
+        curriculum_mapping:
+          status: "体系细化"
+          stage_3: "作为分数运算的重要基础，按教材版本映射"
+
+      - id: "A2-09"
+        name: "小数的性质"
+        definition: >
+          在小数末尾添上零或者去掉零，
+          小数的大小不变。
+        learning_objectives:
+          - "理解小数性质。"
+          - "能够判断小数末尾添零或去零是否改变数值。"
+          - "能够利用小数性质进行小数化简和改写。"
+        diagnostic_dimensions:
+          - id: "property"
+            name: "小数性质理解"
+          - id: "trailing_zero"
+            name: "末尾添零与去零"
+          - id: "simplification"
+            name: "小数化简"
+          - id: "misconception"
+            name: "小数中间零与末尾零的区别"
+        prerequisites:
+          - "A2-02"
+          - "A2-04"
+        curriculum_mapping:
+          status: "体系细化"
+          stage_2: "结合小数认识建立基础"
+          stage_3: "结合小数运算应用"
+
+  - id: "A3"
+    name: "数的运算"
+    description: >
+      研究加、减、乘、除四种基本运算的意义、算理和算法，
+      以及不同数域中的运算。
+    knowledge_points:
+
+      - id: "A3-01"
+        name: "加法的意义与运算"
+        definition: >
+          加法是将两个或多个数量合并为一个总量的运算。
+          加数与和之间具有确定的数量关系。
+        learning_objectives:
+          - "理解加法的合并意义。"
+          - "理解加法算理。"
+          - "能够进行适用数域内的加法计算。"
+          - "能够用加法解决实际问题。"
+        diagnostic_dimensions:
+          - id: "meaning"
+            name: "加法意义"
+          - id: "integer_addition"
+            name: "整数加法"
+          - id: "decimal_addition"
+            name: "小数加法"
+          - id: "fraction_addition"
+            name: "分数加法"
+          - id: "algorithm"
+            name: "计算方法与算理"
+          - id: "application"
+            name: "加法应用"
+        prerequisites:
+          - "A1-01"
+          - "A2-01"
+        curriculum_mapping:
+          stage_1: "整数加法"
+          stage_2: "多位数、小数和同分母分数相关内容"
+          stage_3: "小数、分数四则运算"
+
+      - id: "A3-02"
+        name: "减法的意义与运算"
+        definition: >
+          减法用于表示从一个数量中去掉一部分、
+          比较两个数量的差，或求一个加数。
+          减法是加法的逆运算。
+        learning_objectives:
+          - "理解减法的不同情境意义。"
+          - "理解减法与加法的逆运算关系。"
+          - "能够进行适用数域内的减法计算。"
+          - "能够用减法解决实际问题。"
+        diagnostic_dimensions:
+          - id: "meaning"
+            name: "减法意义"
+          - id: "integer_subtraction"
+            name: "整数减法"
+          - id: "decimal_subtraction"
+            name: "小数减法"
+          - id: "fraction_subtraction"
+            name: "分数减法"
+          - id: "algorithm"
+            name: "计算方法与算理"
+          - id: "application"
+            name: "减法应用"
+        prerequisites:
+          - "A3-01"
+        curriculum_mapping:
+          stage_1: "整数减法"
+          stage_2: "多位数、小数和同分母分数相关内容"
+          stage_3: "小数、分数四则运算"
+
+      - id: "A3-03"
+        name: "乘法的意义与运算"
+        definition: >
+          乘法表示相同数量的累加，
+          也可以表示一个数量的若干倍或相关面积模型。
+          乘法是加法的简便运算。
+        learning_objectives:
+          - "理解乘法的基本意义。"
+          - "理解乘法算理。"
+          - "能够进行适用数域内的乘法计算。"
+          - "能够用乘法解决实际问题。"
+        diagnostic_dimensions:
+          - id: "meaning"
+            name: "乘法意义"
+          - id: "integer_multiplication"
+            name: "整数乘法"
+          - id: "decimal_multiplication"
+            name: "小数乘法"
+          - id: "fraction_multiplication"
+            name: "分数乘法"
+          - id: "algorithm"
+            name: "计算方法与算理"
+          - id: "application"
+            name: "乘法应用"
+        prerequisites:
+          - "A1-01"
+          - "A3-01"
+        curriculum_mapping:
+          stage_1: "表内乘法及简单整数乘法"
+          stage_2: "多位数乘法"
+          stage_3: "小数、分数乘法"
+
+      - id: "A3-04"
+        name: "除法的意义与运算"
+        definition: >
+          除法表示将一个数量按每份数量进行分配，
+          或将一个数量平均分成若干份。
+          除法是乘法的逆运算，除数不能为零。
+        learning_objectives:
+          - "理解平均分和包含除的意义。"
+          - "理解除法与乘法的逆运算关系。"
+          - "能够进行适用数域内的除法计算。"
+          - "理解除法结果与分数表示的关系。"
+        diagnostic_dimensions:
+          - id: "meaning"
+            name: "除法意义"
+          - id: "integer_division"
+            name: "整数除法"
+          - id: "decimal_division"
+            name: "小数除法"
+          - id: "fraction_division"
+            name: "分数除法"
+          - id: "remainder"
+            name: "有余数除法"
+          - id: "algorithm"
+            name: "计算方法与算理"
+          - id: "application"
+            name: "除法应用"
+        prerequisites:
+          - "A3-03"
+        curriculum_mapping:
+          stage_1: "表内除法及简单整数除法"
+          stage_2: "多位数除法"
+          stage_3: "小数、分数除法及整数除法与分数的关系"
+
+      - id: "A3-05"
+        name: "四则混合运算"
+        definition: >
+          在一个算式中综合使用加、减、乘、除运算，
+          按照运算顺序和括号规则求出结果。
+        learning_objectives:
+          - "理解四则混合运算的运算顺序。"
+          - "能够正确处理含有括号的算式。"
+          - "能够进行整数、小数和分数范围内的适用混合运算。"
+        diagnostic_dimensions:
+          - id: "operation_order"
+            name: "运算顺序"
+          - id: "parentheses"
+            name: "括号处理"
+          - id: "integer_mixed"
+            name: "整数混合运算"
+          - id: "decimal_mixed"
+            name: "小数混合运算"
+          - id: "fraction_mixed"
+            name: "分数混合运算"
+          - id: "calculation_accuracy"
+            name: "计算准确性"
+        prerequisites:
+          - "A3-01"
+          - "A3-02"
+          - "A3-03"
+          - "A3-04"
+          - "A4-08"
+        curriculum_mapping:
+          stage_1: "简单整数混合运算基础"
+          stage_2: "整数四则混合运算"
+          stage_3: "简单小数、分数混合运算"
+
+  - id: "A4"
+    name: "运算关系、规律与算理"
+    description: >
+      研究运算之间的关系、运算律、运算性质和运算一致性，
+      为理解算理、简便计算和推理提供依据。
+    knowledge_points:
+
+      - id: "A4-01"
+        name: "加法交换律与结合律"
+        definition: >
+          两个数相加，交换加数的位置，和不变；
+          三个或多个数相加，改变加法的结合顺序，和不变。
+        learning_objectives:
+          - "理解加法交换律。"
+          - "理解加法结合律。"
+          - "能够用字母表示加法运算律。"
+          - "能够利用运算律进行合理计算。"
+        diagnostic_dimensions:
+          - id: "commutative"
+            name: "加法交换律"
+          - id: "associative"
+            name: "加法结合律"
+          - id: "symbolic"
+            name: "字母表示"
+          - id: "application"
+            name: "运算律应用"
+        prerequisites:
+          - "A3-01"
+        curriculum_mapping:
+          stage_2: "明确要求"
+
+      - id: "A4-02"
+        name: "乘法交换律与结合律"
+        definition: >
+          两个数相乘，交换因数的位置，积不变；
+          三个或多个数相乘，改变乘法的结合顺序，积不变。
+        learning_objectives:
+          - "理解乘法交换律。"
+          - "理解乘法结合律。"
+          - "能够用字母表示乘法运算律。"
+          - "能够利用运算律进行合理计算。"
+        diagnostic_dimensions:
+          - id: "commutative"
+            name: "乘法交换律"
+          - id: "associative"
+            name: "乘法结合律"
+          - id: "symbolic"
+            name: "字母表示"
+          - id: "application"
+            name: "运算律应用"
+        prerequisites:
+          - "A3-03"
+        curriculum_mapping:
+          stage_2: "明确要求"
+
+      - id: "A4-03"
+        name: "乘法分配律"
+        definition: >
+          一个数乘两个数的和，
+          等于这个数分别乘两个加数后再相加；
+          该关系也可以用于乘法与减法的组合。
+        learning_objectives:
+          - "理解乘法分配律。"
+          - "能够用字母表示乘法分配律。"
+          - "能够识别适合使用乘法分配律的算式。"
+          - "能够利用分配律进行计算。"
+        diagnostic_dimensions:
+          - id: "property"
+            name: "分配律理解"
+          - id: "symbolic"
+            name: "字母表示"
+          - id: "expansion"
+            name: "乘法分配展开"
+          - id: "factorization"
+            name: "逆向提取公因数"
+          - id: "application"
+            name: "计算应用"
+        prerequisites:
+          - "A3-01"
+          - "A3-03"
+        curriculum_mapping:
+          stage_2: "明确要求"
+
+      - id: "A4-04"
+        name: "加法与减法的互逆关系"
+        definition: >
+          加法和减法互为逆运算。
+          已知两个加数可以求和，
+          已知和与其中一个加数可以求另一个加数。
+        learning_objectives:
+          - "理解加法与减法的互逆关系。"
+          - "能够利用互逆关系求未知数。"
+          - "能够使用加减法关系检验计算结果。"
+        diagnostic_dimensions:
+          - id: "inverse_relation"
+            name: "互逆关系理解"
+          - id: "unknown_addend"
+            name: "求未知加数"
+          - id: "verification"
+            name: "加减法验算"
+        prerequisites:
+          - "A3-01"
+          - "A3-02"
+        curriculum_mapping:
+          stage_1: "明确要求"
+          stage_2: "进一步应用"
+
+      - id: "A4-05"
+        name: "乘法与除法的互逆关系"
+        definition: >
+          乘法与除法互为逆运算。
+          已知两个因数可以求积，
+          已知积与其中一个因数可以求另一个因数。
+        learning_objectives:
+          - "理解乘法与除法的互逆关系。"
+          - "能够利用互逆关系求未知数。"
+          - "能够使用乘除法关系检验计算结果。"
+        diagnostic_dimensions:
+          - id: "inverse_relation"
+            name: "互逆关系理解"
+          - id: "unknown_factor"
+            name: "求未知因数"
+          - id: "verification"
+            name: "乘除法验算"
+        prerequisites:
+          - "A3-03"
+          - "A3-04"
+        curriculum_mapping:
+          stage_1: "明确要求"
+          stage_2: "进一步应用"
+
+      - id: "A4-06"
+        name: "减法的运算性质"
+        definition: >
+          一个数连续减去两个数，
+          可以等于这个数减去后两个数的和；
+          从一个数中减去两个数的和，
+          也可以转化为连续减去这两个数。
+        learning_objectives:
+          - "理解减法运算性质。"
+          - "能够识别减法算式中的等值变形。"
+          - "能够在适当情境下利用减法性质计算。"
+        diagnostic_dimensions:
+          - id: "consecutive_subtraction"
+            name: "连续减法关系"
+          - id: "parentheses"
+            name: "括号与减法关系"
+          - id: "equivalent_transformation"
+            name: "等值变形"
+          - id: "application"
+            name: "计算应用"
+        prerequisites:
+          - "A3-02"
+          - "A4-04"
+        curriculum_mapping:
+          status: "体系细化"
+          notes: "不作为2022年版课标独立列出的运算律。"
+
+      - id: "A4-07"
+        name: "除法的运算性质"
+        definition: >
+          在除数不为零的条件下，
+          除法可以根据数与运算之间的关系进行等值变形。
+          例如，被除数和除数同时乘或除以相同的非零数，
+          商不变。
+        learning_objectives:
+          - "理解商不变性质。"
+          - "理解除法算式等值变形的条件。"
+          - "能够利用除法性质进行合理计算。"
+        diagnostic_dimensions:
+          - id: "quotient_invariance"
+            name: "商不变性质"
+          - id: "equivalent_transformation"
+            name: "除法等值变形"
+          - id: "condition"
+            name: "适用条件"
+          - id: "application"
+            name: "计算应用"
+        prerequisites:
+          - "A3-04"
+          - "A4-05"
+        curriculum_mapping:
+          status: "体系细化"
+          notes: "作为除法算理与算法的细化内容，按教材版本映射。"
+
+      - id: "A4-08"
+        name: "运算顺序与括号"
+        definition: >
+          混合运算中，不同运算具有规定的先后顺序；
+          括号用于改变或明确运算顺序。
+        learning_objectives:
+          - "理解同级运算的顺序。"
+          - "理解不同级运算的顺序。"
+          - "理解小括号和中括号的作用。"
+          - "能够正确计算含括号的混合算式。"
+        diagnostic_dimensions:
+          - id: "same_level"
+            name: "同级运算顺序"
+          - id: "different_level"
+            name: "不同级运算顺序"
+          - id: "parentheses"
+            name: "小括号"
+          - id: "brackets"
+            name: "中括号"
+          - id: "application"
+            name: "综合运算"
+        prerequisites:
+          - "A3-01"
+          - "A3-02"
+          - "A3-03"
+          - "A3-04"
+        curriculum_mapping:
+          stage_1: "简单运算顺序基础"
+          stage_2: "整数四则混合运算"
+          stage_3: "结合小数和分数运算应用"
+
+      - id: "A4-09"
+        name: "运算的一致性"
+        definition: >
+          整数、小数和分数的运算在意义和基本算理上具有联系。
+          不同数域的运算形式可能不同，
+          但可以通过相同的数学思想理解和解释。
+        learning_objectives:
+          - "理解不同数域运算之间的联系。"
+          - "能够从计数单位角度解释小数运算。"
+          - "能够从分数意义角度解释分数运算。"
+          - "能够比较不同数域中运算方法的共同点。"
+        diagnostic_dimensions:
+          - id: "integer_decimal"
+            name: "整数与小数运算联系"
+          - id: "integer_fraction"
+            name: "整数与分数运算联系"
+          - id: "place_value"
+            name: "计数单位与运算"
+          - id: "arithmetic_reasoning"
+            name: "算理解释"
+        prerequisites:
+          - "A1-08"
+          - "A1-09"
+          - "A1-10"
+          - "A3-01"
+          - "A3-02"
+          - "A3-03"
+          - "A3-04"
+        curriculum_mapping:
+          stage_2: "初步感悟"
+          stage_3: "明确要求"
+
+          stage_3: "结合实际问题选择合理方法"
+
+cross_domain_capabilities:
+
+  - id: "CAP-01"
+    name: "数的大小比较"
+    source_knowledge:
+      - "A2-01"
+      - "A2-02"
+      - "A2-03"
+      - "A2-04"
+    description: >
+      根据数的意义、计数单位和表示形式，
+      判断两个或多个数之间的大小关系。
+    diagnostic_dimensions:
+      - id: "integer_comparison"
+        name: "整数大小比较"
+      - id: "decimal_comparison"
+        name: "小数大小比较"
+      - id: "fraction_comparison"
+        name: "分数大小比较"
+      - id: "mixed_comparison"
+        name: "不同数域综合比较"
+      - id: "reasoning"
+        name: "比较依据解释"
+    learning_objectives:
+      - "能够比较整数、小数和分数的大小。"
+      - "能够选择合适的比较方法。"
+      - "能够解释比较结果的依据。"
+    curriculum_notes:
+      - "stage_1：万以内数比较；stage_2：小数和分数初步比较；stage_3：综合应用。"
+
+  - id: "CAP-02"
+    name: "估算"
+    source_knowledge:
+      - "A1-01"
+      - "A1-08"
+      - "A1-09"
+      - "A3-01"
+      - "A3-02"
+      - "A3-03"
+      - "A3-04"
+    description: >
+      根据实际问题和数值特点，
+      选择适当单位、方法和精度估计数量或运算结果。
+    diagnostic_dimensions:
+      - "估算意识"
+      - "估算方法选择"
+      - "估算精度判断"
+      - "估算结果合理性"
+
+  - id: "CAP-03"
+    name: "计算结果检验"
+    source_knowledge:
+      - "A4-04"
+      - "A4-05"
+      - "A4-09"
+    description: >
+      使用逆运算、估算或其他合理方法，
+      判断计算过程和结果是否正确。
+    diagnostic_dimensions:
+      - "逆运算检验"
+      - "估算检验"
+      - "结果合理性判断"
+
+  - id: "CAP-04"
+    name: "算理表达"
+    source_knowledge:
+      - "A3-01"
+      - "A3-02"
+      - "A3-03"
+      - "A3-04"
+      - "A4-01"
+      - "A4-02"
+      - "A4-03"
+      - "A4-09"
+    description: >
+      能够使用语言、算式、图形或操作过程，
+      解释运算意义、计算依据和方法。
+    diagnostic_dimensions:
+      - "概念解释"
+      - "算理说明"
+      - "步骤表达"
+      - "方法比较"
+
+  - id: "CAP-05"
+    name: "运算方法选择"
+    source_knowledge:
+      - "A3-01"
+      - "A3-02"
+      - "A3-03"
+      - "A3-04"
+      - "A4-01"
+      - "A4-02"
+      - "A4-03"
+      - "A4-06"
+      - "A4-07"
+    description: >
+      根据数的特点、运算关系和问题要求，
+      选择合理、简洁且正确的运算方法，
+      包括直接计算、运算律、运算性质或其他合适方法。
+    diagnostic_dimensions:
+      - "策略识别"
+      - "策略选择"
+      - "策略执行"
+      - "策略解释"
+
+  - id: "CAP-06"
+    name: "数的直观表示"
+    source_knowledge:
+      - "A1-08"
+      - "A1-09"
+      - "A2-01"
+      - "A2-02"
+      - "A2-03"
+    description: >
+      借助实物、图形、数轴或其他直观模型，
+      表示和理解数及其关系。
+    diagnostic_dimensions:
+      - "实物表示"
+      - "图形表示"
+      - "数轴表示"
+      - "表示形式转换"
+
+  - id: "CAP-07"
+    name: "数感与初步推理意识"
+    source_knowledge:
+      - "A1-01"
+      - "A1-08"
+      - "A1-09"
+    description: >
+      能在生活情境中运用数描述事物特征，
+      逐步形成数感、运算能力和初步的推理意识。
+      认知层面的“用数表示/解释数量”仍由 A1 簇知识点承载；
+      本能力不作为独立知识点，也不写入 prerequisites。
+    diagnostic_dimensions:
+      - "用数描述特征"
+      - "数感表现"
+      - "运算意识"
+      - "初步推理意识"
+    curriculum_notes: >
+      对应课标 CR-013 素养目标部分；
+      题库绑定时 capability_tags=CAP-07，
+      并视题面挂 A1-01 / A1-08 / A1-09 等具体 KP。
+
+dependency_rules:
+  - "数的概念是数的表示和运算的基础。"
+  - "数的表示依赖计数单位、数位和数的意义。"
+  - "分数运算依赖分数意义、分数表示和等值关系。"
+  - "小数运算依赖小数意义、数位和位值。"
+  - "四则混合运算依赖四种基本运算及运算顺序。"
+  - "运算律和运算性质必须建立在对应运算意义的基础上。"
+  - "估算、结果检验和方法选择属于跨知识能力，不作为核心知识点的前置条件。"
+  - "数感与初步推理意识（CAP-07）属于跨知识能力，不作为核心知识点的前置条件。"
+  - "前置关系表示知识理解依赖，不等同于教材实际教学顺序。"
+
+id_management:
+  rules:
+    - "知识点ID一经发布不得复用。"
+    - "知识点迁移模块时保留原ID。"
+    - "知识点拆分时，旧ID标记为deprecated，并记录replaced_by。"
+    - "知识点合并时，保留主ID，并记录其他ID的merged_into。"
+    - "诊断维度ID在所属知识点内唯一。"
+    - "教材版本映射不得创建重复的统一知识点。"
+  legacy_id_handling:
+    - id: "A2-06"
+      action: "retain"
+      note: "整数除法与分数的关系，保留为唯一主ID。"
+    - id: "A3-06"
+      action: "alias"
+      canonical_id: "A2-06"
+      note: "同一内容，禁止独立主绑定。"
+    - id: "A2-07"
+      action: "reclassified"
+      canonical_capability_id: "CAP-01"
+      removed_from: "knowledge_points"
+      note: "数的大小比较移出知识点的跨数域能力，唯一承载为 CAP-01。"
+    - id: "A4-04"
+      action: "retain"
+      note: "加法与减法的互逆关系。"
+    - id: "A4-05"
+      action: "retain"
+      note: "乘法与除法的互逆关系。"
+    - id: "A4-08"
+      action: "retain"
+      note: "运算顺序与括号。"
+    - id: "A4-10"
+      action: "reclassified"
+      canonical_capability_id: "CAP-05"
+      removed_from: "knowledge_points"
+      note: "运算方法选择移出知识点的跨知识能力，唯一承载为 CAP-05。"
+
+assessment_binding:
+  rules:
+    - "一道题至少绑定一个核心知识点。"
+    - "一道题可以绑定多个知识点，但必须区分主要考查点和辅助知识点。"
+    - "每道题应尽可能绑定具体诊断维度。"
+    - "主要考查点用于知识掌握情况归因。"
+    - "辅助知识点用于分析题目所需的前置能力。"
+    - "不能仅因题目使用了某种运算，就认定该运算是主要考查点。"
+    - "计算错误需要区分概念错误、算理错误、方法错误和执行错误。"
+  binding_structure:
+    primary_knowledge:
+      required: true
+      description: "题目主要测量的知识点。"
+    secondary_knowledge:
+      required: false
+      description: "解题过程中涉及的辅助知识点。"
+    diagnostic_dimensions:
+      required: true
+      description: "题目实际测量的具体能力或错误类型。"
+    capability_tags:
+      required: false
+      description: "估算、检验、算理表达等跨知识能力。"
+
+curriculum_mapping_rules:
+  - "统一知识点与教材章节采用多对多映射。"
+  - "同一知识点可以出现在不同教材版本、不同年级或不同单元。"
+  - "同一教材单元可以包含多个统一知识点。"
+  - "教材映射记录教材版本、年级、册次、单元、页码和学习要求。"
+  - "教材没有覆盖的知识点不应因为其他版本覆盖而删除。"
+  - "教材扩展内容应标记为教材扩展，不直接提升为课标要求。"
+  - "教材顺序不作为统一知识体系的层级依据。"
+
+quality_rules:
+  - "每个核心知识点必须有明确、可判定的定义。"
+  - "不同知识点不得只因表述不同而重复建立。"
+  - "一个知识点不能同时混合概念、运算技能和综合能力而不作区分。"
+  - "诊断维度必须能够对应具体题目或可观察的学生表现。"
+  - "前置知识必须存在真实的理解依赖关系。"
+  - "不能将教学方法、计算技巧直接等同于数学知识点。"
+  - "知识点的年级归属必须来自教材映射，不能仅凭课标学段推断。"
+  - "课标映射必须保留原文依据、学段和要求类型。"
+
+version_history:
+  - version: "1.0"
+    date: "2026-11-17"
+    changes:
+      - "确立独立于教材版本的统一知识体系。"
+      - "完成数的概念、数的表示、数的运算、运算关系与规律四个模块。"
+      - "将数的大小比较、估算、结果检验、算理表达和方法选择调整为跨知识能力。"
+      - "补充分数基本性质、小数性质、减法性质和除法性质。"
+      - "将负数保留为扩展节点，不误标为数与运算核心课标要求。"
+      - "明确课标学段映射与教材年级映射的边界。"

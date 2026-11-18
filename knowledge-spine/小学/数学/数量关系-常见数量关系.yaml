@@ -1,0 +1,470 @@
+schema_version: "1.0"
+status: "final"
+
+module:
+  id: "B2"
+  name: "常见数量关系"
+  parent: "数量关系"
+  description: >
+    研究现实情境中数量之间的关系，
+    建立加法模型和乘法模型，
+    并利用数量关系分析和解决实际问题。
+
+  scope:
+    education_stage: "小学阶段"
+    primary_grade_stage: "第二学段（3～4年级）"
+    curriculum_basis: "义务教育数学课程标准（2022年版）"
+    curriculum_source:
+      url: "https://www.moe.gov.cn/srcsite/A26/s8001/202204/W020220420582346895190.pdf"
+      section: "四、课程内容—数与代数—数量关系"
+    boundaries:
+      included:
+        - "加法模型"
+        - "乘法模型"
+        - "常见数量关系"
+        - "数量关系的逆向求解"
+        - "等量关系"
+      excluded:
+        - "方程及解方程，归入B3"
+        - "比和比例，归入B4"
+        - "正比例与反比例，归入B5"
+        - "图形周长和面积公式，归入图形与几何"
+        - "平均数，归入统计与数据分析"
+        - "复杂行程问题及多阶段应用题，不作为独立知识点"
+
+  design_principles:
+    - "以数量之间的数学关系为核心，而不是以应用题题型分类。"
+    - "同一数量关系可以出现在不同生活情境中。"
+    - "一个数量关系可以通过不同的已知条件求解。"
+    - "数量关系的理解先于字母表达和方程建模。"
+    - "和差、倍数等复合关系不与基础数量关系重复建点。"
+    - "数量单位和量纲必须与数量关系保持一致。"
+
+  knowledge_points:
+
+    - id: "B2-01"
+      name: "总量与分量关系"
+      definition: >
+        一个整体数量可以由若干部分数量合并得到。
+        整体数量等于各部分数量之和。
+      relation:
+        general: "总量 = 分量1 + 分量2 + ..."
+        inverse:
+          - "分量1 = 总量 - 其他分量之和"
+      learning_objectives:
+        - "理解整体与部分之间的关系。"
+        - "能够识别总量和各分量。"
+        - "能够根据已知分量求总量。"
+        - "能够根据总量和部分分量求未知分量。"
+        - "能够在不同情境中使用加法模型。"
+      mastery_criteria:
+        - "能从情境中识别整体数量和部分数量。"
+        - "能正确建立总量与分量的关系。"
+        - "能根据不同未知量选择加法或减法。"
+        - "能解释计算结果对应的实际数量。"
+      diagnostic_dimensions:
+        - id: "whole_part"
+          name: "整体与部分识别"
+        - id: "total_calculation"
+          name: "由分量求总量"
+        - id: "unknown_part"
+          name: "由总量求未知分量"
+        - id: "multi_part"
+          name: "多个分量关系"
+        - id: "model_construction"
+          name: "加法模型建立"
+      prerequisites:
+        - "A3-01"
+        - "A3-02"
+      curriculum_mapping:
+        stage_1: "通过具体情境理解合并与分解"
+        stage_2: "明确要求"
+      source_type: "课标明确要求"
+
+    - id: "B2-02"
+      name: "相差关系"
+      definition: >
+        两个数量之间可以通过相减得到差。
+        已知其中一个数量和差，可以求另一个数量。
+      relation:
+        general: "较大数量 - 较小数量 = 相差量"
+        inverse:
+          - "较大数量 = 较小数量 + 相差量"
+          - "较小数量 = 较大数量 - 相差量"
+      learning_objectives:
+        - "理解两个数量之间的相差关系。"
+        - "能够识别比较量、标准量和相差量。"
+        - "能够根据已知条件求未知数量。"
+        - "能够区分求相差量与求其中一个数量。"
+      mastery_criteria:
+        - "能正确判断两个数量的大小关系。"
+        - "能识别题目要求的是差还是具体数量。"
+        - "能建立正确的加减数量关系。"
+        - "能解释数量关系的方向。"
+      diagnostic_dimensions:
+        - id: "comparison"
+          name: "比较对象识别"
+        - id: "difference"
+          name: "相差量识别"
+        - id: "difference_calculation"
+          name: "求相差量"
+        - id: "larger_quantity"
+          name: "求较大数量"
+        - id: "smaller_quantity"
+          name: "求较小数量"
+        - id: "relationship_direction"
+          name: "数量关系方向判断"
+      prerequisites:
+        - "B2-01"
+        - "A3-01"
+        - "A3-02"
+      curriculum_mapping:
+        stage_1: "通过比较情境建立基础"
+        stage_2: "常见加减数量关系的应用"
+      source_type: "体系细化"
+
+    - id: "B2-03"
+      name: "倍数关系"
+      definition: >
+        一个数量是另一个数量的若干倍，
+        表示两个数量之间存在以乘法或除法表达的关系。
+      relation:
+        general: "比较量 = 标准量 × 倍数"
+        inverse:
+          - "标准量 = 比较量 ÷ 倍数"
+          - "倍数 = 比较量 ÷ 标准量"
+      learning_objectives:
+        - "理解倍数关系的含义。"
+        - "能够识别标准量、比较量和倍数。"
+        - "能够根据已知条件求未知数量。"
+        - "能够区分倍数关系与相差关系。"
+      mastery_criteria:
+        - "能识别谁是谁的几倍。"
+        - "能判断已知量和未知量在关系中的位置。"
+        - "能正确选择乘法或除法。"
+        - "能解释倍数关系中的标准量。"
+      diagnostic_dimensions:
+        - id: "standard_quantity"
+          name: "标准量识别"
+        - id: "comparison_quantity"
+          name: "比较量识别"
+        - id: "multiple"
+          name: "倍数识别"
+        - id: "find_comparison"
+          name: "求比较量"
+        - id: "find_standard"
+          name: "求标准量"
+        - id: "find_multiple"
+          name: "求倍数"
+        - id: "difference_vs_multiple"
+          name: "相差关系与倍数关系辨析"
+      prerequisites:
+        - "A3-03"
+        - "A3-04"
+      curriculum_mapping:
+        stage_1: "结合具体情境认识倍的意义"
+        stage_2: "在乘除法问题中应用"
+      source_type: "体系细化"
+      notes:
+        - "和倍、差倍等属于多个基础关系的组合，不单独建立核心知识点。"
+
+    - id: "B2-04"
+      name: "总价、单价与数量关系"
+      definition: >
+        在单价相同的条件下，
+        总价等于单价与购买数量的乘积。
+      relation:
+        general: "总价 = 单价 × 数量"
+        inverse:
+          - "单价 = 总价 ÷ 数量"
+          - "数量 = 总价 ÷ 单价"
+      learning_objectives:
+        - "理解单价、数量和总价的含义。"
+        - "理解三个数量之间的乘除关系。"
+        - "能够根据不同已知条件求未知量。"
+        - "能够在购物等实际情境中应用数量关系。"
+      mastery_criteria:
+        - "能区分单价、数量和总价。"
+        - "能根据问题确定未知量。"
+        - "能建立正确的乘除关系。"
+        - "能检查单位是否匹配。"
+      diagnostic_dimensions:
+        - id: "unit_price"
+          name: "单价识别"
+        - id: "quantity"
+          name: "数量识别"
+        - id: "total_price"
+          name: "总价识别"
+        - id: "find_total"
+          name: "求总价"
+        - id: "find_unit_price"
+          name: "求单价"
+        - id: "find_quantity"
+          name: "求数量"
+        - id: "unit_consistency"
+          name: "数量单位一致性"
+      prerequisites:
+        - "A3-03"
+        - "A3-04"
+        - "B2-03"
+      curriculum_mapping:
+        stage_2: "明确要求"
+      source_type: "课标明确要求"
+
+    - id: "B2-05"
+      name: "路程、速度与时间关系"
+      definition: >
+        在速度保持不变的运动过程中，
+        路程等于速度与时间的乘积。
+      relation:
+        general: "路程 = 速度 × 时间"
+        inverse:
+          - "速度 = 路程 ÷ 时间"
+          - "时间 = 路程 ÷ 速度"
+      learning_objectives:
+        - "理解路程、速度和时间的含义。"
+        - "理解三个数量之间的乘除关系。"
+        - "能够根据不同已知条件求未知量。"
+        - "能够正确处理速度和时间单位。"
+      mastery_criteria:
+        - "能识别路程、速度和时间。"
+        - "能根据已知条件建立关系。"
+        - "能选择乘法或除法求解。"
+        - "能判断计算结果的单位是否正确。"
+      diagnostic_dimensions:
+        - id: "distance"
+          name: "路程识别"
+        - id: "speed"
+          name: "速度识别"
+        - id: "time"
+          name: "时间识别"
+        - id: "find_distance"
+          name: "求路程"
+        - id: "find_speed"
+          name: "求速度"
+        - id: "find_time"
+          name: "求时间"
+        - id: "unit_conversion"
+          name: "速度与时间单位换算"
+        - id: "unit_consistency"
+          name: "量纲一致性"
+      prerequisites:
+        - "A3-03"
+        - "A3-04"
+        - "B2-03"
+      curriculum_mapping:
+        stage_2: "明确要求"
+      source_type: "课标明确要求"
+      notes:
+        - "复杂相遇、追及、多阶段运动问题不在本知识点的基础范围内。"
+        - "后续可作为行程问题应用场景映射。"
+
+    - id: "B2-06"
+      name: "等量关系"
+      definition: >
+        两个数量或两个数量表达式具有相同的数值时，
+        它们之间构成相等关系。
+        等量的等量相等是建立数学推理的重要基础。
+      learning_objectives:
+        - "理解相等关系表示两个数量相同。"
+        - "能够从情境中识别相等的数量。"
+        - "能够用算式或符号表达简单等量关系。"
+        - "理解等量的等量相等。"
+      mastery_criteria:
+        - "能识别情境中的相等数量。"
+        - "能判断两个表达式是否表示相等数量。"
+        - "能用等号正确表达相等关系。"
+        - "能根据等量关系进行简单推理。"
+      diagnostic_dimensions:
+        - id: "equality_meaning"
+          name: "相等关系的意义"
+        - id: "quantity_equality"
+          name: "数量相等判断"
+        - id: "expression_equality"
+          name: "表达式相等判断"
+        - id: "equality_representation"
+          name: "等量关系表达"
+        - id: "transitivity"
+          name: "等量的等量相等"
+      prerequisites:
+        - "B2-01"
+        - "B2-02"
+        - "B2-03"
+      curriculum_mapping:
+        stage_2: "明确要求"
+        stage_3: "结合等式基本性质进一步学习"
+      source_type: "课标明确要求"
+      notes:
+        - "本知识点只研究等量关系的意义和识别。"
+        - "等式的基本性质和利用等式解方程归入B3。"
+
+    - id: "B2-07"
+      name: "复合数量关系"
+      definition: >
+        一个实际问题可能同时包含两个或多个基本数量关系。
+        需要将复杂情境分解为若干基本关系，
+        再按照数量之间的联系逐步求解。
+      learning_objectives:
+        - "能够从复杂情境中识别多个数量关系。"
+        - "能够将复合关系分解为基本关系。"
+        - "能够确定数量关系之间的先后联系。"
+        - "能够根据中间量逐步解决问题。"
+      mastery_criteria:
+        - "能识别问题中的已知量和未知量。"
+        - "能将复杂关系分解为基本模型。"
+        - "能确定中间量。"
+        - "能正确组合基本数量关系。"
+        - "能解释每一步计算的实际意义。"
+      diagnostic_dimensions:
+        - id: "quantity_identification"
+          name: "数量识别"
+        - id: "relationship_decomposition"
+          name: "数量关系分解"
+        - id: "intermediate_quantity"
+          name: "中间量识别"
+        - id: "sequence"
+          name: "关系顺序确定"
+        - id: "model_combination"
+          name: "基本模型组合"
+        - id: "result_interpretation"
+          name: "结果意义解释"
+      prerequisites:
+        - "B2-01"
+        - "B2-02"
+        - "B2-03"
+        - "B2-04"
+        - "B2-05"
+        - "B2-06"
+      curriculum_mapping:
+        stage_1: "简单实际问题"
+        stage_2: "常见数量关系综合应用"
+        stage_3: "复杂实际问题中的模型应用"
+      source_type: "体系细化"
+
+  capability_tags:
+
+    - id: "B2-CAP-01"
+      name: "数量关系识别"
+      description: "从文字、图表或生活情境中识别相关数量。"
+
+    - id: "B2-CAP-02"
+      name: "数量关系表达"
+      description: "使用语言、算式或字母表达数量之间的关系。"
+
+    - id: "B2-CAP-03"
+      name: "模型选择"
+      description: "根据问题情境选择加法模型或乘法模型。"
+
+    - id: "B2-CAP-04"
+      name: "逆向求解"
+      description: "根据已知量和未知量的位置选择逆向运算。"
+
+    - id: "B2-CAP-05"
+      name: "量纲检查"
+      description: "检查计算过程和结果的数量单位是否一致。"
+
+    - id: "B2-CAP-06"
+      name: "实际意义解释"
+      description: "解释计算结果对应的现实数量及其合理性。"
+
+  exclusions:
+    - name: "方程"
+      target_module: "B3"
+      reason: "数量关系可以用算式表达，但方程及解方程属于独立内容。"
+
+    - name: "比和比例"
+      target_module: "B4"
+      reason: "倍数关系是基础数量关系，比和比例具有独立的概念体系。"
+
+    - name: "正比例与反比例"
+      target_module: "B5"
+      reason: "属于两个变量之间的变化关系。"
+
+    - name: "和差问题、和倍问题、差倍问题"
+      reason: >
+        这些是多个基础数量关系的组合应用场景，
+        不作为独立的核心知识点。
+
+    - name: "复杂行程问题"
+      reason: >
+        相遇、追及、多阶段运动属于复合应用场景，
+        不与基本路程、速度和时间关系重复建点。
+
+    - name: "周长与面积公式"
+      target_module: "图形与几何"
+      reason: "属于图形测量知识体系。"
+
+  dependency_rules:
+    - "B2-01依赖加法和减法的意义。"
+    - "B2-02依赖加法和减法的意义。"
+    - "B2-03依赖乘法和除法的意义。"
+    - "B2-04依赖乘除法及倍数关系。"
+    - "B2-05依赖乘除法及倍数关系。"
+    - "B2-06依赖对数量及相等关系的理解。"
+    - "B2-07依赖多个基础数量关系。"
+    - "B1中的字母表达是数量关系的一般化表达方式，不是理解基础数量关系的前置条件。"
+    - "前置关系表示理解依赖，不代表教材教学顺序。"
+
+  assessment_binding:
+    rules:
+      - "每道题必须绑定一个主要知识点。"
+      - "综合应用题可以绑定多个辅助知识点。"
+      - "主要知识点用于判断学生掌握情况。"
+      - "辅助知识点用于分析解题所需的其他关系。"
+      - "不能仅根据题目出现的关键词判断知识点。"
+      - "不能仅根据最终使用的加减乘除运算判断主要考查点。"
+      - "应优先诊断学生是否理解数量关系，再诊断计算执行错误。"
+
+    error_categories:
+      - id: "E01"
+        name: "相关数量识别错误"
+      - id: "E02"
+        name: "数量角色判断错误"
+      - id: "E03"
+        name: "数量关系理解错误"
+      - id: "E04"
+        name: "加法模型建立错误"
+      - id: "E05"
+        name: "乘法模型建立错误"
+      - id: "E06"
+        name: "相差关系与倍数关系混淆"
+      - id: "E07"
+        name: "已知量与未知量判断错误"
+      - id: "E08"
+        name: "逆向求解关系错误"
+      - id: "E09"
+        name: "复合关系分解错误"
+      - id: "E10"
+        name: "中间量识别错误"
+      - id: "E11"
+        name: "数量单位不一致"
+      - id: "E12"
+        name: "计算结果意义解释错误"
+
+  curriculum_mapping_rules:
+    - "课标明确要求与体系细化内容必须区分。"
+    - "总量与分量、总价与单价数量、路程与速度时间、等量关系映射第二学段明确要求。"
+    - "相差关系和倍数关系作为基础关系细化，具体教学安排以教材为准。"
+    - "复合数量关系作为跨基础关系的综合应用，不应误认为独立课标知识点。"
+    - "年级、册次和单元必须通过教材版本映射确定。"
+    - "不同教材版本可以用不同情境讲授同一数量关系。"
+
+  quality_rules:
+    - "每个知识点必须有明确的数量关系表达。"
+    - "每个知识点必须明确各数量的角色。"
+    - "每个知识点必须能够设计不同未知量的诊断题。"
+    - "基础数量关系与复合应用题必须分开。"
+    - "相同数学关系不得因情境变化而重复建点。"
+    - "单位和量纲必须纳入诊断。"
+    - "字母表达属于B1，不在本模块重复定义。"
+    - "方程求解属于B3，不在本模块展开。"
+
+  version_history:
+    - version: "1.0"
+      date: "2026-11-17"
+      changes:
+        - "建立常见数量关系统一知识结构。"
+        - "明确加法模型和乘法模型的基本关系。"
+        - "覆盖总量分量、相差、倍数、总价、路程和等量关系。"
+        - "增加复合数量关系作为综合应用知识点。"
+        - "明确与字母表达、方程、比例和图形测量的边界。"

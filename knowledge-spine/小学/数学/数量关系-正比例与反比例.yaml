@@ -1,0 +1,347 @@
+status: "final"
+module:
+  id: B5
+  name: 正比例与反比例
+  version: "1.0"
+  domain: 数与代数
+  description: >
+    研究两个相关联的变量在变化过程中的数量关系，
+    通过比值不变或乘积不变识别正比例与反比例，
+    并用关系式、表格和图像表示及分析变化规律。
+
+  boundary:
+    prerequisites:
+      - B1-01  # 字母表示数的意义
+      - B1-02  # 含有字母的式子
+      - B2-03  # 倍数关系
+      - B2-04  # 总价、单价与数量关系
+      - B2-05  # 路程、速度与时间关系
+      - B4-01  # 比的意义
+      - B4-02  # 比值及其计算
+
+    includes:
+      - 相关联的量
+      - 正比例的意义
+      - 正比例关系式
+      - 正比例关系的表格与图像
+      - 反比例的意义
+      - 反比例关系式
+      - 正比例与反比例的辨析
+      - 正比例与反比例的实际应用
+
+    excludes:
+      - 函数的一般概念
+      - 一次函数
+      - 反比例函数的完整性质
+      - 函数图像的系统研究
+      - 比例尺
+      - 比例的基本性质
+      - 解比例
+
+  knowledge_points:
+
+    - id: B5-01
+      name: 相关联的量
+      definition: >
+        在具体情境中，两个数量会随着条件变化而发生变化，
+        其中一个量的变化会与另一个量的变化产生联系。
+      learning_objectives:
+        - 理解两个量可以同时发生变化
+        - 能识别实际情境中的相关联的量
+        - 能区分变量与不变量
+        - 能观察两个量的变化趋势
+      diagnostic_dimensions:
+        - 变量识别
+        - 不变量识别
+        - 变化关系观察
+        - 变化趋势判断
+      prerequisites:
+        - B1-01
+        - B2-03
+      curriculum:
+        stage_3:
+          status: 体系基础
+          description: 为数量关系与变化规律的学习提供基础
+        stage_4:
+          status: 学习基础
+          description: 为函数及变量关系学习提供基础
+
+    - id: B5-02
+      name: 正比例的意义
+      definition: >
+        两个相关联的量，如果相对应的两个数的比值
+        始终保持一定，则这两个量成正比例关系。
+        在常见正数情境中，两个量同向变化。
+      learning_objectives:
+        - 理解正比例关系的含义
+        - 理解比值一定是正比例关系的判断依据
+        - 能识别正比例关系中的两个变量
+        - 能判断两个量是否成正比例
+        - 理解正比例关系不只是两个量同时增加
+      diagnostic_dimensions:
+        - 相关联的量识别
+        - 比值不变理解
+        - 正比例关系判断
+        - 同向变化与正比例的辨析
+      prerequisites:
+        - B5-01
+        - B4-02
+      curriculum:
+        standard_2011:
+          status: 明确要求
+          description: 小学第二学段正比例内容
+        standard_2022:
+          status: 明确要求（成正比的量）
+          note: 非独立正比例主题，对应 CR-027「成正比的量」；覆盖 y/x=k 的明确要求
+
+    - id: B5-03
+      name: 正比例关系式
+      definition: >
+        正比例关系可以用 y = kx 表示，
+        其中 k 为比例常数，x、y 为相关联的变量。
+      learning_objectives:
+        - 能根据正比例关系写出关系式
+        - 能理解比例常数的意义
+        - 能根据关系式求出未知量
+        - 能根据实际情境解释关系式中各字母的意义
+      diagnostic_dimensions:
+        - 关系式建立
+        - 比例常数识别
+        - 未知量求解
+        - 关系式解释
+      prerequisites:
+        - B1-02
+        - B5-02
+      curriculum:
+        standard_2011:
+          status: 体系细化
+          description: 对正比例关系的符号表达进行细化
+        standard_2022:
+          status: 课标要求的具体化（y=kx）
+          description: 对"成正比的量"明确要求中 y=kx 关系的符号表达细化
+
+    - id: B5-04
+      name: 正比例关系的表格与图像
+      definition: >
+        正比例关系可以通过对应数值表和图像表示，
+        用于观察两个量之间的变化规律。
+      learning_objectives:
+        - 能根据正比例关系填写数值表
+        - 能根据数值表识别比值不变
+        - 能在方格纸上描出对应点
+        - 能观察正比例关系图像的基本特征
+        - 能根据一个量的数值估计另一个量
+      diagnostic_dimensions:
+        - 数值表填写
+        - 比值规律识别
+        - 坐标对应
+        - 描点准确性
+        - 图像读取与估值
+      prerequisites:
+        - B5-02
+        - B5-03
+      curriculum:
+        standard_2011:
+          status: 明确要求
+          description: 根据正比例关系的数据画图并估计另一个量
+        standard_2022:
+          status: 课标学业要求的具体化（表格/方格纸）
+          description: 对应学业要求在方格纸上画图、由一量求另一量的具体化
+
+    - id: B5-05
+      name: 反比例的意义
+      definition: >
+        两个相关联的量，如果相对应的两个数的乘积
+        始终保持一定，则这两个量成反比例关系。
+      learning_objectives:
+        - 理解反比例关系的含义
+        - 理解乘积一定是反比例关系的判断依据
+        - 能识别反比例关系中的两个变量
+        - 能判断两个量是否成反比例
+        - 理解反比例关系不只是一个量增加另一个量减少
+      diagnostic_dimensions:
+        - 相关联的量识别
+        - 乘积不变理解
+        - 反比例关系判断
+        - 反向变化与反比例的辨析
+      prerequisites:
+        - B5-01
+        - A3-03
+      curriculum:
+        standard_2011:
+          status: 明确要求
+          description: 小学第二学段反比例内容
+        standard_2022:
+          status: 教材拓展 / 2011 内容 / 初中进阶准备
+          description: 不作为小学独立课标要求
+          note: 不得映射为 2022 小学明确要求
+
+    - id: B5-06
+      name: 反比例关系式
+      definition: >
+        反比例关系可以用 xy = k 或 y = k / x 表示，
+        其中 k 为非零常数，x、y 均不为零。
+      learning_objectives:
+        - 能根据反比例关系写出关系式
+        - 能理解乘积常数的意义
+        - 能根据关系式求出未知量
+        - 能根据实际情境解释关系式中各字母的意义
+      diagnostic_dimensions:
+        - 关系式建立
+        - 乘积常数识别
+        - 未知量求解
+        - 关系式解释
+      prerequisites:
+        - B1-02
+        - B5-05
+      curriculum:
+        standard_2011:
+          status: 体系细化
+          description: 对反比例关系的符号表达进行细化
+        standard_2022:
+          status: 教材拓展 / 2011 内容
+          description: 为反比例函数学习提供基础
+          note: 不得映射为 2022 小学明确要求
+
+    - id: B5-07
+      name: 正比例与反比例的辨析
+      definition: >
+        根据两个变量之间保持不变的数量关系，
+        判断它们属于正比例、反比例或不成比例。
+      learning_objectives:
+        - 能根据比值是否一定判断正比例
+        - 能根据乘积是否一定判断反比例
+        - 能识别既不成正比例也不成反比例的关系
+        - 能区分同向变化、反向变化与比例关系
+      diagnostic_dimensions:
+        - 比值不变判断
+        - 乘积不变判断
+        - 非比例关系识别
+        - 变化方向与比例关系辨析
+      prerequisites:
+        - B5-02
+        - B5-05
+      curriculum:
+        standard_2011:
+          status: 体系细化
+          description: 综合正比例与反比例进行关系辨析
+        standard_2022:
+          status: 拓展内容
+          description: 为初中函数关系学习提供准备
+          note: 含反比例侧，不得映射为 2022 小学明确要求
+
+    - id: B5-08
+      name: 正比例与反比例的实际应用
+      definition: >
+        根据实际问题中两个变量的变化规律，
+        判断其比例关系，并利用关系式解决问题。
+      learning_objectives:
+        - 能从实际情境中确定两个变量
+        - 能判断实际问题中的比例关系
+        - 能建立相应的数量关系式
+        - 能利用关系式解决简单问题
+        - 能检验结果是否符合实际情境
+      diagnostic_dimensions:
+        - 变量确定
+        - 比例关系建模
+        - 关系式应用
+        - 运算求解
+        - 结果合理性检验
+      prerequisites:
+        - B5-02
+        - B5-03
+        - B5-05
+        - B5-06
+      curriculum:
+        standard_2011:
+          status: 明确要求
+          description: 发现生活中的正比例和反比例关系并解决简单问题
+        standard_2022:
+          status: 拓展内容（若含反比例则整题按拓展）
+          description: 可作为变量关系与函数思想的衔接内容
+          note: 含反比例侧，不得映射为 2022 小学明确要求
+
+  cross_module_abilities:
+    - id: B5-C01
+      name: 变量关系识别
+      description: >
+        从具体情境中确定变量、不变量及其变化关系。
+      uses:
+        - B5-01
+        - B5-02
+        - B5-05
+
+    - id: B5-C02
+      name: 不变量分析
+      description: >
+        通过计算、比较和观察，
+        判断两个变量之间保持不变的是比值还是乘积。
+      uses:
+        - B5-02
+        - B5-05
+        - B5-07
+
+    - id: B5-C03
+      name: 关系模型表达
+      description: >
+        使用关系式、数值表和图像表达变量之间的关系。
+      uses:
+        - B5-03
+        - B5-04
+        - B5-06
+
+    - id: B5-C04
+      name: 变化规律应用
+      description: >
+        根据变量之间的关系解决实际问题，
+        并解释计算结果。
+      uses:
+        - B5-08
+
+  curriculum_mapping_policy:
+    standard:
+      source: 义务教育数学课程标准
+      version_2011:
+        stage_2:
+          status: 明确要求
+          description: >
+            小学第二学段包含正比例、反比例的学习要求。
+      version_2022:
+        stage_3:
+          status: 非独立内容主题
+          description: >
+            小学阶段以数与运算、数量关系组织内容，
+            不再将正比例、反比例作为独立内容主题；
+            其中"成正比的量"（对应 B5-02）属于数量关系明确要求（CR-027）。
+        stage_4:
+          status: 系统学习
+          description: >
+            在函数及反比例函数等内容中进一步研究变量关系。
+
+    textbook_mapping:
+      rule: >
+        各教材版本独立记录正比例、反比例的年级、
+        册次、单元及教学顺序。
+        不因教材提前安排而改变统一知识点的课标属性。
+
+  diagnostic_policy:
+    rule: >
+      题目必须绑定具体知识点ID。
+      判断正比例和反比例时，必须以不变量为依据，
+      不能仅凭两个量同向或反向变化作出判断。
+
+    examples:
+      - question: 判断两个相关联的量是否成正比例
+        primary: B5-02
+      - question: 根据正比例关系写出关系式
+        primary: B5-03
+      - question: 根据正比例数据画图并估值
+        primary: B5-04
+      - question: 判断两个量是否成反比例
+        primary: B5-05
+      - question: 根据反比例关系求未知量
+        primary: B5-06
+      - question: 判断两个量是正比例、反比例还是不成比例
+        primary: B5-07
+      - question: 运用比例关系解决实际问题
+        primary: B5-08
