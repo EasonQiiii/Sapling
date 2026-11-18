@@ -130,3 +130,4 @@ Verifier 仅根据 `blind.json` 作答，输出 `items/answers/<batch>/independe
 |---|---|---|---|---|
 | B00（016、026） | 未开始 | | | |
 | B01–B16 | 未开始 | | | |
+| B01（047–067） | 完成 | 2026-11-18 | bb1d75e | 21 题全部为开放题（题干无数据），见 items/answers/B01/reconcile.md 的 ISSUES |
