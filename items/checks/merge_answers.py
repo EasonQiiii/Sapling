@@ -102,7 +102,9 @@ def main():
         offset += len(new_lines)
         merged += 1
 
-    new_text = "\n".join(lines) + ("\n" if not text.endswith("\n") else "")
+    new_text = "\n".join(lines)
+    if not new_text.endswith("\n"):
+        new_text += "\n"
     MAIN.write_text(new_text, encoding="utf-8")
 
     # Round-trip verification: re-parse and compare.
