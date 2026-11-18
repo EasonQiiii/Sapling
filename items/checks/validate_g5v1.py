@@ -46,7 +46,11 @@ def collect_spine_ids():
             if isinstance(_id, str):
                 if "CAP" in _id:
                     cap_ids.add(_id)
-                elif re.fullmatch(r"[A-D]\d-\d{2}", _id):
+                elif re.fullmatch(r"[A-D]\d-\d{2}", _id) and (
+                    "learning_objectives" in node or "definition" in node
+                ):
+                    # KP nodes carry a definition / learning_objectives body.
+                    # Legacy_id_handling entries (id + action only) are not KPs.
                     kp_ids.add(_id)
             for v in node.values():
                 walk(v)
