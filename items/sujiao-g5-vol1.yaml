@@ -4395,5 +4395,606 @@ items:
   thinking: 先选方法或先把情境翻译成数学关系
   answer: 可能用的钱数是 6×茶杯单价+茶盘单价，即 6a+m、6a+n、6b+m、6b+n、6c+m、6c+n 六种情况。
   answer_note: 6 个同样的茶杯用去"6×茶杯单价"，1 个茶盘用去"茶盘单价"，总钱数=6×茶杯单价+茶盘单价。茶杯单价可能是 a、b、c 中的一种，茶盘单价可能是 m、n 中的一种，所以可能用的钱数有 6a+m、6a+n、6b+m、6b+n、6c+m、6c+n 共 6 种，用含字母的式子表示（数与字母相乘乘号省略）。
+- id: G5V1-S001
+  source:
+    origin: self
+    note: 自编测试题，依据 A1-01（覆盖补齐，第一批 S-B01）
+  task: 小明的座位在第 12 排、第 5 列。分别说出“排”和“列”用到的自然数，并说明它们表示数量还是顺序。
+  kp_main: A1-01
+  kp_other: []
+  thinking: 按步骤做
+  figure: null
+  answer: 12 和 5 都表示顺序（第几排、第几列），不表示数量。
+- id: G5V1-S002
+  source:
+    origin: self
+    note: 自编测试题，依据 A1-01（覆盖补齐，第一批 S-B01）
+  task: 一箱苹果有 36 个，小红吃掉了第 7 个。用自然数分别写出“苹果的个数”和“第几个”，并判断各自表示数量还是顺序。
+  kp_main: A1-01
+  kp_other: []
+  thinking: 还要说明理由
+  figure: null
+  answer: 36 表示数量（个数）；7 表示顺序（第几个）。
+- id: G5V1-S003
+  source:
+    origin: self
+    note: 自编测试题，依据 A1-01（覆盖补齐，第一批 S-B01）
+  task: “第 3 名”与“3 名”都用到了自然数 3，两者能不能互换？请说明理由。
+  kp_main: A1-01
+  kp_other: []
+  thinking: 还要说明理由
+  figure: null
+  answer: 不能互换。“3 名”表示数量（3 个人），“第 3 名”表示顺序（名次在第三位）；数值相同，含义不同。
+- id: G5V1-S004
+  source:
+    origin: self
+    note: 自编测试题，依据 A1-08（覆盖补齐，第一批 S-B01）
+  task: 0.7 表示几个十分之一？0.07 表示几个百分之一？
+  kp_main: A1-08
+  kp_other: []
+  thinking: 先选方法或先把情境翻译成数学关系
+  figure: null
+  answer: 0.7 是 7 个十分之一；0.07 是 7 个百分之一。
+- id: G5V1-S005
+  source:
+    origin: self
+    note: 自编测试题，依据 A1-08（覆盖补齐，第一批 S-B01）
+  task: 一根绳子长 2.45 米。说出 2.45 中每个数字表示的意义。
+  kp_main: A1-08
+  kp_other: []
+  thinking: 还要说明理由
+  figure: null
+  answer: 2 表示 2 个一（2 米）；4 表示 4 个十分之一（0.4 米）；5 表示 5 个百分之一（0.05 米）。
+- id: G5V1-S006
+  source:
+    origin: self
+    note: 自编测试题，依据 A1-08（覆盖补齐，第一批 S-B01）
+  task: 小华说：“0.50 比 0.5 多一个零，所以 0.50 大一点。”这种说法对吗？请用小数的计数单位说明理由。
+  kp_main: A1-08
+  kp_other: []
+  thinking: 自己把几个关系串起来
+  figure: null
+  answer: 不对。0.50 表示 5 个十分之一加 0 个百分之一，即 5 个十分之一；0.5 也是 5 个十分之一，两者大小相等。
+- id: G5V1-S007
+  source:
+    origin: self
+    note: 自编测试题，依据 A1-09（覆盖补齐，第一批 S-B01）
+  task: 把一个蛋糕平均分成 8 份，吃了其中的 3 份，用分数表示吃了的部分。
+  kp_main: A1-09
+  kp_other: []
+  thinking: 按步骤做
+  figure: null
+  answer: 3/8
+- id: G5V1-S008
+  source:
+    origin: self
+    note: 自编测试题，依据 A1-09（覆盖补齐，第一批 S-B01）
+  task: 3 个苹果平均分给 4 个人，每人分到多少个？用分数表示，并说明分子、分母各表示什么。
+  kp_main: A1-09
+  kp_other: []
+  thinking: 还要说明理由
+  figure: null
+  answer: 每人分到 3/4 个。分子 3 表示分的苹果个数，分母 4 表示平均分的份数（人数）。
+- id: G5V1-S009
+  source:
+    origin: self
+    note: 自编测试题，依据 A1-09（覆盖补齐，第一批 S-B01）
+  task: 一根绳子平均分成 5 段，取其中 2 段。用分数 2/5 表示，并说明 2/5 与“2 段”各表示什么意义。
+  kp_main: A1-09
+  kp_other: []
+  thinking: 还要说明理由
+  figure: null
+  answer: 2/5 表示取的 2 段占整根绳子的 2/5（部分与整体的关系）；“2 段”是具体数量。
+- id: G5V1-S010
+  source:
+    origin: self
+    note: 自编测试题，依据 A1-11（覆盖补齐，第一批 S-B01）
+  task: 温度计显示零上 6 摄氏度，记作 +6℃；零下 4 摄氏度应记作多少？
+  kp_main: A1-11
+  kp_other: []
+  thinking: 先选方法或先把情境翻译成数学关系
+  figure: null
+  answer: −4℃
+- id: G5V1-S011
+  source:
+    origin: self
+    note: 自编测试题，依据 A1-11（覆盖补齐，第一批 S-B01）
+  task: 小明向东走 5 米记作 +5 米，之后向西走 3 米，应记作多少？他相对出发点的位置用数表示为多少？
+  kp_main: A1-11
+  kp_other: []
+  thinking: 还要说明理由
+  figure: null
+  answer: 应记作 −3 米。位置：5 + (−3) = +2 米，即在出发点东边 2 米处。
+- id: G5V1-S012
+  source:
+    origin: self
+    note: 自编测试题，依据 A1-11（覆盖补齐，第一批 S-B01）
+  task: 判断：“−2 比 −5 大”对不对？用数轴或“零上零下”的情境说明理由。
+  kp_main: A1-11
+  kp_other: []
+  thinking: 自己把几个关系串起来
+  figure: null
+  answer: 对。数轴上 −2 在 −5 的右边，所以 −2 > −5；情境：零下 2 度比零下 5 度温度高。
+- id: G5V1-S013
+  source:
+    origin: self
+    note: 自编测试题，依据 A2-01（覆盖补齐，第一批 S-B01）
+  task: 写出“三百万零六十”的数字，并指出 6 所在数位的位值。
+  kp_main: A2-01
+  kp_other: []
+  thinking: 按步骤做
+  figure: null
+  answer: 3000060；6 在十位，位值是 60（6 个十）。
+- id: G5V1-S014
+  source:
+    origin: self
+    note: 自编测试题，依据 A2-01（覆盖补齐，第一批 S-B01）
+  task: 一个六位数，十万位是 5，万位是 0，千位是 9，百位是 0，十位是 4，个位是 7。写出这个数并读出来。
+  kp_main: A2-01
+  kp_other: []
+  thinking: 还要说明理由
+  figure: null
+  answer: 509047，读作“五十万九千零四十七”。
+- id: G5V1-S015
+  source:
+    origin: self
+    note: 自编测试题，依据 A2-01（覆盖补齐，第一批 S-B01）
+  task: 用数字 4、0、7 各一次组成三位数，最大的是几？最小的是几？为什么最小的不是 047？
+  kp_main: A2-01
+  kp_other: []
+  thinking: 还要说明理由
+  figure: null
+  answer: 最大是 740，最小是 407；047 前面的 0 无意义，百位不能为 0，否则不是三位数。
+- id: G5V1-S016
+  source:
+    origin: self
+    note: 自编测试题，依据 A2-03（覆盖补齐，第一批 S-B01）
+  task: 读出 5/8 和 11/4，并判断它们是真分数还是假分数。
+  kp_main: A2-03
+  kp_other: []
+  thinking: 先选方法或先把情境翻译成数学关系
+  figure: null
+  answer: 5/8 读作八分之五，是真分数；11/4 读作四分之十一，是假分数。
+- id: G5V1-S017
+  source:
+    origin: self
+    note: 自编测试题，依据 A2-03（覆盖补齐，第一批 S-B01）
+  task: 把假分数 11/4 化成带分数，并说明每一步的意义。
+  kp_main: A2-03
+  kp_other: []
+  thinking: 还要说明理由
+  figure: null
+  answer: 11÷4=2 余 3，即 11/4 = 2 又 3/4；表示 2 个整体加 3/4。
+- id: G5V1-S018
+  source:
+    origin: self
+    note: 自编测试题，依据 A2-03（覆盖补齐，第一批 S-B01）
+  task: 判断：“分子等于分母的分数都等于 1”对不对？说明理由。
+  kp_main: A2-03
+  kp_other: []
+  thinking: 自己把几个关系串起来
+  figure: null
+  answer: 对。分子等于分母时，分数表示的是 1 个整体，即 1。
+- id: G5V1-S019
+  source:
+    origin: self
+    note: 自编测试题，依据 A2-04（覆盖补齐，第一批 S-B01）
+  task: 写出与 1/2 相等的三个分数。
+  kp_main: A2-04
+  kp_other: []
+  thinking: 按步骤做
+  figure: null
+  answer: 例如 2/4、3/6、4/8。
+- id: G5V1-S020
+  source:
+    origin: self
+    note: 自编测试题，依据 A2-04（覆盖补齐，第一批 S-B01）
+  task: 判断 0.5、1/2、50% 是否表示同一个数，并用等式说明它们之间的转换关系。
+  kp_main: A2-04
+  kp_other: []
+  thinking: 还要说明理由
+  figure: null
+  answer: 是同一个数。0.5 = 5/10 = 1/2 = 50/100 = 50%。
+- id: G5V1-S021
+  source:
+    origin: self
+    note: 自编测试题，依据 A2-04（覆盖补齐，第一批 S-B01）
+  task: 0.75 可以写成哪几种形式？说明为什么它们表示的是同一个数。
+  kp_main: A2-04
+  kp_other: []
+  thinking: 还要说明理由
+  figure: null
+  answer: 0.75、75/100、3/4、75%。依据：分数的分子分母同乘或同除同一个非零数，分数大小不变；小数和百分数都是十进分数的另一种写法。
+- id: G5V1-S022
+  source:
+    origin: self
+    note: 自编测试题，依据 A2-05（覆盖补齐，第一批 S-B01）
+  task: 把 0.6 化成分数，并化简。
+  kp_main: A2-05
+  kp_other: []
+  thinking: 先选方法或先把情境翻译成数学关系
+  figure: null
+  answer: 0.6 = 6/10 = 3/5。
+- id: G5V1-S023
+  source:
+    origin: self
+    note: 自编测试题，依据 A2-05（覆盖补齐，第一批 S-B01）
+  task: 把 7/4 化成小数。
+  kp_main: A2-05
+  kp_other: []
+  thinking: 还要说明理由
+  figure: null
+  answer: 7/4 = 1.75。
+- id: G5V1-S024
+  source:
+    origin: self
+    note: 自编测试题，依据 A2-05（覆盖补齐，第一批 S-B01）
+  task: 判断：1/8 能否化成有限小数？请说明理由并写出结果。
+  kp_main: A2-05
+  kp_other: []
+  thinking: 自己把几个关系串起来
+  figure: null
+  answer: 能。1/8 = 125/1000 = 0.125。理由：分母 8 只含质因数 2，可以化成分母为 10 的幂的分数。
+- id: G5V1-S025
+  source:
+    origin: self
+    note: 自编测试题，依据 A2-06（覆盖补齐，第一批 S-B01）
+  task: 3 块饼干平均分给 4 个小朋友，每人分到多少块？用分数表示。
+  kp_main: A2-06
+  kp_other: []
+  thinking: 按步骤做
+  figure: null
+  answer: 每人分到 3/4 块。
+- id: G5V1-S026
+  source:
+    origin: self
+    note: 自编测试题，依据 A2-06（覆盖补齐，第一批 S-B01）
+  task: 5 ÷ 8 的商用分数表示是多少？用一个式子说明分数与除法的关系。
+  kp_main: A2-06
+  kp_other: []
+  thinking: 还要说明理由
+  figure: null
+  answer: 5/8。分数 a/b = a÷b（b≠0）。
+- id: G5V1-S027
+  source:
+    origin: self
+    note: 自编测试题，依据 A2-06（覆盖补齐，第一批 S-B01）
+  task: 7 个同样的橙子平均分给 5 人，每人分到多少个？用分数表示，并说明为什么 7÷5 可以写成分数 7/5。
+  kp_main: A2-06
+  kp_other: []
+  thinking: 还要说明理由
+  figure: null
+  answer: 每人分到 7/5 个（即 1 又 2/5 个）。分数 7/5 是 7÷5 的精确商；“1 余 2”只是整数商和余数的另一种表示方式。
+- id: G5V1-S028
+  source:
+    origin: self
+    note: 自编测试题，依据 A2-08（覆盖补齐，第一批 S-B01）
+  task: 把 12/18 约分成最简分数。
+  kp_main: A2-08
+  kp_other: []
+  thinking: 先选方法或先把情境翻译成数学关系
+  figure: null
+  answer: 2/3
+- id: G5V1-S029
+  source:
+    origin: self
+    note: 自编测试题，依据 A2-08（覆盖补齐，第一批 S-B01）
+  task: 把 3/4 和 5/6 通分，写出分母相同的两个分数。
+  kp_main: A2-08
+  kp_other: []
+  thinking: 还要说明理由
+  figure: null
+  answer: 3/4 = 9/12，5/6 = 10/12。
+- id: G5V1-S030
+  source:
+    origin: self
+    note: 自编测试题，依据 A2-08（覆盖补齐，第一批 S-B01）
+  task: 判断：“分子和分母同时加 2，分数的大小不变”对不对？用一个例子验证并说明理由。
+  kp_main: A2-08
+  kp_other: []
+  thinking: 自己把几个关系串起来
+  figure: null
+  answer: 不对。例如 1/2 的分子分母都加 2 得 3/4，大小从 0.5 变为 0.75。分数基本性质要求同时乘或除以同一个不为 0 的数。
+- id: G5V1-S031
+  source:
+    origin: self
+    note: 自编测试题，依据 A2-09（覆盖补齐，第一批 S-B01）
+  task: 判断：6.20 和 6.2 的大小是否相等？为什么？
+  kp_main: A2-09
+  kp_other: []
+  thinking: 按步骤做
+  figure: null
+  answer: 相等。小数末尾添 0 或去 0，小数的大小不变。
+- id: G5V1-S032
+  source:
+    origin: self
+    note: 自编测试题，依据 A2-09（覆盖补齐，第一批 S-B01）
+  task: 把 4.50 化简，并说明依据。
+  kp_main: A2-09
+  kp_other: []
+  thinking: 还要说明理由
+  figure: null
+  answer: 4.5。依据：小数末尾的 0 可以去掉，大小不变。
+- id: G5V1-S033
+  source:
+    origin: self
+    note: 自编测试题，依据 A2-09（覆盖补齐，第一批 S-B01）
+  task: 判断：“0.09 末尾添 0 变成 0.090，大小不变”对吗？“把 0.09 的小数点向右移动一位得 0.9”对吗？说明理由。
+  kp_main: A2-09
+  kp_other: []
+  thinking: 还要说明理由
+  figure: null
+  answer: 第一个对，添 0 大小不变；第二个不对，小数点右移一位得 0.9，数值扩大到 10 倍，与原数大小不同。
+- id: G5V1-S034
+  source:
+    origin: self
+    note: 自编测试题，依据 A3-01（覆盖补齐，第一批 S-B01）
+  task: 计算 25.6 + 3.85。
+  kp_main: A3-01
+  kp_other: []
+  thinking: 先选方法或先把情境翻译成数学关系
+  figure: null
+  answer: '29.45'
+- id: G5V1-S035
+  source:
+    origin: self
+    note: 自编测试题，依据 A3-01（覆盖补齐，第一批 S-B01）
+  task: 一本书第一天读了 37 页，第二天读了 45 页，还剩 58 页没读。这本书一共有多少页？列式计算。
+  kp_main: A3-01
+  kp_other: []
+  thinking: 还要说明理由
+  figure: null
+  answer: 37 + 45 + 58 = 140（页）。
+- id: G5V1-S036
+  source:
+    origin: self
+    note: 自编测试题，依据 A3-01（覆盖补齐，第一批 S-B01）
+  task: 计算 3/5 + 1/4，并说明为什么不能直接把分子相加、分母相加。
+  kp_main: A3-01
+  kp_other: []
+  thinking: 自己把几个关系串起来
+  figure: null
+  answer: 3/5 + 1/4 = 12/20 + 5/20 = 17/20。分数加法必须先通分（统一计数单位），分子分母直接相加会改变计数单位。
+- id: G5V1-S037
+  source:
+    origin: self
+    note: 自编测试题，依据 A3-05（覆盖补齐，第一批 S-B01）
+  task: 计算 12 + 8 × 3 − 6 ÷ 2。
+  kp_main: A3-05
+  kp_other: []
+  thinking: 按步骤做
+  figure: null
+  answer: '33'
+- id: G5V1-S038
+  source:
+    origin: self
+    note: 自编测试题，依据 A3-05（覆盖补齐，第一批 S-B01）
+  task: 计算 (45 − 9) ÷ 4 + 2 × 5。
+  kp_main: A3-05
+  kp_other: []
+  thinking: 还要说明理由
+  figure: null
+  answer: '19'
+- id: G5V1-S039
+  source:
+    origin: self
+    note: 自编测试题，依据 A3-05（覆盖补齐，第一批 S-B01）
+  task: 小明算 (2.5 + 1.5) × 4 − 3 ÷ 0.5：他先算 4 × 4 = 16，再 16 − 3 = 13，再 13 ÷ 0.5 = 26。这个过程对吗？说明错在哪里并给出正确结果。
+  kp_main: A3-05
+  kp_other: []
+  thinking: 还要说明理由
+  figure: null
+  answer: 不对。错在先算了减法，把 (4 × 4 − 3) ÷ 0.5 当成了原式；按运算顺序应先算乘除：(2.5 + 1.5) × 4 − 3 ÷ 0.5 = 16 − 6 = 10。
+- id: G5V1-S040
+  source:
+    origin: self
+    note: 自编测试题，依据 A4-01（覆盖补齐，第一批 S-B01）
+  task: 用字母表示加法交换律和结合律（各写一个等式）。
+  kp_main: A4-01
+  kp_other: []
+  thinking: 先选方法或先把情境翻译成数学关系
+  figure: null
+  answer: 交换律：a + b = b + a；结合律：(a + b) + c = a + (b + c)。
+- id: G5V1-S041
+  source:
+    origin: self
+    note: 自编测试题，依据 A4-01（覆盖补齐，第一批 S-B01）
+  task: 简便计算：2.5 + 6.8 + 7.5。
+  kp_main: A4-01
+  kp_other: []
+  thinking: 还要说明理由
+  figure: null
+  answer: (2.5 + 7.5) + 6.8 = 10 + 6.8 = 16.8。
+- id: G5V1-S042
+  source:
+    origin: self
+    note: 自编测试题，依据 A4-01（覆盖补齐，第一批 S-B01）
+  task: 判断：“减法也有交换律”对不对？用 8 − 3 和 3 − 8 说明理由。
+  kp_main: A4-01
+  kp_other: []
+  thinking: 自己把几个关系串起来
+  figure: null
+  answer: 不对。8 − 3 = 5，而 3 − 8 在小学的数范围内没有意义（不够减），且一般 a − b ≠ b − a，所以减法没有交换律。
+- id: G5V1-S043
+  source:
+    origin: self
+    note: 自编测试题，依据 A4-02（覆盖补齐，第一批 S-B01）
+  task: 用字母表示乘法交换律和结合律（各写一个等式）。
+  kp_main: A4-02
+  kp_other: []
+  thinking: 按步骤做
+  figure: null
+  answer: 交换律：a × b = b × a；结合律：(a × b) × c = a × (b × c)。
+- id: G5V1-S044
+  source:
+    origin: self
+    note: 自编测试题，依据 A4-02（覆盖补齐，第一批 S-B01）
+  task: 简便计算：125 × 32 × 25。
+  kp_main: A4-02
+  kp_other: []
+  thinking: 还要说明理由
+  figure: null
+  answer: 100000。（125 × 8 = 1000，4 × 25 = 100，原式 = 1000 × 100。）
+- id: G5V1-S045
+  source:
+    origin: self
+    note: 自编测试题，依据 A4-02（覆盖补齐，第一批 S-B01）
+  task: 判断：“(a × b) × c = a × (b × c)”与“a × b × c = b × a × c”各用到了哪条运算律？请说明。
+  kp_main: A4-02
+  kp_other: []
+  thinking: 还要说明理由
+  figure: null
+  answer: 前者用到结合律（改变括号位置，因数顺序不变）；后者用到交换律（交换前两个因数，括号位置不变）。
+- id: G5V1-S046
+  source:
+    origin: self
+    note: 自编测试题，依据 A4-04（覆盖补齐，第一批 S-B01）
+  task: 利用加减互逆关系求 x：x + 18 = 45。
+  kp_main: A4-04
+  kp_other: []
+  thinking: 先选方法或先把情境翻译成数学关系
+  figure: null
+  answer: x = 45 − 18 = 27。
+- id: G5V1-S047
+  source:
+    origin: self
+    note: 自编测试题，依据 A4-04（覆盖补齐，第一批 S-B01）
+  task: 某数减去 26 后得 39，求这个数，并用加法检验。
+  kp_main: A4-04
+  kp_other: []
+  thinking: 还要说明理由
+  figure: null
+  answer: x − 26 = 39，x = 65；检验：65 − 26 = 39。
+- id: G5V1-S048
+  source:
+    origin: self
+    note: 自编测试题，依据 A4-04（覆盖补齐，第一批 S-B01）
+  task: 小明算出 97 − 38 = 59，并用 38 + 59 = 97 检验。他的检验能否说明计算正确？说明理由。
+  kp_main: A4-04
+  kp_other: []
+  thinking: 自己把几个关系串起来
+  figure: null
+  answer: 能。减法和加法互为逆运算：被减数 = 减数 + 差，38 + 59 = 97 说明 97 − 38 = 59 正确。
+- id: G5V1-S049
+  source:
+    origin: self
+    note: 自编测试题，依据 A4-05（覆盖补齐，第一批 S-B01）
+  task: 求 x：6 × x = 42。
+  kp_main: A4-05
+  kp_other: []
+  thinking: 按步骤做
+  figure: null
+  answer: x = 7
+- id: G5V1-S050
+  source:
+    origin: self
+    note: 自编测试题，依据 A4-05（覆盖补齐，第一批 S-B01）
+  task: 某数除以 9 得 8，求这个数，并用乘法检验。
+  kp_main: A4-05
+  kp_other: []
+  thinking: 还要说明理由
+  figure: null
+  answer: x ÷ 9 = 8，x = 72；检验：9 × 8 = 72。
+- id: G5V1-S051
+  source:
+    origin: self
+    note: 自编测试题，依据 A4-05（覆盖补齐，第一批 S-B01）
+  task: 判断：“35 ÷ 4 = 8 余 3”可以用乘法检验吗？如何检验？
+  kp_main: A4-05
+  kp_other: []
+  thinking: 还要说明理由
+  figure: null
+  answer: 可以。检验：商 × 除数 + 余数 = 被除数，即 8 × 4 + 3 = 35，所以计算正确。
+- id: G5V1-S052
+  source:
+    origin: self
+    note: 自编测试题，依据 A4-06（覆盖补齐，第一批 S-B01）
+  task: 简便计算：100 − 36 − 14。
+  kp_main: A4-06
+  kp_other: []
+  thinking: 先选方法或先把情境翻译成数学关系
+  figure: null
+  answer: 100 − (36 + 14) = 100 − 50 = 50。
+- id: G5V1-S053
+  source:
+    origin: self
+    note: 自编测试题，依据 A4-06（覆盖补齐，第一批 S-B01）
+  task: 比较 84 − (24 + 36) 与 84 − 24 − 36 的结果是否相同。
+  kp_main: A4-06
+  kp_other: []
+  thinking: 还要说明理由
+  figure: null
+  answer: 相同，都是 24。84 − 60 = 24，84 − 24 − 36 = 24。
+- id: G5V1-S054
+  source:
+    origin: self
+    note: 自编测试题，依据 A4-06（覆盖补齐，第一批 S-B01）
+  task: 判断：“a − b − c = a − (b + c)”对吗？用减法的意义说明理由。
+  kp_main: A4-06
+  kp_other: []
+  thinking: 自己把几个关系串起来
+  figure: null
+  answer: 对。从 a 中减去 b，再减去 c，等于从 a 中一次减去 b 与 c 的和。
+- id: G5V1-S055
+  source:
+    origin: self
+    note: 自编测试题，依据 A4-07（覆盖补齐，第一批 S-B01）
+  task: 简便计算：720 ÷ 6 ÷ 2。
+  kp_main: A4-07
+  kp_other: []
+  thinking: 按步骤做
+  figure: null
+  answer: 720 ÷ (6 × 2) = 720 ÷ 12 = 60。
+- id: G5V1-S056
+  source:
+    origin: self
+    note: 自编测试题，依据 A4-07（覆盖补齐，第一批 S-B01）
+  task: 利用商不变性质计算 2400 ÷ 50，可以怎样变形？写出变形后的算式和结果。
+  kp_main: A4-07
+  kp_other: []
+  thinking: 还要说明理由
+  figure: null
+  answer: 2400 ÷ 50 = 240 ÷ 5 = 48（被除数和除数同除以 10）；也可同乘 2：4800 ÷ 100 = 48。两种变形结果都是 48。
+- id: G5V1-S057
+  source:
+    origin: self
+    note: 自编测试题，依据 A4-07（覆盖补齐，第一批 S-B01）
+  task: 判断：“a ÷ b ÷ c = a ÷ c ÷ b”对吗？说明理由（b、c 均不为 0）。
+  kp_main: A4-07
+  kp_other: []
+  thinking: 还要说明理由
+  figure: null
+  answer: 对。除以 b 再除以 c，等于除以 b × c；乘法有交换律，所以 b 与 c 的顺序可以交换。
+- id: G5V1-S058
+  source:
+    origin: self
+    note: 自编测试题，依据 A4-08（覆盖补齐，第一批 S-B01）
+  task: 计算 20 − 4 × 3 + 8 ÷ 2。
+  kp_main: A4-08
+  kp_other: []
+  thinking: 先选方法或先把情境翻译成数学关系
+  figure: null
+  answer: '12'
+- id: G5V1-S059
+  source:
+    origin: self
+    note: 自编测试题，依据 A4-08（覆盖补齐，第一批 S-B01）
+  task: 计算 [(15 + 5) ÷ 4 − 1] × 3。
+  kp_main: A4-08
+  kp_other: []
+  thinking: 还要说明理由
+  figure: null
+  answer: '12'
+- id: G5V1-S060
+  source:
+    origin: self
+    note: 自编测试题，依据 A4-08（覆盖补齐，第一批 S-B01）
+  task: 小华计算 48 ÷ 6 × 2 = 48 ÷ 12 = 4。他的算法对吗？如果不对，正确结果是多少？说明理由。
+  kp_main: A4-08
+  kp_other: []
+  thinking: 自己把几个关系串起来
+  figure: null
+  answer: 不对。同级运算应从左往右依次计算：48 ÷ 6 × 2 = 8 × 2 = 16。
+
 _note_figures: figure 记录规则：type=points，坐标系全书统一——方格左下角为原点，x 向右，y 向上，1 格=1，记录格线交点坐标（不是格子），字母标注用题中的字母。answer
   与 figure 同构给出画图答案；开放题 answer 为 null，用 answer_note 说明完成标准。

@@ -2,7 +2,7 @@
 """Validate items/sujiao-g5-vol1.yaml against the frozen primary spine.
 
 Checks:
-  1. Item IDs are unique and follow G5V1-NNN.
+  1. Item IDs are unique and follow G5V1-NNN (textbook) or G5V1-SNNN (self-authored test items).
   2. Every kp_main / kp_other ID exists in knowledge-spine/小学/数学/*.yaml.
   3. kp_main is not a CAP id (capabilities are not KP targets).
   4. thinking is one of the five allowed levels, or null exactly when kp_main is null.
@@ -106,7 +106,7 @@ def main():
     seen = set()
     for it in items:
         iid = it.get("id")
-        if not re.fullmatch(r"G5V1-\d{3}", str(iid)):
+        if not re.fullmatch(r"G5V1-(\d{3}|S\d{3})", str(iid)):
             errors.append(f"bad id format: {iid}")
         if iid in seen:
             errors.append(f"duplicate id: {iid}")
@@ -148,8 +148,10 @@ def main():
 
         # 6b: answer null => answer_note must be non-empty (for filled items only
         # while the fill campaign is in progress; unconditionally without the arg).
-        num = int(str(iid).split("-")[1])
-        if filled_through is None or num <= filled_through:
+        suffix = str(iid).split("-")[1]
+        is_self = suffix.startswith("S")
+        num = 0 if is_self else int(suffix)
+        if is_self or filled_through is None or num <= filled_through:
             if ans is None and not (it.get("answer_note") or "").strip():
                 errors.append(f"{iid}: answer is null but answer_note is empty")
 
@@ -158,6 +160,8 @@ def main():
     prev_unit, prev_page = None, -1
     for it in items:
         src = it.get("source", {})
+        if src.get("origin") == "self":
+            continue  # self-authored test items have no textbook position
         unit = src.get("unit")
         page = src.get("page")
         if unit != prev_unit:
