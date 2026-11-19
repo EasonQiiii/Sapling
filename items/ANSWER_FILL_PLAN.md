@@ -1,5 +1,8 @@
 # 五年级上册题库补答案计划（给 agent 执行）
 
+> **状态：已完成（历史文档）。** 本文件记录的是 answer 补全阶段（B00–B16），以及随后的两次删除（见第 8 节）。下方“共 395 题、357 待补”等数字为当时的快照，不代表现状。
+> **后续新增测试题的计划见 `items/GENERATE_TEST_PLAN.md`。**
+
 > 对象：`items/sujiao-g5-vol1.yaml`，共 395 题，当前 38 题有 `answer`，357 题待补（其中 8 题为开放或活动类，见 B00）。
 > 本计划只负责 `answer` / `answer_note` 字段。不改 `id`、`task`、`figure`、`kp_main`、`kp_other`、`thinking`、`source`。
 
