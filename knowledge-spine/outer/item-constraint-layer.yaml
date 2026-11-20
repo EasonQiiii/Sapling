@@ -1,0 +1,34 @@
+status: "draft"
+artifact: item-constraint-layer
+schema_version: "1.1"
+spine_ref: math.std.v1.1
+version: "1.0"
+description: >
+  出题约束层：存放出题侧的硬性约束，防止 spine 字段契约被反向污染。
+  规则仅引用 KP ID 或全局作用域，不修改 spine 本体。
+  items/GENERATE_TEST_PLAN.md 的硬性规则以本层为准同步。
+principle: >
+  误区、反例、题型约束一律放在外层；spine 的 learning_objectives / diagnostic_dimensions
+  只承载课标对齐结果与认知归因切面，不承载任何具体干扰项或错误模式。
+
+rules:
+  - id: IC-DERIVE-01
+    scope: all
+    priority: hard
+    rule: 不得从 learning_objectives / diagnostic_dimensions 的辨析或否定措辞直接派生反例题
+    rationale: >
+      v1 中 B5-02 的 LO"理解正比例关系不只是两个量同时增加"与 DD"同向变化与正比例的辨析"
+      被出题侧直接派生出 S159 怪题；根因是字段语义外溢，故在出题侧硬禁此路径。
+    enforcement: 出题时辨析/反例类素材只能取自 outer/misconception-bank.yaml
+
+  - id: IC-DERIVE-02
+    scope: [B5-02, B5-05, B5-07]
+    priority: hard
+    rule: 正/反比例判定类题只以比值或乘积恒定为判据，不得以同向或反向变化为判据或诱饵
+    rationale: 课标 CR-027 仅要求"认识成正比的量；探索规律或变化趋势"，不含增减方向判据。
+
+  - id: IC-MISCONCEPTION-LOCATION
+    scope: all
+    priority: hard
+    rule: 具体错误模式、反例、干扰项只能存于误区库，不得写入 spine 的 name/definition/LO/DD
+    rationale: 防"换汤不换药"第三闸——误区单独存放，不进 spine 本体。

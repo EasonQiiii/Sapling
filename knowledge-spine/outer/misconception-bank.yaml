@@ -1,0 +1,59 @@
+status: "draft"
+artifact: misconception-bank
+schema_version: "1.1"
+spine_ref: math.std.v1.1
+version: "1.0"
+description: >
+  误区库：存放常见错误模式、反例与典型干扰项。仅通过 KP ID 引用 spine 知识点，
+  不回写、不污染 spine 本体的 name / definition / learning_objectives / diagnostic_dimensions。
+  出题侧可读取本库生成辨析题，但不得从 spine 的 LO/DD 措辞直接派生反例题。
+usage:
+  - 出题侧生成"判断/辨析/反例"类题时，从本库按 kp_ref 取素材。
+  - 归因侧做错因归类时，可引用本库 item id。
+  - 严禁将本库条目回写进 spine 字段。
+
+items:
+  - id: MIS-B5-02-01
+    kp_ref: B5-02
+    pattern: 把"两个量同时增加（同向变化）"当作正比例的判定依据
+    typical_wrong_form: 正方形的面积与边长同时增加，就判定为正比例
+    correct_rule: 判定正比例的唯一依据是比值一定（y/x=k），不是增减方向
+    source: 题库怪题复盘 S159
+    severity: high
+    status: active
+
+  - id: MIS-B5-05-01
+    kp_ref: B5-05
+    pattern: 把"一个量增加、另一个量减少（反向变化）"当作反比例的判定依据
+    typical_wrong_form: 总页数一定时已看页数增加、剩下页数减少，就判定为反比例
+    correct_rule: 判定反比例的唯一依据是乘积一定（xy=k），不是增减方向
+    source: 题库怪题复盘 S159
+    severity: high
+    status: active
+
+  - id: MIS-B5-07-01
+    kp_ref: B5-07
+    pattern: 以"变化方向"代替"不变量类型"作比例关系判别
+    typical_wrong_form: 只看同增/同减或一增一减，不检验比值或乘积是否恒定
+    correct_rule: 先确定保持不变的是比值还是乘积，再判定比例类型
+    source: B5-07 字段污染复盘
+    severity: high
+    status: active
+
+  - id: MIS-A2-09-01
+    kp_ref: A2-09
+    pattern: 混淆小数中间的零与末尾的零
+    typical_wrong_form: 认为 0.05 与 0.5 大小相同（把中间零当末尾零去掉）
+    correct_rule: 仅小数末尾添零或去零不改变大小，中间的零不可去掉
+    source: A2-09 P1 外移
+    severity: medium
+    status: active
+
+  - id: MIS-C2-02-01
+    kp_ref: C2-02
+    pattern: 忽略有序数对中两个数的先后顺序
+    typical_wrong_form: 把 (2,3) 与 (3,2) 当作同一个位置
+    correct_rule: 有序数对的两个数按"先横后纵"固定顺序，交换后位置不同
+    source: C2-02 P1 外移
+    severity: medium
+    status: active

@@ -24,6 +24,7 @@
 6. **`kp_main` 必须是 spine 中的 KP ID**（格式 `[A-D]\d-\d{2}`）。不得使用 CAP-xx，不得使用 `null`，不得新增 KP。
 7. **不改 spine**。若发现某个 KP 无法出题，记入本文件第 7 节“上报”，跳过该 KP，不得擅自修改 spine（spine 修改需走 `MATH_STD_V1_FREEZE.md` §8）。
 8. **不推送**。只提交到本地分支，不执行 `git push`，除非用户明确批准。
+9. **不从 LO/DD 派生反例题**（`IC-DERIVE-01`）。不得从 spine 的 `learning_objectives` / `diagnostic_dimensions` 中的辨析或否定措辞直接出"判断/辨析/反例"类题。此类素材只能取自 `knowledge-spine/outer/misconception-bank.yaml`；正/反比例判定题只以比值或乘积恒定为判据（`IC-DERIVE-02`）。
 
 ## 2. 题目格式
 

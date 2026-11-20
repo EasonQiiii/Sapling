@@ -2,7 +2,7 @@ status: "final"
 module:
   id: C2
   name: 图形的位置与运动
-  version: "1.0"
+  version: "1.1"
   domain: 图形与几何
 
   description: >
@@ -85,7 +85,7 @@ module:
         - 数对与点的位置对应
         - 数对书写
         - 数对读取
-        - 顺序错误辨析
+        - 位序对应关系理解
       prerequisites:
         - C2-01
       curriculum:

@@ -1,4 +1,4 @@
-schema_version: "1.0"
+schema_version: "1.1"
 status: "final"
 name: "小学数学统一知识体系：数与运算"
 name_en: "Primary Mathematics Knowledge System: Numbers and Operations"
@@ -531,8 +531,8 @@ modules:
             name: "末尾添零与去零"
           - id: "simplification"
             name: "小数化简"
-          - id: "misconception"
-            name: "小数中间零与末尾零的区别"
+          - id: "place_value"
+            name: "小数数位与计数单位理解"
         prerequisites:
           - "A2-02"
           - "A2-04"
