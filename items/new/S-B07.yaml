@@ -5,6 +5,7 @@
   task: 一支铅笔 a 元。买 6 支要用多少元？用含字母 a 的式子表示。再分别算出 a = 2 和 a = 3 时各要多少元。
   kp_main: B1-01
   kp_other: []
+  dd_main: generality
   thinking: 按步骤做
   figure: null
   answer: 6a 元。当 a = 2 时要 12 元；当 a = 3 时要 18 元。
@@ -16,6 +17,7 @@
   task: 图书馆有故事书 248 本，其中童话书 96 本，其余都是科幻书。科幻书有多少本？
   kp_main: B2-01
   kp_other: []
+  dd_main: unknown_part
   thinking: 按步骤做
   figure: null
   answer: 248 − 96 = 152（本）。
@@ -26,6 +28,7 @@
   task: 姐姐身高 148 厘米，比妹妹高 12 厘米。妹妹身高多少厘米？
   kp_main: B2-02
   kp_other: []
+  dd_main: smaller_quantity
   thinking: 认出来就做
   figure: null
   answer: 148 − 12 = 136（厘米）。
@@ -36,6 +39,7 @@
   task: 下面三个比，哪些可以写成除法算式和分数？请写出能写的除法算式和分数，并说明不能写的原因：① 4:5；② 7:0；③ 9:12。
   kp_main: B4-03
   kp_other: []
+  dd_main: 除数与分母限制
   thinking: 还要说明理由
   figure: null
   answer: ① 4÷5，分数 4/5。② 不能写：后项是 0，除数和分母都不能为 0。③ 9÷12，分数 9/12。
@@ -47,6 +51,7 @@
   task: 两组量的对应情况是：x 取 2、3、4 时，y 分别是 6、12、10。y 与 x 成正比例吗？请写出各组的比值 y÷x，并说明判断依据。
   kp_main: B5-02
   kp_other: []
+  dd_main: 比例恒定性判别
   thinking: 还要说明理由
   figure: null
   answer: 不成正比例。各组比值：6÷2=3，12÷3=4，10÷4=2.5，比值不恒定，所以不成正比例。
@@ -58,6 +63,7 @@
   task: 两组量的对应情况是：x 取 2、3、4 时，y 分别是 12、10、6。y 与 x 成反比例吗？请写出各组的乘积 xy，并说明判断依据。
   kp_main: B5-05
   kp_other: []
+  dd_main: 乘积恒定性判别
   thinking: 还要说明理由
   figure: null
   answer: 不成反比例。各组乘积：2×12=24，3×10=30，4×6=24，乘积不恒定，所以不成反比例。

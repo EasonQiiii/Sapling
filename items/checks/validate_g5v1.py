@@ -10,6 +10,8 @@ Checks:
   6. figure / answer have a valid shape (type in points/heights/table, or null).
   7. Items are in textbook order (unit order, then page non-decreasing within a unit).
   8. Duplicate task text (warning only).
+  9. If dd_main is present, it must be a diagnostic_dimensions key of kp_main
+     (spine DD id when the facet has id; otherwise the exact Chinese string).
 """
 import re
 import sys
@@ -32,13 +34,17 @@ FIGURE_TYPES = {"points", "heights", "table"}
 
 
 def collect_spine_ids():
-    """Return (kp_ids, cap_ids, retired_ids) gathered from the primary spine YAMLs.
+    """Return (kp_ids, cap_ids, retired_ids, kp_dd_keys).
 
+    kp_dd_keys maps KP id -> set of allowed dd_main values:
+      - DD object with id  -> the id string
+      - DD plain string    -> the string itself
     retired_ids are legacy IDs listed under id_management.legacy_id_handling
     (e.g. A3-06 alias -> A2-06, A2-07 reclassified to CAP-01). They must not be
     used as KP targets.
     """
     kp_ids, cap_ids, retired_ids = set(), set(), set()
+    kp_dd_keys = {}
 
     def walk(node):
         if isinstance(node, dict):
@@ -52,6 +58,13 @@ def collect_spine_ids():
                     # KP nodes carry a definition / learning_objectives body.
                     # Legacy_id_handling entries (id + action only) are not KPs.
                     kp_ids.add(_id)
+                    keys = set()
+                    for d in node.get("diagnostic_dimensions") or []:
+                        if isinstance(d, dict) and isinstance(d.get("id"), str):
+                            keys.add(d["id"])
+                        elif isinstance(d, str):
+                            keys.add(d)
+                    kp_dd_keys[_id] = keys
             for v in node.values():
                 walk(v)
         elif isinstance(node, list):
@@ -68,7 +81,7 @@ def collect_spine_ids():
             if isinstance(entry, dict) and isinstance(entry.get("id"), str):
                 if entry.get("action") != "retain":
                     retired_ids.add(entry["id"])
-    return kp_ids, cap_ids, retired_ids
+    return kp_ids, cap_ids, retired_ids, kp_dd_keys
 
 
 def check_shape(label, obj, errors, item_id):
@@ -99,9 +112,10 @@ def main():
         data = yaml.safe_load(f)
     items = data["items"]
 
-    kp_ids, cap_ids, retired_ids = collect_spine_ids()
+    kp_ids, cap_ids, retired_ids, kp_dd_keys = collect_spine_ids()
     known = kp_ids
     errors, warnings = [], []
+    dd_filled = 0
 
     seen = set()
     for it in items:
@@ -115,6 +129,7 @@ def main():
         kp_main = it.get("kp_main")
         kp_other = it.get("kp_other") or []
         thinking = it.get("thinking")
+        dd_main = it.get("dd_main")
 
         # 2 & 3: KP references
         for kp in ([kp_main] if kp_main else []) + list(kp_other):
@@ -131,9 +146,23 @@ def main():
                 errors.append(f"{iid}: kp_main is null but thinking={thinking!r}")
             if not it.get("kp_reason"):
                 errors.append(f"{iid}: kp_main is null but kp_reason is missing")
+            if dd_main is not None:
+                errors.append(f"{iid}: kp_main is null but dd_main={dd_main!r}")
         else:
             if thinking not in THINKING_LEVELS:
                 errors.append(f"{iid}: invalid thinking {thinking!r}")
+
+        # 9: dd_main optional; when present must belong to kp_main's facets
+        if dd_main is not None:
+            dd_filled += 1
+            if not isinstance(dd_main, str) or not dd_main.strip():
+                errors.append(f"{iid}: dd_main must be a non-empty string")
+            elif kp_main is not None:
+                allowed = kp_dd_keys.get(kp_main) or set()
+                if dd_main not in allowed:
+                    errors.append(
+                        f"{iid}: dd_main={dd_main!r} not in diagnostic_dimensions of {kp_main}"
+                    )
 
         # 6: figure / answer shape
         check_shape("figure", it.get("figure"), errors, iid)
@@ -184,6 +213,7 @@ def main():
 
     print(f"items: {len(items)}  unique ids: {len(seen)}")
     print(f"spine KP ids: {len(kp_ids)}  CAP ids: {len(cap_ids)}  retired: {len(retired_ids)}")
+    print(f"dd_main filled: {dd_filled}")
     print(f"errors: {len(errors)}  warnings: {len(warnings)}")
     for e in errors:
         print("ERROR  ", e)
